@@ -1,3 +1,4 @@
+import '@lib/shared';
 import React from "react";
 import ReactDOM from "react-dom";
 
