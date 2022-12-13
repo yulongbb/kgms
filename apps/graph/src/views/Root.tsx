@@ -2,6 +2,8 @@ import React, { FC, useEffect, useState } from 'react';
 import { SigmaContainer, ZoomControl, FullScreenControl } from 'react-sigma-v2';
 import { omit, mapValues, keyBy, constant } from 'lodash';
 
+import { LibReact } from '@lib/react';
+
 import getNodeProgramImage from 'sigma/rendering/webgl/programs/node.image';
 
 import GraphSettingsController from './GraphSettingsController';
@@ -54,6 +56,7 @@ const Root: FC = () => {
   return (
     <div id="app-root" className={showContents ? 'show-contents' : ''}>
       <my-greeting title="react"></my-greeting>
+      <LibReact></LibReact>
 
       <SigmaContainer
         graphOptions={{ type: 'directed' }}

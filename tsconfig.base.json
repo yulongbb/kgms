@@ -15,8 +15,9 @@
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
     "paths": {
+      "@lib/angular": ["libs/lib-angular/src/index.ts"],
       "@lib/shared": ["libs/lib-shared/src/index.ts"],
-      "@lib/angular": ["libs/lib-angular/src/index.ts"]
+      "@lib/react": ["libs/lib-react/src/index.ts"]
     }
   },
   "exclude": ["node_modules", "tmp"]
