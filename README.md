@@ -40,3 +40,23 @@ docker run --name neo4j -p7474:7474 -p7687:7687 -d  --env NEO4J_AUTH=neo4j/test 
 
 
 -i https://mirrors.aliyun.com/pypi/simple/
+
+
+schema 本体模型
+
+1 schema概念表查看、搜索功能，导出节点功能
+2 schema概念表知识图谱可视化展示
+3 schema属性表查看、搜索功能，导出节点功能
+4 Myschema概念表增删改查功能、重置功能、导入数据功能、导出文件功能
+5 Myschema概念表知识图谱可视化展示
+6 Myschema属性表增删改查功能、重置功能、导出文件功能
+7 生成Myschema三元组
+
+
+wikidata 知识库数据
+
+graph 可视化展示
+
+
+
+参考连接

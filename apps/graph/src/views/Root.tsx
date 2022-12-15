@@ -55,8 +55,8 @@ const Root: FC = () => {
 
   return (
     <div id="app-root" className={showContents ? 'show-contents' : ''}>
-      <my-greeting title="react"></my-greeting>
-      <LibReact></LibReact>
+      {/* <my-greeting title="react"></my-greeting>
+      <LibReact></LibReact> */}
 
       <SigmaContainer
         graphOptions={{ type: 'directed' }}
