@@ -3,7 +3,7 @@ import json
 import random
 
 driver = GraphDatabase.driver("neo4j://localhost:7687",
-                              auth=("neo4j", "test"))
+                              auth=("neo4j", "eszrdxtfc"))
 
 
 def add_Relation(tx, source, relation, target):
