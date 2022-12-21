@@ -34,6 +34,7 @@ npx nx graph
 npx nx affected:build
 
 
+gem install wikidata
 
 
 docker run --name neo4j -p7474:7474 -p7687:7687 -d  --env NEO4J_AUTH=neo4j/test  neo4j:latest
@@ -60,3 +61,5 @@ graph 可视化展示
 
 
 参考连接
+
+
