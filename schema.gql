@@ -1,0 +1,99 @@
+# ------------------------------------------------------
+# THIS FILE WAS AUTOMATICALLY GENERATED (DO NOT MODIFY)
+# ------------------------------------------------------
+
+type Property {
+  id: ID!
+  category: String!
+  name: String!
+  description: String!
+  nameZh: String!
+  descriptionZh: String!
+  schemaorgUrl: String!
+  wikidataUrl: String!
+  version: String!
+}
+
+type Schema {
+  id: ID!
+  category: String!
+  name: String!
+  description: String!
+  nameZh: String!
+  descriptionZh: String!
+  children: [Schema!]!
+  properties: [Property!]!
+  wikidataUrl: String!
+  schemaorgUrl: String!
+  version: String!
+}
+
+type Dataset {
+  id: ID!
+  type: String!
+  title: String!
+  content: String!
+  data: String!
+  mimeType: String!
+  size: String!
+}
+
+type Entity {
+  id: String
+  type: String
+  labels: JSONObject
+  descriptions: JSONObject
+  aliases: JSONObject
+  claims: JSONObject
+  sitelinks: JSONObject
+  genes: JSONObject
+  modified: DateTime
+}
+
+"""
+The `JSONObject` scalar type represents JSON objects as specified by [ECMA-404](http://www.ecma-international.org/publications/files/ECMA-ST/ECMA-404.pdf).
+"""
+scalar JSONObject
+
+"""
+A date-time string at UTC, such as 2019-12-03T09:54:33Z, compliant with the date-time format.
+"""
+scalar DateTime
+
+type Query {
+  entities: [Entity!]!
+  getEntitiesById(id: Float!): [Entity!]!
+  entity(id: String!): Entity!
+  schema(id: Float!): Schema!
+  findTree(id: Float!): Schema!
+  findSchemaByName(name: String!): Schema!
+  schemas: [Schema!]!
+  properties: [Property!]!
+  datasets: [Dataset!]!
+  dataset(id: Float!): Dataset!
+}
+
+type Mutation {
+  createEntity(data: CreateEntityDto!): Entity!
+  removeEntity(entityId: String!): Entity
+  createDataset(data: CreateDatasetDto!): Dataset!
+  removeDataset(datasetId: Int!): Dataset
+}
+
+input CreateEntityDto {
+  id: String
+  type: String
+  labels: JSONObject
+  descriptions: JSONObject
+  aliases: JSONObject
+  claims: JSONObject
+  sitelinks: JSONObject
+  genes: JSONObject
+  modified: DateTime
+}
+
+input CreateDatasetDto {
+  type: String!
+  title: String!
+  content: String!
+}
