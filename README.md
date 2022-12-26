@@ -45,6 +45,14 @@ docker run --name neo4j -p7474:7474 -p7687:7687 -d  --env NEO4J_AUTH=neo4j/test 
 
 schema 本体模型
 
+概念表
+
+属性表
+
+
+导出到知识图谱
+编辑
+
 1 schema概念表查看、搜索功能，导出节点功能
 2 schema概念表知识图谱可视化展示
 3 schema属性表查看、搜索功能，导出节点功能
@@ -57,8 +65,6 @@ schema 本体模型
 wikidata 知识库数据
 
 graph 可视化展示
-
-
 
 参考连接
 
