@@ -23,24 +23,23 @@ def add_Relation(tx, source, relation, target):
 
 
 def output_Data(tx):
-    query = ("MATCH p = (m)-[r]->(n) RETURN p LIMIT 100")
+    query = ("MATCH p = (m)-[r:产国]->(n) RETURN p")
     with open("apps/graph/src/assets/dataset.json", "w", encoding='utf-8') as outfile:
         dataset = {}
         dataset["nodes"] = []
         dataset["edges"] = []
         dataset["clusters"] = []
         dataset["tags"] = [
-            {"key": "Chart type", "image": "charttype.svg"},
-            {"key": "Company", "image": "company.svg"},
-            {"key": "Concept", "image": "concept.svg"},
-            {"key": "Field", "image": "field.svg"},
-            {"key": "List", "image": "list.svg"},
-            {"key": "Method", "image": "method.svg"},
-            {"key": "Organization", "image": "organization.svg"},
-            {"key": "Person", "image": "person.svg"},
-            {"key": "Technology", "image": "technology.svg"},
-            {"key": "Tool", "image": "tool.svg"},
-            {"key": "unknown", "image": "unknown.svg"}
+            {"key": "导弹武器", "image": "charttype.svg"},
+            {"key": "火炮", "image": "company.svg"},
+            {"key": "枪械与单兵", "image": "concept.svg"},
+            {"key": "飞行器", "image": "field.svg"},
+            {"key": "太空装备", "image": "list.svg"},
+            {"key": "爆炸物", "image": "method.svg"},
+            {"key": "坦克装甲车辆", "image": "organization.svg"},
+            {"key": "舰船舰艇", "image": "person.svg"},
+            {"key": "国家", "image": "technology.svg"},
+            {"key": "研发单位", "image": "tool.svg"},
         ]
         for record in tx.run(query):
             if record.data()['p'][0] not in dataset["nodes"]:
@@ -56,11 +55,11 @@ def output_Data(tx):
             labels.add(node["cluster"])
             node["x"] = random.uniform(0, 1)
             node["y"] = random.uniform(0, 1)
-            node["score"] = random.uniform(0, 1)
-            # if node['type'] == '国家':
-            #     node["score"] = random.uniform(0, 1)
-            # else:
-            #     node["score"] = random.uniform(0, 0.01)
+            # node["score"] = random.uniform(0, 1)
+            if node['tag'] == '国家':
+                node["score"] = random.uniform(0, 1)
+            else:
+                node["score"] = random.uniform(0, 0.0001)
         for label in labels:
             def r(): return random.randint(0, 255)
             dataset["clusters"].append(
@@ -86,7 +85,7 @@ def clusters_node(tx):
 
 
 with driver.session(database="neo4j") as session:
-    # with open('tools\data\military.json', 'r', encoding='utf-8') as f:
+    # with open('tools/data/military.json', 'r', encoding='utf-8') as f:
     #     for line in f:
     #         value = json.loads(line)
     #         print(value)
@@ -94,7 +93,7 @@ with driver.session(database="neo4j") as session:
     #             "key": value['_id']['$oid'],
     #             'cluster': value['类型'],
     #             "label": value['名称'],
-    #             "tag": "Tool",
+    #             "tag": value['大类'],
     #         }
 
     #         if '产国' in value.keys():
@@ -102,10 +101,8 @@ with driver.session(database="neo4j") as session:
     #                 "key": value['产国'],
     #                 'cluster': '国家',
     #                 "label": value['产国'],
-    #                 "tag": "Tool",
+    #                 "tag": "国家",
     #             }
-    #             print(source)
-    #             print(target)
     #             session.execute_write(add_Relation, source, '产国', target)
 
     #         if '研发单位' in value.keys():
@@ -113,18 +110,11 @@ with driver.session(database="neo4j") as session:
     #                 "key": value['研发单位'],
     #                 'cluster': '研发单位',
     #                 "label": value['研发单位'],
-    #                 "tag": "Tool",
+    #                 "tag": "研发单位",
     #             }
-    #             print(source)
-    #             print(target)
     #             session.execute_write(add_Relation, source, '研发单位',  target)
 
     session.execute_read(output_Data)
-    # session.execute_read(clusters_node)
 
-    # session.execute_write(add_friend, node, friend1)
-    # session.execute_write(add_friend, node, friend2)
-    # session.execute_write(add_friend, node, friend3)
-    # session.execute_read(print_friends, node)
 
 driver.close()

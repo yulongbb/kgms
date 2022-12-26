@@ -24,7 +24,7 @@ const GraphDataController: FC<any> = ({ dataset, filters, children }) => {
         image: `assets/images/${tags[node.tag].image}`,
       }),
     );
-    dataset.edges.forEach(([source, target]:any) => graph.addEdge(source, target, { size: 1 }));
+    dataset.edges.forEach(([source, target]:any) => graph.addEdge(source, target, { size: 1}));
 
     // Use degrees as node sizes:
     const scores = graph.nodes().map((node:any) => graph.getNodeAttribute(node, "score"));
