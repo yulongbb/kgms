@@ -79,3 +79,31 @@ npm install -D @nrwl/nest
 npx nx serve api
 
 
+
+
+pip3 install rdflib -i https://pypi.tuna.tsinghua.edu.cn/simple
+
+
+
+pip3 install Flask -i https://pypi.tuna.tsinghua.edu.cn/simple
+
+
+
+
+pip3 install pandas -i https://pypi.tuna.tsinghua.edu.cn/simple
+
+
+
+
+
+ flask --app hello run
+
+
+
+ dataset 存储csv数据
+
+ python 将csv转换成ttl文件
+
+ ttl文件解析成入库
+
+

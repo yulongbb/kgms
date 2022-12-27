@@ -1,0 +1,11 @@
+@prefix ns1: <http://xmlns.com/foaf/0.1/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<Jake> ns1:age 42 .
+
+<Jenny> ns1:age 12 .
+
+<Jill> ns1:age 28 .
+
+<John> ns1:age 32 .
+
