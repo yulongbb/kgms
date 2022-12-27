@@ -48,6 +48,14 @@ dataset 数据集（CSV）
 
 schema 本体模型
 
+概念表
+
+属性表
+
+
+导出到知识图谱
+编辑
+
 1 schema概念表查看、搜索功能，导出节点功能
 2 schema概念表知识图谱可视化展示
 3 schema属性表查看、搜索功能，导出节点功能
@@ -71,5 +79,48 @@ entity 实体
 npm install -D @nrwl/nest
 
 npx nx serve api
+
+
+
+
+pip3 install rdflib -i https://pypi.tuna.tsinghua.edu.cn/simple
+
+
+
+pip3 install Flask -i https://pypi.tuna.tsinghua.edu.cn/simple
+
+
+
+
+pip3 install pandas -i https://pypi.tuna.tsinghua.edu.cn/simple
+
+
+pip3 install Django -i https://pypi.tuna.tsinghua.edu.cn/simple
+
+
+
+
+ flask --app hello run
+
+
+
+ dataset 存储csv数据
+
+ python 将csv转换成ttl文件
+
+ ttl文件解析成入库
+
+ django-admin startproject kgms
+
+ python manage.py startapp dataset
+
+
+ python manage.py migrate
+
+
+ python manage.py createsuperuser
+
+python manage.py runserver
+
 
 
