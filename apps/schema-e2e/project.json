@@ -1,19 +1,19 @@
 {
-  "name": "wikidata-e2e",
+  "name": "schema-e2e",
   "$schema": "../../node_modules/nx/schemas/project-schema.json",
-  "sourceRoot": "apps/wikidata-e2e/src",
+  "sourceRoot": "apps/schema-e2e/src",
   "projectType": "application",
   "targets": {
     "e2e": {
       "executor": "@nrwl/cypress:cypress",
       "options": {
-        "cypressConfig": "apps/wikidata-e2e/cypress.config.ts",
-        "devServerTarget": "wikidata:serve:development",
+        "cypressConfig": "apps/schema-e2e/cypress.config.ts",
+        "devServerTarget": "schema:serve:development",
         "testingType": "e2e"
       },
       "configurations": {
         "production": {
-          "devServerTarget": "wikidata:serve:production"
+          "devServerTarget": "schema:serve:production"
         }
       }
     },
@@ -24,13 +24,13 @@
       ],
       "options": {
         "lintFilePatterns": [
-          "apps/wikidata-e2e/**/*.{js,ts}"
+          "apps/schema-e2e/**/*.{js,ts}"
         ]
       }
     }
   },
   "tags": [],
   "implicitDependencies": [
-    "wikidata"
+    "schema"
   ]
 }

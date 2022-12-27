@@ -1,4 +1,4 @@
-import { Body, Controller, Get, Post } from '@nestjs/common';
+import { Body, Controller, Delete, Get, Param, Post } from '@nestjs/common';
 import { Schema } from './schema.entity';
 import { SchemaService } from './schema.service';
 
@@ -11,8 +11,8 @@ export class SchemaController {
    * @param createSchemaDto 
    */
   @Post()
-  async create(@Body() createSchemaDto: any) {
-    await this.schemaService.create(createSchemaDto);
+  async create(@Body() createSchemaDto: any): Promise<Schema>  {
+   return await this.schemaService.create(createSchemaDto);
   }
 
 
@@ -24,6 +24,24 @@ export class SchemaController {
   async schemas(): Promise<Schema[]> {
     const schemas = await this.schemaService.findAll();
     return schemas;
+  }
+
+
+  /**
+   * 查询单个图谱信息
+   * @param id 
+   * @returns 
+   */
+  @Get(':id')
+  async findOne(@Param('id') id: number): Promise<Schema> {
+    return this.schemaService.findTree(id);
+  }
+
+
+
+  @Delete(':id')
+  async delete(@Param('id') id: number): Promise<Schema> {
+    return this.schemaService.delete(id);
   }
 
 

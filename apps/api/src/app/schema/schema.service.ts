@@ -26,7 +26,7 @@ export class SchemaService {
   ) { }
 
 
-  create(createSchemaDto: any): Promise<any> {
+  create(createSchemaDto: any): Promise<Schema> {
     if (createSchemaDto.parent) {
       return this.schemasRepository.findOneBy({ id: createSchemaDto.parent }).then((schema) => {
         createSchemaDto.parent = schema;
@@ -77,7 +77,7 @@ export class SchemaService {
     });
   }
 
-  deleteOne(id: number): Promise<any> {
+  delete(id: number): Promise<any> {
     return this.schemasRepository.delete(id);
   }
 

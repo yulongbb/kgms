@@ -10,6 +10,8 @@ npx nx add @nrwl/react
 
 npx nx g @nrwl/react:app graph
 
+npx nx serve schema --port=4200
+
 npx nx serve wikidata --port=4201
 
 npx nx serve graph --port=4202

@@ -1,0 +1,49 @@
+<mat-drawer-container class="example-container">
+  <mat-drawer mode="side" opened>
+    <mat-toolbar>
+      <a [routerLink]="['/']">知识图谱Schema编辑工具</a>
+    </mat-toolbar>
+    <mat-selection-list #shoes [multiple]="false">
+      <mat-list-option
+        *ngFor="let shoe of schemas"
+        [value]="shoe"
+        [selected]="shoe.id === id"
+        [routerLink]="['schema']"
+        [queryParams]="{ id: shoe.id }"
+      >
+        {{ shoe.name }}
+      </mat-list-option>
+    </mat-selection-list>
+  </mat-drawer>
+  <mat-drawer-content>
+    <mat-toolbar class="d-flex justify-content-between">
+      <div>
+        <button
+          *ngIf="id"
+          mat-button
+          [routerLink]="['/schema']"
+          [queryParams]="{ id: id }"
+        >
+          概念表
+        </button>
+        <button
+          *ngIf="id"
+          mat-button
+          [routerLink]="['/property']"
+          [queryParams]="{ id: id }"
+        >
+          属性表
+        </button>
+      </div>
+      <div>
+        <button mat-button color="primary" (click)="openDialog()">
+          创建图谱
+        </button>
+        <button mat-button color="warn" (click)="deleteSchema(id)">
+          删除图谱
+        </button>
+      </div>
+    </mat-toolbar>
+    <router-outlet></router-outlet>
+  </mat-drawer-content>
+</mat-drawer-container>
