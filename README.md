@@ -93,6 +93,8 @@ pip3 install Flask -i https://pypi.tuna.tsinghua.edu.cn/simple
 pip3 install pandas -i https://pypi.tuna.tsinghua.edu.cn/simple
 
 
+pip3 install Django -i https://pypi.tuna.tsinghua.edu.cn/simple
+
 
 
 
@@ -105,5 +107,18 @@ pip3 install pandas -i https://pypi.tuna.tsinghua.edu.cn/simple
  python 将csv转换成ttl文件
 
  ttl文件解析成入库
+
+ django-admin startproject kgms
+
+ python manage.py startapp dataset
+
+
+ python manage.py migrate
+
+
+ python manage.py createsuperuser
+
+python manage.py runserver
+
 
 
