@@ -16,6 +16,9 @@ npx nx serve wikidata --port=4201
 
 npx nx serve graph --port=4202
 
+npx nx serve builder --port=4203
+
+
 ## 创建libraries
 
 ### 纯依赖
