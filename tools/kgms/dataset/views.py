@@ -50,7 +50,7 @@ def datasets(request):
             df = pd.read_csv(io.StringIO(s.decode('gbk')))
             g = Graph()
             for row in df.values:
-                g.add((Literal(row[1]), Literal(row[2]), Literal(row[1])))
+                g.add((Literal(row[0]), Literal(row[2]), Literal(row[1])))
 
             print(g.serialize(format='turtle'))
             g.serialize(str(newdoc.docfile).split(
