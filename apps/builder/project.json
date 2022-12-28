@@ -1,78 +1,71 @@
 {
   "name": "builder",
   "$schema": "../../node_modules/nx/schemas/project-schema.json",
-  "projectType": "application",
   "sourceRoot": "apps/builder/src",
-  "prefix": "monorepo",
+  "projectType": "application",
   "targets": {
     "build": {
-      "executor": "@angular-devkit/build-angular:browser",
+      "executor": "@nrwl/webpack:webpack",
       "outputs": ["{options.outputPath}"],
+      "defaultConfiguration": "production",
       "options": {
+        "compiler": "babel",
         "outputPath": "dist/apps/builder",
         "index": "apps/builder/src/index.html",
-        "main": "apps/builder/src/main.ts",
-        "polyfills": ["zone.js"],
+        "baseHref": "/",
+        "main": "apps/builder/src/main.tsx",
+        "polyfills": "apps/builder/src/polyfills.ts",
         "tsConfig": "apps/builder/tsconfig.app.json",
         "assets": ["apps/builder/src/favicon.ico", "apps/builder/src/assets"],
-        "styles": [
-          "node_modules/drawflow/dist/drawflow.min.css",
-          "apps/builder/src/styles.css"
-        ],
-        "scripts": [
-          "node_modules/drawflow/dist/drawflow.min.js"
-        ]
+        "styles": ["apps/builder/src/styles.css"],
+        "scripts": [],
+        "webpackConfig": "@nrwl/react/plugins/webpack"
       },
       "configurations": {
+        "development": {
+          "extractLicenses": false,
+          "optimization": false,
+          "sourceMap": true,
+          "vendorChunk": true
+        },
         "production": {
-          "budgets": [
+          "fileReplacements": [
             {
-              "type": "initial",
-              "maximumWarning": "500kb",
-              "maximumError": "1mb"
-            },
-            {
-              "type": "anyComponentStyle",
-              "maximumWarning": "2kb",
-              "maximumError": "4kb"
+              "replace": "apps/builder/src/environments/environment.ts",
+              "with": "apps/builder/src/environments/environment.prod.ts"
             }
           ],
-          "outputHashing": "all"
-        },
-        "development": {
-          "buildOptimizer": false,
-          "optimization": false,
-          "vendorChunk": true,
-          "extractLicenses": false,
-          "sourceMap": true,
-          "namedChunks": true
+          "optimization": true,
+          "outputHashing": "all",
+          "sourceMap": false,
+          "namedChunks": false,
+          "extractLicenses": true,
+          "vendorChunk": false
         }
-      },
-      "defaultConfiguration": "production"
+      }
     },
     "serve": {
-      "executor": "@angular-devkit/build-angular:dev-server",
-      "configurations": {
-        "production": {
-          "browserTarget": "builder:build:production"
-        },
-        "development": {
-          "browserTarget": "builder:build:development"
-        }
-      },
-      "defaultConfiguration": "development"
-    },
-    "extract-i18n": {
-      "executor": "@angular-devkit/build-angular:extract-i18n",
+      "executor": "@nrwl/webpack:dev-server",
+      "defaultConfiguration": "development",
       "options": {
-        "browserTarget": "builder:build"
+        "buildTarget": "builder:build",
+        "hmr": true
+      },
+      "configurations": {
+        "development": {
+          "buildTarget": "builder:build:development"
+        },
+        "production": {
+          "buildTarget": "builder:build:production",
+          "hmr": false
+        }
       }
     },
     "lint": {
       "executor": "@nrwl/linter:eslint",
       "outputs": ["{options.outputFile}"],
       "options": {
-        "lintFilePatterns": ["apps/builder/**/*.ts", "apps/builder/**/*.html"]
+        "lintFilePatterns": ["apps/builder/**/*.{ts,tsx,js,jsx}"]
       }
     },
     "test": {
