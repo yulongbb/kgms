@@ -40,7 +40,7 @@ import { FileModule } from './file/file.module';
       port: 3306,
       username: 'root',
       password: 'root',
-      database: 'monorepo',
+      database: 'kgms',
       synchronize: true,
       autoLoadEntities: true,
     }),

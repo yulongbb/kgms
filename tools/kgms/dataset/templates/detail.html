@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>详情页</title>
+  </head>
+
+  <body>
+    {% if dataset %}
+    <p>{{ dataset.name }}</p>
+    <table>
+      <tr>
+        <th>subject</th>
+        <th>predicate</th>
+        <th>object</th>
+      </tr>
+      {% for triple in triples %}
+      <tr>
+        <td>{{ triple.subject }}</td>
+        <td>{{ triple.predicate }}</td>
+        <td>{{ triple.object }}</td>
+      </tr>
+      {% endfor %}     
+    </table>
+    {% else %}
+    <p>No dataset.</p>
+    {% endif %}
+  </body>
+</html>

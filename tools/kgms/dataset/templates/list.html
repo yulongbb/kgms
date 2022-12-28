@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Minimal Django File Upload Example</title>
+    </head>
+
+    <body>
+         <!-- Upload form. Note enctype attribute! -->
+         <form action="{% url "datasets" %}" method="post" enctype="multipart/form-data">
+            {% csrf_token %}
+            
+            {{ message }}
+
+            <p>{{ form.non_field_errors }}</p>
+
+            <p>{{ form.docfile.label_tag }} {{ form.docfile.help_text }}</p>
+
+            <p>
+                {{ form.name }}
+            </p>
+
+            <p>
+                {{ form.content }}
+            </p>
+
+            <p>
+                {{ form.docfile.errors }}
+                {{ form.docfile }}
+            </p>
+
+            <p><input type="submit" value="Upload"/></p>
+        </form>
+        <!-- List of uploaded datasets -->
+        {% if datasets %}
+            All datasets in the database:
+            <ul>
+                {% for dataset in datasets %}
+                    <li><a href="/datasets/{{dataset.id}}">{{ dataset.name }}</a></li>
+                {% endfor %}
+            </ul>
+        {% else %}
+            <p>No datasets.</p>
+        {% endif %}
+    </body>
+</html>
