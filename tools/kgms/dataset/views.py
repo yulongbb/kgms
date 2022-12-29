@@ -18,10 +18,9 @@ def dataset(request, dataset_id):
     # Create a Graph
     g = Graph()
     s = requests.get(url).content
-    g.parse(io.StringIO(s.decode('gbk')), format="turtle")
+    g.parse(io.StringIO(s.decode('utf-8')), format="turtle")
     triples = []
     for s, p, o in g:
-        print(s, p, o)
         triples.append({'subject': s, 'predicate': p, 'object': o})
     context = {'dataset': dataset, 'triples': triples}
 

@@ -90,6 +90,7 @@ pip3 install pandas -i https://pypi.tuna.tsinghua.edu.cn/simple
 pip3 install Django -i https://pypi.tuna.tsinghua.edu.cn/simple
 
 pip3 install mysqlclient -i https://pypi.tuna.tsinghua.edu.cn/simple
+
 pip3 install Pillow -i https://pypi.tuna.tsinghua.edu.cn/simple
 
 flask --app hello run
