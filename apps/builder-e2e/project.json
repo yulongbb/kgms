@@ -21,7 +21,7 @@
       "executor": "@nrwl/linter:eslint",
       "outputs": ["{options.outputFile}"],
       "options": {
-        "lintFilePatterns": ["apps/builder-e2e/**/*.{js,ts}"]
+        "lintFilePatterns": ["apps/builder-e2e/**/*.js"]
       }
     }
   },

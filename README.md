@@ -16,6 +16,8 @@ npx nx serve wikidata --port=4201
 
 npx nx serve graph --port=4202
 
+npx nx g @nrwl/react:app builder --js
+
 npx nx serve builder --port=4203
 
 ## 创建 libraries
@@ -93,6 +95,9 @@ pip3 install mysqlclient -i https://pypi.tuna.tsinghua.edu.cn/simple
 
 pip3 install Pillow -i https://pypi.tuna.tsinghua.edu.cn/simple
 
+
+
+
 flask --app hello run
 
 dataset 存储 csv 数据
@@ -108,7 +113,6 @@ python manage.py startapp dataset
 python manage.py makemigrations
 
 python manage.py migrate
-
 
 python manage.py sqlmigrate dataset 0001
 

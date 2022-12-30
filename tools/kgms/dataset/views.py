@@ -10,6 +10,7 @@ import requests
 from django.core.files.base import ContentFile, File
 from django.shortcuts import get_object_or_404, render
 
+from django.http import JsonResponse
 
 def dataset(request, dataset_id):
     dataset = get_object_or_404(Dataset, pk=dataset_id)
@@ -18,7 +19,7 @@ def dataset(request, dataset_id):
     # Create a Graph
     g = Graph()
     s = requests.get(url).content
-    g.parse(io.StringIO(s.decode('utf-8')), format="turtle")
+    g.parse(io.StringIO(s.decode('gbk')), format="turtle")
     triples = []
     for s, p, o in g:
         triples.append({'subject': s, 'predicate': p, 'object': o})

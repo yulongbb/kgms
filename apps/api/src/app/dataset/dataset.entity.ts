@@ -2,7 +2,7 @@ import { Field, ID, InputType, ObjectType } from '@nestjs/graphql';
 import { Column, CreateDateColumn, Entity, PrimaryGeneratedColumn, UpdateDateColumn } from 'typeorm';
 
 @ObjectType()
-@Entity()
+@Entity({ name: 'dataset_dataset' })
 export class Dataset {
 
   @Field(type => ID)
@@ -11,11 +11,7 @@ export class Dataset {
 
   @Field()
   @Column()
-  type: string;
-
-  @Field()
-  @Column()
-  title: string;
+  name: string;
 
   @Field()
   @Column({
@@ -25,46 +21,14 @@ export class Dataset {
 
   @Field()
   @Column({
-    type: "longblob",
     nullable: true,
   })
-  data: string
+  docfile: string
 
   @Field()
   @Column({
     nullable: true,
   })
-  mimeType: string
-
-  @Field()
-  @Column({
-    nullable: true,
-  })
-  size: string;
-
-  @CreateDateColumn({
-    nullable: true,
-  })
-  dateCreated: Date;
-
-  @UpdateDateColumn({
-    nullable: true,
-  })
-  dateUpdated: Date;
-}
-
-
-
-@InputType()
-export class CreateDatasetDto {
-
-  @Field({ nullable: false })
-  type: string;
-
-  @Field({ nullable: false })
-  title: string;
-
-  @Field()
-  content: string;
+  turtle: string
 }
 

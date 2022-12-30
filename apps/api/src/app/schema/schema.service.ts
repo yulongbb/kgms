@@ -11,7 +11,7 @@ const options: DataSourceOptions = {
   port: 3306,
   username: "root",
   password: "root",
-  database: "monorepo",
+  database: "kgms",
   logging: ["query", "error"],
   synchronize: true,
   entities: [Schema, Property],
