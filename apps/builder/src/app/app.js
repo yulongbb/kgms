@@ -12,13 +12,17 @@ import {
   nodes as initialNodes,
   edges as initialEdges,
 } from './initial-elements';
-import CustomNode from './CustomNode';
+import SourceNode from './SourceNode';
+import TransformNode from './TransformNode';
+import TargetNode from './TargetNode';
 
 import 'reactflow/dist/style.css';
 import './overview.css';
 
 const nodeTypes = {
-  custom: CustomNode,
+  source: SourceNode,
+  transform: TransformNode,
+  target: TargetNode,
 };
 
 const minimapStyle = {
@@ -40,7 +44,7 @@ export function App() {
   // this could also be done with a custom edge for example
   const edgesWithUpdatedTypes = edges.map((edge) => {
     if (edge.sourceHandle) {
-      const edgeType = nodes.find((node) => node.type === 'custom').data
+      const edgeType = nodes.find((node) => node.type === 'source').data
         .selects[edge.sourceHandle];
       edge.type = edgeType;
     }

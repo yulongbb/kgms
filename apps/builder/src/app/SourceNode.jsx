@@ -2,7 +2,8 @@ import React, { memo, useCallback, useState, useEffect } from 'react';
 
 import { Handle, useReactFlow, useStoreApi } from 'reactflow';
 
-function Select(handleId) {
+function Select({ value }) {
+  const [v, setV] = useState(value);
   const [datasets, setDatasets] = useState([]);
   const [isLoading, setIsLoading] = useState(false);
 
@@ -22,32 +23,38 @@ function Select(handleId) {
     fetchData();
   }, []);
 
+  const handleChange = (e) => {
+    setV(e.target.value);
+  };
+
   return (
-    <div className="custom-node__select">
-      <div>选择数据源</div>
-      <select className="nodrag">
+    <div className="source-node__select">
+      <div>选择数据源{value}</div>
+      <select className="nodrag" value={v} onChange={handleChange}>
         {datasets.map((option) => (
           <option key={option.name} value={option.name}>
             {option.name}
           </option>
         ))}
       </select>
-      <Handle type="source" position="right" id={handleId} />
+      <Handle type="source" position="right" />
     </div>
   );
 }
 
-function CustomNode({ id, data }) {
+function SourceNode({ id, data }) {
+  const [value, setValue] = useState('孙玉龙');
+
   return (
     <>
-      <div className="custom-node__header">
-        <strong>数据源</strong>
+      <div className="source-node__header">
+        <strong>{value}</strong>
       </div>
-      <div className="custom-node__body">
-        <Select handleId='smoothstep'/>
+      <div className="source-node__body">
+        <Select value={value} />
       </div>
     </>
   );
 }
 
-export default memo(CustomNode);
+export default memo(SourceNode);
