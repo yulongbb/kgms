@@ -2,8 +2,9 @@ import React, { memo, useCallback, useState, useEffect } from 'react';
 
 import { Handle, useReactFlow, useStoreApi } from 'reactflow';
 
-function Select({ value }) {
-  const [v, setV] = useState(value);
+function SourceNode({ id, data }) {
+  const [value, setValue] = useState('孙玉龙');
+
   const [datasets, setDatasets] = useState([]);
   const [isLoading, setIsLoading] = useState(false);
 
@@ -24,26 +25,8 @@ function Select({ value }) {
   }, []);
 
   const handleChange = (e) => {
-    setV(e.target.value);
+    setValue(e.target.value);
   };
-
-  return (
-    <div className="source-node__select">
-      <div>选择数据源{value}</div>
-      <select className="nodrag" value={v} onChange={handleChange}>
-        {datasets.map((option) => (
-          <option key={option.name} value={option.name}>
-            {option.name}
-          </option>
-        ))}
-      </select>
-      <Handle type="source" position="right" />
-    </div>
-  );
-}
-
-function SourceNode({ id, data }) {
-  const [value, setValue] = useState('孙玉龙');
 
   return (
     <>
@@ -51,7 +34,17 @@ function SourceNode({ id, data }) {
         <strong>{value}</strong>
       </div>
       <div className="source-node__body">
-        <Select value={value} />
+        <div className="source-node__select">
+          <div>选择数据源</div>
+          <select className="nodrag" value={value} onChange={handleChange}>
+            {datasets.map((option) => (
+              <option key={option.name} value={option.name}>
+                {option.name}
+              </option>
+            ))}
+          </select>
+          <Handle type="source" position="right" />
+        </div>
       </div>
     </>
   );
