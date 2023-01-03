@@ -15,19 +15,18 @@ export class PropertyService {
 
   ) { }
 
-  create(createPropertyDto: any): Promise<Property> {
-    if (createPropertyDto.subPropertyOf) {
-      return this.propertyRepository.findOneBy({ id: createPropertyDto.subPropertyOf }).then((property) => {
-        createPropertyDto.subPropertyOf = property;
-        return this.propertyRepository.save(createPropertyDto);
-      });
-    } else {
-      return this.propertyRepository.save(createPropertyDto);
+  async create(property: any): Promise<Property> {
+    const p = await this.propertyRepository.findOneBy({ 'name': property.name })
+    console.log(p)
+    if(p){
+      property.id = p.id;
     }
+    property.schemas = [{id:1}];
+    return this.propertyRepository.save(property)
   }
 
   findByName(name: any): Promise<Property> {
-    return this.propertyRepository.findOneBy({ 'nameZh': name });
+    return this.propertyRepository.findOneBy({ 'name': name });
   }
 
   findAll(): Promise<Property[]> {

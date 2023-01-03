@@ -27,15 +27,15 @@ export class EntityController {
    */
   @Get(':id')
   async findOne(@Param('id') id: number): Promise<any> {
-    let entity = {};
-    let data = await this.neo4jService.read(
-      `MATCH (subject:Item)-[predicate]-(object) WHERE ID(subject)=0 RETURN subject, predicate, object`
+    const entity = {};
+    const data = await this.neo4jService.read(
+      `MATCH (subject:Item)-[predicate]-(object) WHERE ID(subject)=317 RETURN subject, predicate, object`
     );
     entity['id'] = data['records'][0]['_fields'][0]['identity']['low'];
     entity['labels'] = {};
     entity['labels']['zh-cn'] = data['records'][0]['_fields'][0]['properties'];
 
-    let statements = {};
+    const statements = {};
     data['records'].forEach((record: any) => {
       if (!statements[record['_fields'][1]['type']]) {
         statements[record['_fields'][1]['type']] = [];

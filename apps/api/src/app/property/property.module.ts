@@ -1,5 +1,6 @@
 import { Module } from '@nestjs/common';
 import { TypeOrmModule } from '@nestjs/typeorm';
+import { PropertyController } from './property.controller';
 import { Property } from './property.entity';
 import { PropertyResolver } from './property.resolver';
 import { PropertyService } from './property.service';
@@ -17,6 +18,7 @@ import { PropertyService } from './property.service';
     synchronize: true,
     autoLoadEntities: true,
   }),],
+  controllers: [PropertyController],
   providers: [PropertyService, PropertyResolver],
 })
 export class PropertyModule { }
