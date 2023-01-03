@@ -19,11 +19,12 @@ def dataset(request, dataset_id):
     # Create a Graph
     g = Graph()
     s = requests.get(url).content
-    g.parse(io.StringIO(s.decode('gbk')), format="turtle")
+    g.parse(io.StringIO(s.decode('utf-8')), format="turtle")
     triples = []
+    print(len(g))
     for s, p, o in g:
         triples.append({'subject': s, 'predicate': p, 'object': o})
-    context = {'dataset': dataset, 'triples': triples}
+    context = {'dataset': dataset, 'triples': triples[0:100]}
 
     return render(request, 'detail.html', context)
 
@@ -47,7 +48,7 @@ def datasets(request):
             print(newdoc.docfile)
             url = "http://localhost:8000/"+str(newdoc.docfile)
             s = requests.get(url).content
-            df = pd.read_csv(io.StringIO(s.decode('gbk')))
+            df = pd.read_csv(io.StringIO(s.decode('utf-8')))
             g = Graph()
             for row in df.values:
                 g.add((Literal(row[0]), Literal(row[2]), Literal(row[1])))

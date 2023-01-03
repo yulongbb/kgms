@@ -1,7 +1,7 @@
 <mat-drawer-container class="example-container">
   <mat-drawer mode="side" opened>
     <mat-toolbar>
-      <a [routerLink]="['/']">知识图谱Schema编辑工具</a>
+      <a [routerLink]="['/']">知识图谱编辑工具</a>
     </mat-toolbar>
     <mat-selection-list #shoes [multiple]="false">
       <mat-list-option
@@ -33,6 +33,14 @@
           [queryParams]="{ id: id }"
         >
           属性表
+        </button>
+        <button
+          *ngIf="id"
+          mat-button
+          [routerLink]="['/instance']"
+          [queryParams]="{ id: id }"
+        >
+          实例
         </button>
       </div>
       <div>

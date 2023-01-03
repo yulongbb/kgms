@@ -23,7 +23,7 @@ def add_Relation(tx, source, relation, target):
 
 
 def output_Data(tx):
-    query = ("MATCH p = (m)-[r:产国]->(n) RETURN p")
+    query = ("MATCH p = (m)-[r]->(n) RETURN p LIMIT 100")
     with open("apps/graph/src/assets/dataset.json", "w", encoding='utf-8') as outfile:
         dataset = {}
         dataset["nodes"] = []
@@ -55,11 +55,11 @@ def output_Data(tx):
             labels.add(node["cluster"])
             node["x"] = random.uniform(0, 1)
             node["y"] = random.uniform(0, 1)
-            # node["score"] = random.uniform(0, 1)
-            if node['tag'] == '国家':
-                node["score"] = random.uniform(0, 1)
-            else:
-                node["score"] = random.uniform(0, 0.0001)
+            node["score"] = random.uniform(0, 1)
+            # if node['tag'] == '国家':
+            #     node["score"] = random.uniform(0, 1)
+            # else:
+            #     node["score"] = random.uniform(0, 0.0001)
         for label in labels:
             def r(): return random.randint(0, 255)
             dataset["clusters"].append(

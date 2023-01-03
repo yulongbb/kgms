@@ -3,7 +3,7 @@ import React, { memo, useCallback, useState, useEffect } from 'react';
 import { Handle, useReactFlow, useStoreApi } from 'reactflow';
 
 function SourceNode({ id, data }) {
-  const [value, setValue] = useState('孙玉龙');
+  const [value, setValue] = useState('');
 
   const [datasets, setDatasets] = useState([]);
   const [isLoading, setIsLoading] = useState(false);
@@ -17,6 +17,7 @@ function SourceNode({ id, data }) {
       .then((data) => {
         setIsLoading(false);
         setDatasets(data);
+        setValue(data[0].name);
       });
   };
 

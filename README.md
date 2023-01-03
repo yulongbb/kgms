@@ -6,6 +6,10 @@ npx create-nx-workspace monorepo --preset=angular
 
 npx nx list
 
+npm install -D @nrwl/nest
+
+npx nx serve api
+
 npx nx add @nrwl/react
 
 npx nx g @nrwl/react:app graph
@@ -79,9 +83,7 @@ entity 实体
 
 参考连接
 
-npm install -D @nrwl/nest
 
-npx nx serve api
 
 pip3 install rdflib -i https://pypi.tuna.tsinghua.edu.cn/simple
 
@@ -110,15 +112,15 @@ django-admin startproject kgms
 
 python manage.py startapp dataset
 
-python manage.py makemigrations
+/usr/bin/python3  manage.py makemigrations
 
-python manage.py migrate
+/usr/bin/python3 manage.py migrate
 
 python manage.py sqlmigrate dataset 0001
 
-python manage.py migrate --fake dataset zero
+/usr/bin/python3 manage.py migrate --fake dataset zero
 
-python manage.py migrate dataset
+/usr/bin/python3 manage.py migrate dataset
 
 python manage.py createsuperuser
 

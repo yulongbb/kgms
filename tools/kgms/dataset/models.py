@@ -6,3 +6,4 @@ class Dataset(models.Model):
     content = models.CharField(max_length=500)
     docfile = models.FileField(upload_to='docfiles/%Y/%m/%d')
     turtle = models.FileField() 
+    size = models.IntegerField()
