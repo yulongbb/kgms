@@ -6,8 +6,21 @@ import { SchemaResolver } from './schema.resolver';
 import { SchemaController } from './schema.controller';
 
 @Module({
-  imports: [TypeOrmModule.forFeature([Schema]),],
+  imports: [
+    TypeOrmModule.forRoot({
+      type: 'mysql',
+      host: 'localhost',
+      port: 3306,
+      username: 'root',
+      password: 'root',
+      database: 'kgms',
+      entities: [Schema],
+      synchronize: true,
+      autoLoadEntities: true,
+    }),
+    TypeOrmModule.forFeature([Schema]),
+  ],
   controllers: [SchemaController],
-  providers: [SchemaService,SchemaResolver],
+  providers: [SchemaService, SchemaResolver],
 })
-export class SchemaModule { }
+export class SchemaModule {}

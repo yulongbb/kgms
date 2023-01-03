@@ -5,7 +5,18 @@ import { PropertyResolver } from './property.resolver';
 import { PropertyService } from './property.service';
 
 @Module({
-  imports: [TypeOrmModule.forFeature([Property]),],
+  imports: [TypeOrmModule.forFeature([Property]),
+  TypeOrmModule.forRoot({
+    type: 'mysql',
+    host: 'localhost',
+    port: 3306,
+    username: 'root',
+    password: 'root',
+    database: 'kgms',
+    entities: [],
+    synchronize: true,
+    autoLoadEntities: true,
+  }),],
   providers: [PropertyService, PropertyResolver],
 })
 export class PropertyModule { }

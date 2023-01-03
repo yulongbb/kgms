@@ -12,9 +12,28 @@ from django.shortcuts import get_object_or_404, render
 
 from django.http import JsonResponse
 
+
+def turtles(request, dataset_id):
+    dataset = get_object_or_404(Dataset, pk=dataset_id)
+    url = "http://localhost:8000/"+str(str(dataset.docfile).split(
+        '.')[0]+'.ttl')
+
+    # Create a Graph
+    g = Graph()
+    s = requests.get(url).content
+    g.parse(io.StringIO(s.decode('utf-8')), format="turtle")
+    triples = []
+    print(len(g))
+    for s, p, o in g:
+        triples.append({'subject': s, 'predicate': p, 'object': o})
+
+    return JsonResponse(triples, safe=False, status=201)
+
+
 def dataset(request, dataset_id):
     dataset = get_object_or_404(Dataset, pk=dataset_id)
-    url = "http://localhost:8000/"+str(dataset.turtle)
+    url = "http://localhost:8000/"+str(str(dataset.docfile).split(
+        '.')[0]+'.ttl')
 
     # Create a Graph
     g = Graph()
@@ -36,38 +55,33 @@ def datasets(request):
     if request.method == 'POST':
         form = DatasetForm(request.POST, request.FILES)
         if form.is_valid():
-            print(form.cleaned_data['name'])
-            print(form.cleaned_data['content'])
             newdoc = Dataset(
                 name=form.cleaned_data['name'],
                 content=form.cleaned_data['content'],
                 docfile=request.FILES['docfile']
             )
             newdoc.save()
-            print(newdoc.id)
-            print(newdoc.docfile)
             url = "http://localhost:8000/"+str(newdoc.docfile)
             s = requests.get(url).content
             df = pd.read_csv(io.StringIO(s.decode('utf-8')))
             g = Graph()
+            print(len(df.values))
             for row in df.values:
                 g.add((Literal(row[0]), Literal(row[2]), Literal(row[1])))
 
-            print(g.serialize(format='turtle'))
+            # print(g.serialize(format='turtle'))
             g.serialize(str(newdoc.docfile).split(
                 '.')[0]+'.ttl', format='turtle')
-            with open(str(newdoc.docfile).split('.')[0]+'.ttl', 'r', encoding='utf-8') as f:
-                newdoc.turtle = File(f)
-                newdoc.save()
-                f.close()
+            newdoc.size = len(df.values)
+            newdoc.save()
 
             # # Create a Graph
             # g2 = Graph()
 
             # g2.parse("tools/data/turtle.ttl", format="turtle")
 
-            for s, p, o in g:
-                print(s, p, o)
+            # for s, p, o in g:
+            #     print(s, p, o)
 
             # Redirect to the dataset list after POST
             return redirect('datasets')

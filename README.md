@@ -48,7 +48,7 @@ npx nx affected:build
 
 gem install wikidata
 
-docker run --name neo4j -p7474:7474 -p7687:7687 -d --env NEO4J_AUTH=neo4j/test neo4j:latest
+docker run --name neo4j -p7474:7474 -p7687:7687 -d --env NEO4J_AUTH=neo4j/eszrdxtfc neo4j:latest
 
 docker run -di --name mysql -p 3306:3306 -e MYSQL_ROOT_PASSWORD=root mysql:8.0.21
 

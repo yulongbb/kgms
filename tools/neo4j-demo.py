@@ -84,7 +84,7 @@ def clusters_node(tx):
     return clusters
 
 
-with driver.session(database="neo4j") as session:
+# with driver.session(database="neo4j") as session:
     # with open('tools/data/military.json', 'r', encoding='utf-8') as f:
     #     for line in f:
     #         value = json.loads(line)
@@ -114,7 +114,7 @@ with driver.session(database="neo4j") as session:
     #             }
     #             session.execute_write(add_Relation, source, '研发单位',  target)
 
-    session.execute_read(output_Data)
+    # session.execute_rea'd(output_Data)
 
 
-driver.close()
+# driver.close()

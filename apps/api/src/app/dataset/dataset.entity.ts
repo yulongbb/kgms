@@ -15,7 +15,7 @@ export class Dataset {
 
   @Field()
   @Column({
-    nullable: true,
+    nullable: false,
   })
   content: string;
 
@@ -27,8 +27,8 @@ export class Dataset {
 
   @Field()
   @Column({
-    nullable: true,
+    nullable: false,
   })
-  turtle: string
+  size: number
 }
 
