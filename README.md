@@ -1,8 +1,8 @@
-# Monorepo
+# kgms
 
 ## 创建 applications
 
-npx create-nx-workspace monorepo --preset=angular
+npx create-nx-workspace kgms --preset=angular
 
 npx nx list
 
