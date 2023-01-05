@@ -1,0 +1,12 @@
+<div id="search-component">
+  <label for="search-box">实例检索</label>
+  <input #searchBox id="search-box" (input)="search(searchBox.value)" />
+
+  <ul class="search-result">
+    <li *ngFor="let instance of instances$ | async">
+      <a routerLink="/instance/detail/{{ instance._fields[0].identity.low }}">
+        {{ instance._fields[0].properties.label }}
+      </a>
+    </li>
+  </ul>
+</div>

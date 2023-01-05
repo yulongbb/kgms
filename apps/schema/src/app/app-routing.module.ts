@@ -10,7 +10,11 @@ const routes: Routes = [
   { path: '', redirectTo: '/schema', pathMatch: 'full' },
   { path: 'schema', component: SchemaComponent },
   { path: 'property', component: PropertyComponent },
-  { path: 'instance', component: InstanceComponent }
+  {
+    path: 'instance',
+    loadChildren: () => import('./instance/instance.module')
+      .then(m => m.InstanceModule),
+  },
 ];
 
 @NgModule({

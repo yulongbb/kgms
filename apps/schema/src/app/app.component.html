@@ -19,7 +19,6 @@
     <mat-toolbar class="d-flex justify-content-between">
       <div>
         <button
-          *ngIf="id"
           mat-button
           [routerLink]="['/schema']"
           [queryParams]="{ id: id }"
@@ -27,7 +26,6 @@
           概念表
         </button>
         <button
-          *ngIf="id"
           mat-button
           [routerLink]="['/property']"
           [queryParams]="{ id: id }"
@@ -35,9 +33,8 @@
           属性表
         </button>
         <button
-          *ngIf="id"
           mat-button
-          [routerLink]="['/instance']"
+          [routerLink]="['/instance/instances']"
           [queryParams]="{ id: id }"
         >
           实例

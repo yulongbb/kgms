@@ -11,7 +11,6 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { AppRoutingModule } from './app-routing.module';
 import { SchemaComponent } from './schema/schema.component';
 import { PropertyComponent } from './property/property.component';
-import { InstanceComponent } from './instance/instance.component';
 
 @NgModule({
   declarations: [
@@ -19,7 +18,6 @@ import { InstanceComponent } from './instance/instance.component';
     DialogComponent,
     SchemaComponent,
     PropertyComponent,
-    InstanceComponent
   ],
   imports: [
     BrowserModule,

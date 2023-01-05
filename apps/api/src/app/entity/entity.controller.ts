@@ -1,4 +1,12 @@
-import { Body, Controller, Delete, Get, Param, Post } from '@nestjs/common';
+import {
+  Body,
+  Controller,
+  Delete,
+  Get,
+  Param,
+  Post,
+  Query,
+} from '@nestjs/common';
 import { Neo4jService } from 'nest-neo4j';
 
 @Controller('entity')
@@ -21,10 +29,19 @@ export class EntityController {
   }
 
   @Get('')
-  async findAll(): Promise<any> {
-    const nodes = await this.neo4jService.read(
-      `MATCH (node:Item) RETURN node LIMIT 100`
-    );
+  async findAll(@Query() query?: { term: string }): Promise<any> {
+    let nodes;
+    if (query.term) {
+      nodes = await this.neo4jService.read(
+        `MATCH (node:Item)  WHERE node.label CONTAINS ${JSON.stringify(
+          query.term
+        )} RETURN node LIMIT 100`
+      );
+    } else {
+      nodes = await this.neo4jService.read(
+        `MATCH (node:Item) RETURN node LIMIT 100`
+      );
+    }
     return nodes['records'];
   }
 
