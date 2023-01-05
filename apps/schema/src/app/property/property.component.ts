@@ -14,7 +14,9 @@ export class PropertyComponent {
 
   constructor(private http: HttpClient) {
     this.columnDefs=[
-      { field: 'id', headerName: 'id' },
+      { field: 'id', headerName: 'id' , cellRenderer: (params: any) => {
+        return `P${params.value}`;
+      },},
       { field: 'name', headerName: 'name' },
     ]
     this.rowData$ = this.http.get<any[]>(
