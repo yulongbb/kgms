@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 
 @Component({
-  selector: 'monorepo-inner',
+  selector: 'kgms-inner',
   templateUrl: './inner.component.html',
   styleUrls: ['./inner.component.css'],
 })

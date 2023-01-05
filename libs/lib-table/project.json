@@ -1,15 +1,15 @@
 {
-  "name": "lib-angular",
+  "name": "lib-table",
   "$schema": "../../node_modules/nx/schemas/project-schema.json",
   "projectType": "library",
-  "sourceRoot": "libs/lib-angular/src",
-  "prefix": "kgms",
+  "sourceRoot": "libs/lib-table/src",
+  "prefix": "monorepo",
   "targets": {
     "test": {
       "executor": "@nrwl/jest:jest",
       "outputs": ["{workspaceRoot}/coverage/{projectRoot}"],
       "options": {
-        "jestConfig": "libs/lib-angular/jest.config.ts",
+        "jestConfig": "libs/lib-table/jest.config.ts",
         "passWithNoTests": true
       }
     },
@@ -18,8 +18,8 @@
       "outputs": ["{options.outputFile}"],
       "options": {
         "lintFilePatterns": [
-          "libs/lib-angular/**/*.ts",
-          "libs/lib-angular/**/*.html"
+          "libs/lib-table/**/*.ts",
+          "libs/lib-table/**/*.html"
         ]
       }
     }

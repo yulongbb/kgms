@@ -3,7 +3,7 @@ import { Component, ViewEncapsulation } from '@angular/core';
 /* eslint-disable */
 
 @Component({
-  selector: 'monorepo-nx-welcome',
+  selector: 'kgms-nx-welcome',
   template: `
     <!--
      * * * * * * * * * * * * * * * * * * * * * * * * * * * *

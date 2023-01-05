@@ -1,6 +1,6 @@
 /* eslint-disable */
 export default {
-  displayName: 'wikidata',
+  displayName: 'lib-table',
   preset: '../../jest.preset.js',
   setupFilesAfterEnv: ['<rootDir>/src/test-setup.ts'],
   globals: {
@@ -9,7 +9,7 @@ export default {
       stringifyContentPathRegex: '\\.(html|svg)$',
     },
   },
-  coverageDirectory: '../../coverage/apps/wikidata',
+  coverageDirectory: '../../coverage/libs/lib-table',
   transform: {
     '^.+\\.(ts|mjs|js|html)$': 'jest-preset-angular',
   },

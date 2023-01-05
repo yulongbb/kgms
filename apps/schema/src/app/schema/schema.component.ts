@@ -7,7 +7,7 @@ import { DialogComponent, Schema } from '../app.component';
 import { AppService } from '../app.service';
 
 @Component({
-  selector: 'monorepo-schema',
+  selector: 'kgms-schema',
   templateUrl: './schema.component.html',
   styleUrls: ['./schema.component.css'],
 })

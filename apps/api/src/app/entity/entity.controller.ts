@@ -20,6 +20,14 @@ export class EntityController {
     );
   }
 
+  @Get('')
+  async findAll(): Promise<any> {
+    const nodes = await this.neo4jService.read(
+      `MATCH (node:Item) RETURN node LIMIT 100`
+    );
+    return nodes['records'];
+  }
+
   /**
    * 查询单个节点信息
    * @param id
@@ -29,14 +37,37 @@ export class EntityController {
   async findOne(@Param('id') id: string): Promise<any> {
     const entity = {};
     const node = await this.neo4jService.read(
-      `MATCH (subject:Item) WHERE ID(subject)=${id.replace('Q', '')} RETURN subject`
+      `MATCH (subject:Item) WHERE ID(subject)=${id.replace(
+        'Q',
+        ''
+      )} RETURN subject`
     );
-    entity['id'] = node['records'][0]['_fields'][0]['identity']['low'];
+    entity['id'] = `Q${node['records'][0]['_fields'][0]['identity']['low']}`;
     entity['labels'] = {};
-    entity['labels']['zh-cn'] = node['records'][0]['_fields'][0]['properties'];
+    entity['labels']['zh-cn'] = {
+      language: 'zh-cn',
+      value: node['records'][0]['_fields'][0]['properties']['label'],
+    };
+    entity['descriptions'] = {};
+    entity['descriptions']['zh-cn'] = {
+      language: 'zh-cn',
+      value: node['records'][0]['_fields'][0]['properties']['label'],
+    };
+    entity['aliases'] = {};
+    entity['aliases']['zh-cn'] = [];
+    entity['aliases']['zh-cn'].push({
+      language: 'zh-cn',
+      value: node['records'][0]['_fields'][0]['properties']['label'],
+    });
+
+    entity['modified'] = new Date();
+    entity['type'] = 'type';
 
     const relations = await this.neo4jService.read(
-      `MATCH (subject:Item)-[predicate]->(object) WHERE ID(subject)=${id.replace('Q', '')} RETURN subject, predicate, object`
+      `MATCH (subject:Item)-[predicate]->(object) WHERE ID(subject)=${id.replace(
+        'Q',
+        ''
+      )} RETURN subject, predicate, object`
     );
 
     const statements = {};
@@ -45,21 +76,22 @@ export class EntityController {
         statements[record['_fields'][1]['type']] = [];
       }
       statements[record['_fields'][1]['type']].push({
-        type: 'statement',
-        id: record['_fields'][1]['identity']['low'],
-        rank: 'normal',
         mainsnak: {
           snaktype: 'value',
           property: record['_fields'][1]['type'],
-          datatype: "item",
           datavalue: {
             value: {
               'entity-type': 'item',
+              'numeric-id': record['_fields'][2]['identity']['low'],
               id: `Q${record['_fields'][2]['identity']['low']}`,
             },
-            type: "entityid"
+            type: 'entityid',
           },
+          datatype: 'item',
         },
+        type: 'statement',
+        id: `Q${node['records'][0]['_fields'][0]['identity']['low']}$${record['_fields'][1]['identity']['low']}`,
+        rank: 'normal',
       });
     });
     entity['claims'] = statements;

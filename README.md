@@ -1,5 +1,7 @@
 # kgms
 
+知识图谱世界的通用元素：三元组（triple）
+
 ## 创建 applications
 
 npx create-nx-workspace kgms --preset=angular
@@ -16,13 +18,11 @@ npx nx g @nrwl/react:app graph
 
 npx nx serve schema --port=4200
 
-npx nx serve wikidata --port=4201
-
-npx nx serve graph --port=4202
-
 npx nx g @nrwl/react:app builder --js
 
 npx nx serve builder --port=4203
+
+npx nx serve graph --port=4202
 
 ## 创建 libraries
 
@@ -83,8 +83,6 @@ entity 实体
 
 参考连接
 
-
-
 pip3 install rdflib -i https://pypi.tuna.tsinghua.edu.cn/simple
 
 pip3 install Flask -i https://pypi.tuna.tsinghua.edu.cn/simple
@@ -96,9 +94,6 @@ pip3 install Django -i https://pypi.tuna.tsinghua.edu.cn/simple
 pip3 install mysqlclient -i https://pypi.tuna.tsinghua.edu.cn/simple
 
 pip3 install Pillow -i https://pypi.tuna.tsinghua.edu.cn/simple
-
-
-
 
 flask --app hello run
 
@@ -112,7 +107,7 @@ django-admin startproject kgms
 
 python manage.py startapp dataset
 
-/usr/bin/python3  manage.py makemigrations
+/usr/bin/python3 manage.py makemigrations
 
 /usr/bin/python3 manage.py migrate
 
@@ -125,3 +120,6 @@ python manage.py sqlmigrate dataset 0001
 python manage.py createsuperuser
 
 python manage.py runserver
+
+npm install --save ag-grid-community --force
+npm install --save ag-grid-angular --force

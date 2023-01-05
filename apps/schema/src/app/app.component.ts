@@ -13,7 +13,7 @@ export interface Schema {
 }
 
 @Component({
-  selector: 'monorepo-root',
+  selector: 'kgms-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css'],
 })
@@ -70,7 +70,7 @@ export class AppComponent implements OnInit {
 }
 
 @Component({
-  selector: 'monorepo-dialog',
+  selector: 'kgms-dialog',
   templateUrl: './app-dialog.html',
 })
 export class DialogComponent {
