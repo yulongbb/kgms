@@ -26,29 +26,38 @@ export class EntityController {
    * @returns
    */
   @Get(':id')
-  async findOne(@Param('id') id: number): Promise<any> {
+  async findOne(@Param('id') id: string): Promise<any> {
     const entity = {};
-    const data = await this.neo4jService.read(
-      `MATCH (subject:Item)-[predicate]-(object) WHERE ID(subject)=317 RETURN subject, predicate, object`
+    const node = await this.neo4jService.read(
+      `MATCH (subject:Item) WHERE ID(subject)=${id.replace('Q', '')} RETURN subject`
     );
-    entity['id'] = data['records'][0]['_fields'][0]['identity']['low'];
+    entity['id'] = node['records'][0]['_fields'][0]['identity']['low'];
     entity['labels'] = {};
-    entity['labels']['zh-cn'] = data['records'][0]['_fields'][0]['properties'];
+    entity['labels']['zh-cn'] = node['records'][0]['_fields'][0]['properties'];
+
+    const relations = await this.neo4jService.read(
+      `MATCH (subject:Item)-[predicate]->(object) WHERE ID(subject)=${id.replace('Q', '')} RETURN subject, predicate, object`
+    );
 
     const statements = {};
-    data['records'].forEach((record: any) => {
+    relations['records']?.forEach((record: any) => {
       if (!statements[record['_fields'][1]['type']]) {
         statements[record['_fields'][1]['type']] = [];
       }
       statements[record['_fields'][1]['type']].push({
         type: 'statement',
         id: record['_fields'][1]['identity']['low'],
+        rank: 'normal',
         mainsnak: {
+          snaktype: 'value',
+          property: record['_fields'][1]['type'],
+          datatype: "item",
           datavalue: {
             value: {
-              "entity-type": "item",
-              id: record['_fields'][2]['identity']['low'],
-            }
+              'entity-type': 'item',
+              id: `Q${record['_fields'][2]['identity']['low']}`,
+            },
+            type: "entityid"
           },
         },
       });
