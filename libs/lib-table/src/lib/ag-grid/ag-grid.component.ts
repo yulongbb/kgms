@@ -41,6 +41,7 @@ export class AgGridComponent {
         { field: 'price' },
       ]
     }
+    params.api.sizeColumnsToFit()
   }
 
   // Example of consuming Grid Event

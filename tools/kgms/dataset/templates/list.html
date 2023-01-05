@@ -33,7 +33,7 @@
         </form>
         <!-- List of uploaded datasets -->
         {% if datasets %}
-            All datasets in the database:
+            All datasets in the dataset:
             <ul>
                 {% for dataset in datasets %}
                     <li><a href="/datasets/{{dataset.id}}">{{ dataset.name }}</a>({{ dataset.size }})</li>

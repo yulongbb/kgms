@@ -11,7 +11,9 @@ from django.core.files.base import ContentFile, File
 from django.shortcuts import get_object_or_404, render
 
 from django.http import JsonResponse
+from django.views.decorators.clickjacking import xframe_options_exempt
 
+@xframe_options_exempt
 
 def turtles(request, dataset_id):
     dataset = get_object_or_404(Dataset, pk=dataset_id)
@@ -30,6 +32,7 @@ def turtles(request, dataset_id):
     return JsonResponse(triples, safe=False, status=201)
 
 
+@xframe_options_exempt
 def dataset(request, dataset_id):
     dataset = get_object_or_404(Dataset, pk=dataset_id)
     url = "http://localhost:8000/"+str(str(dataset.docfile).split(
@@ -48,6 +51,7 @@ def dataset(request, dataset_id):
     return render(request, 'detail.html', context)
 
 
+@xframe_options_exempt
 def datasets(request):
     print(f"Great! You're using Python 3.6+. If you fail here, use the right version.")
     message = 'Upload as many files as you want!'

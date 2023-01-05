@@ -1,7 +1,7 @@
 <mat-drawer-container class="example-container">
   <mat-drawer mode="side" opened>
     <mat-toolbar>
-      <a [routerLink]="['/']">知识图谱编辑工具</a>
+      <a [routerLink]="['/']">知识图谱构建工具</a>
     </mat-toolbar>
     <mat-selection-list #shoes [multiple]="false">
       <mat-list-option
@@ -20,11 +20,19 @@
       <div>
         <button
           mat-button
+          [routerLink]="['/dataset']"
+          [queryParams]="{ id: id }"
+        >
+          数据源
+        </button>
+        <button
+          mat-button
           [routerLink]="['/schema']"
           [queryParams]="{ id: id }"
         >
           概念表
         </button>
+        
         <button
           mat-button
           [routerLink]="['/property']"
@@ -34,10 +42,24 @@
         </button>
         <button
           mat-button
+          [routerLink]="['/builder']"
+          [queryParams]="{ id: id }"
+        >
+          转换
+        </button>
+        <button
+          mat-button
           [routerLink]="['/instance/instances']"
           [queryParams]="{ id: id }"
         >
           实例
+        </button>
+        <button
+          mat-button
+          [routerLink]="['/graph']"
+          [queryParams]="{ id: id }"
+        >
+          图谱
         </button>
       </div>
       <div>

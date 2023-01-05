@@ -8,30 +8,28 @@ import { HttpClient } from '@angular/common/http';
   templateUrl: './instance-detail.component.html',
   styleUrls: ['./instance-detail.component.css'],
 })
-export class InstanceDetailComponent {
+export class InstanceDetailComponent implements OnInit{
   instance: any | undefined;
 
   constructor(
     private route: ActivatedRoute,
     private http: HttpClient,
     private location: Location
-  ) {}
+  ) {
+  }
 
   ngOnInit(): void {
     this.getInstance();
   }
 
   getInstance(): void {
-    const id = parseInt(this.route.snapshot.paramMap.get('id')!, 10);
-    this.http.get(`http://localhost:3333/api/entity/${id}`)
-      .subscribe(instance => this.instance = instance);
+    this.http
+      .get(`http://localhost:3333/api/entity/${this.route.snapshot.paramMap.get('id')}`)
+      .subscribe((instance) => (this.instance = instance));
   }
 
   goBack(): void {
     this.location.back();
   }
 
-  save(): void {
-    
-  }
 }

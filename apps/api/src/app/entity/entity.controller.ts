@@ -52,6 +52,7 @@ export class EntityController {
    */
   @Get(':id')
   async findOne(@Param('id') id: string): Promise<any> {
+    console.log(id)
     const entity = {};
     const node = await this.neo4jService.read(
       `MATCH (subject:Item) WHERE ID(subject)=${id.replace(

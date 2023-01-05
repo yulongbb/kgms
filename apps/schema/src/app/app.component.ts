@@ -36,7 +36,6 @@ export class AppComponent implements OnInit {
 
   ngOnInit(): void {
     this.route.queryParams.subscribe((params:any)=>{
-      console.log(params['id'])
       this.id = params['id'];
     })
   }
