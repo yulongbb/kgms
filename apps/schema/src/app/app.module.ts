@@ -21,7 +21,6 @@ import { GraphComponent } from './graph/graph.component';
     AppComponent,
     DialogComponent,
     SchemaComponent,
-    PropertyComponent,
     DatasetComponent,
     BuilderComponent,
     GraphComponent

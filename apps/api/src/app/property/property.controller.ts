@@ -1,4 +1,4 @@
-import { Body, Controller, Get, Post } from '@nestjs/common';
+import { Body, Controller, Get, Post,Query,Param } from '@nestjs/common';
 import { Property } from './property.entity';
 import { PropertyService } from './property.service';
 
@@ -12,7 +12,19 @@ export class PropertyController {
   }
 
   @Get()
-  async findAll(): Promise<Property[]> {
+  async findAll(@Query() query?: { term: string }): Promise<Property[]> {
+    console.log(query)
+    if (query.term) {
+      return this.propertyService.findByName(query.term);
+    }
     return this.propertyService.findAll();
+  }
+
+  @Get(':id')
+  async findOne(@Param('id') id: string): Promise<any> {
+    return this.propertyService.findOne(id.replace(
+      'P',
+      ''
+    ));
   }
 }

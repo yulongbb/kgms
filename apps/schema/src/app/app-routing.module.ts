@@ -12,8 +12,12 @@ const routes: Routes = [
   { path: '', redirectTo: '/schema', pathMatch: 'full' },
   { path: 'dataset', component: DatasetComponent },
   { path: 'schema', component: SchemaComponent },
-  { path: 'property', component: PropertyComponent },
   { path: 'builder', component: BuilderComponent },
+  {
+    path: 'property',
+    loadChildren: () => import('./property/property.module')
+      .then(m => m.PropertyModule),
+  },
   {
     path: 'instance',
     loadChildren: () => import('./instance/instance.module')

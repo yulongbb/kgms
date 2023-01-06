@@ -1,6 +1,6 @@
 import { Injectable } from '@nestjs/common';
 import { InjectRepository } from '@nestjs/typeorm';
-import { TreeRepository } from 'typeorm';
+import { TreeRepository,Like } from 'typeorm';
 import { Property } from './property.entity';
 
 
@@ -25,8 +25,13 @@ export class PropertyService {
     return this.propertyRepository.save(property)
   }
 
-  findByName(name: any): Promise<Property> {
-    return this.propertyRepository.findOneBy({ 'name': name });
+  findOne(id: any): Promise<Property> {
+    return this.propertyRepository.findOneBy({ id: id });
+  }
+
+
+  findByName(name: any): Promise<Property[]> {
+    return this.propertyRepository.find({ where:{name:Like(`%${name}%`)} });
   }
 
   findAll(): Promise<Property[]> {
