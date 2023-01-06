@@ -4,18 +4,10 @@ import { Handle, useReactFlow, useStoreApi } from 'reactflow';
 
 
 const options = [
-    {
-      name: '目标对齐',
-    },
+   
     {
       name: '属性对齐',
-    },
-    {
-      name: '值对齐',
-    },
-    {
-      name: '关联发现',
-    },
+    }
   ];
   
 

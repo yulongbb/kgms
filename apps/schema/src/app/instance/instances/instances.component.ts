@@ -13,7 +13,9 @@ export class InstancesComponent {
 
   constructor(private http: HttpClient) {
     this.columnDefs = [
-      { field: '_fields.0.identity.low', headerName: 'id' },
+      { field: '_fields.0.identity.low', headerName: 'id', cellRenderer: (params: any) => {
+        return `Q${params.value}`;
+      },},
       {
         field: '_fields.0',
         headerName: 'label',

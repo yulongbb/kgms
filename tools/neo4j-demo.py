@@ -28,31 +28,46 @@ def output_Data(tx):
         dataset = {}
         dataset["nodes"] = []
         dataset["edges"] = []
-        dataset["clusters"] = []
-        dataset["tags"] = [
-            {"key": "导弹武器", "image": "charttype.svg"},
-            {"key": "火炮", "image": "company.svg"},
-            {"key": "枪械与单兵", "image": "concept.svg"},
-            {"key": "飞行器", "image": "field.svg"},
-            {"key": "太空装备", "image": "list.svg"},
-            {"key": "爆炸物", "image": "method.svg"},
-            {"key": "坦克装甲车辆", "image": "organization.svg"},
-            {"key": "舰船舰艇", "image": "person.svg"},
-            {"key": "国家", "image": "technology.svg"},
-            {"key": "研发单位", "image": "tool.svg"},
-        ]
+        dataset["clusters"] = [
+            {"key": "0", "color": "#6c3e81", "clusterLabel": "Graph theory"}]
+        dataset["tags"] = [{"key": "Tool", "image": "tool.svg"}]
         for record in tx.run(query):
-            if record.data()['p'][0] not in dataset["nodes"]:
-                dataset["nodes"].append(record.data()['p'][0])
-            if record.data()['p'][2] not in dataset["nodes"]:
-                dataset["nodes"].append(record.data()['p'][2])
-            dataset["edges"].append(
-                [record.data()['p'][0]['key'], record.data()['p'][2]['key']])
+            if {
+                'key': record.data()['p'][0]['label'],
+                'label': record.data()['p'][0]['label'],
+                'tag': 'Tool',
+                'URL': 'https://en.wikipedia.org/wiki/Cytoscape',
+                'cluster': '0',
+            } not in dataset["nodes"]:
+                dataset["nodes"].append({
+                    'key': record.data()['p'][0]['label'],
+                    'label': record.data()['p'][0]['label'],
+                    'tag': 'Tool',
+                    'URL': 'https://en.wikipedia.org/wiki/Cytoscape',
+                    'cluster': '0',
+                })
+            if {
+                'key': record.data()['p'][2]['label'],
+                'label': record.data()['p'][2]['label'],
+                'tag': 'Tool',
+                'URL': 'https://en.wikipedia.org/wiki/Cytoscape',
+                'cluster': '0',
+            } not in dataset["nodes"]:
+                dataset["nodes"].append({
+                    'key': record.data()['p'][2]['label'],
+                    'label': record.data()['p'][2]['label'],
+                    'tag': 'Tool',
+                    'URL': 'https://en.wikipedia.org/wiki/Cytoscape',
+                    'cluster': '0',
+                })
+            if [record.data()['p'][0]['label'], record.data()['p'][2]['label']] not in dataset["edges"]:
+                dataset["edges"].append(
+                    [record.data()['p'][0]['label'], record.data()['p'][2]['label']])
         print(dataset)
 
-        labels = set()
+        # labels = set()
         for node in dataset["nodes"]:
-            labels.add(node["cluster"])
+            # labels.add(node["cluster"])
             node["x"] = random.uniform(0, 1)
             node["y"] = random.uniform(0, 1)
             node["score"] = random.uniform(0, 1)
@@ -60,12 +75,12 @@ def output_Data(tx):
             #     node["score"] = random.uniform(0, 1)
             # else:
             #     node["score"] = random.uniform(0, 0.0001)
-        for label in labels:
-            def r(): return random.randint(0, 255)
-            dataset["clusters"].append(
-                {"key": label, "color": '#%02X%02X%02X' % (
-                    r(), r(), r()), "clusterLabel": label}
-            )
+        # for label in labels:
+        #     def r(): return random.randint(0, 255)
+        #     dataset["clusters"].append(
+        #         {"key": label, "color": '#%02X%02X%02X' % (
+        #             r(), r(), r()), "clusterLabel": label}
+        #     )
         json.dump(dataset, outfile, ensure_ascii=False)
 
 
@@ -84,7 +99,7 @@ def clusters_node(tx):
     return clusters
 
 
-# with driver.session(database="neo4j") as session:
+with driver.session(database="neo4j") as session:
     # with open('tools/data/military.json', 'r', encoding='utf-8') as f:
     #     for line in f:
     #         value = json.loads(line)
@@ -114,7 +129,7 @@ def clusters_node(tx):
     #             }
     #             session.execute_write(add_Relation, source, '研发单位',  target)
 
-    # session.execute_rea'd(output_Data)
+    session.execute_read(output_Data)
 
 
 # driver.close()
