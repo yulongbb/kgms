@@ -30,6 +30,21 @@
 
 ![graph](/screenshots/graph.png)
 
+
+## links
+
+[openkg](http://www.openkg.cn/)
+
+[cnschema](http://cnschema.openkg.cn/)
+
+[ag-grid](https://www.ag-grid.com/)
+
+[angular-tree-component](https://angular2-tree.readme.io/docs)
+
+[sigmajs](https://www.sigmajs.org/)
+
+[wikidata](https://www.wikidata.org/wiki/Special:EntityData/Q5.json)
+
 ## 创建 applications
 
 npx create-nx-workspace kgms --preset=angular
