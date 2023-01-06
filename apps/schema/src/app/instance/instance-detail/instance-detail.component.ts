@@ -23,6 +23,7 @@ export class InstanceDetailComponent {
 
   getInstance(): void {
     const id = parseInt(this.route.snapshot.paramMap.get('id')!, 10);
+    console.log(id);
     this.http.get(`http://localhost:3333/api/entity/${id}`)
       .subscribe(instance => this.instance = instance);
   }
