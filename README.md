@@ -8,27 +8,27 @@
 
 ### dataset
 
-[dataset](/screenshots/dataset.png)
+![dataset](/screenshots/dataset.png)
 
 ### schema
 
-[schema](/screenshots/schema.png)
+![schema](/screenshots/schema.png)
 
 ### property
 
-[property](/screenshots/property.png)
+![property](/screenshots/property.png)
 
 ### builder
 
-[builder](/screenshots/builder.png)
+![builder](/screenshots/builder.png)
 
 ### instance
 
-[instance](/screenshots/instance.png)
+![instance](/screenshots/instance.png)
 
 ### graph
 
-[graph](/screenshots/graph.png)
+![graph](/screenshots/graph.png)
 
 ## 创建 applications
 
