@@ -2,6 +2,9 @@
 
 知识图谱世界的通用元素：三元组（triple）
 
+知识图谱世界组成构件： 数据源、概念、属性、处理过程、实例、图
+
+
 ## 创建 applications
 
 npx create-nx-workspace kgms --preset=angular
@@ -20,7 +23,7 @@ npx nx serve schema --port=4200
 
 npx nx g @nrwl/react:app builder --js
 
-npx nx serve builder --port=4203
+npx nx serve builder --port=4201
 
 npx nx serve graph --port=4202
 

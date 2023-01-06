@@ -8,7 +8,7 @@ import { DomSanitizer, SafeResourceUrl } from '@angular/platform-browser';
 })
 export class BuilderComponent implements OnInit{
   name = 'Set iframe source';
-  url = "http://localhost:4203";
+  url = "http://localhost:4201";
   urlSafe!: SafeResourceUrl;
 
   constructor(public sanitizer: DomSanitizer) { }
