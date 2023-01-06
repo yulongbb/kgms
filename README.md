@@ -169,3 +169,6 @@ python manage.py runserver
 
 npm install --save ag-grid-community --force
 npm install --save ag-grid-angular --force
+
+
+docker run -di --name mongo -p 27017:27017 mongo
