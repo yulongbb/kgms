@@ -1,5 +1,14 @@
-<tree-root [nodes]="nodes" [options]="options">
-    <ng-template #treeNodeTemplate let-node let-index="index">
-        <span (click)="go(node.data)"> {{ node.data.name }}</span>
-    </ng-template>
+<div id="search-component">
+  <label for="filter">概念检索</label>
+  <input
+    id="filter"
+    #filter
+    (keyup)="tree.treeModel.filterNodes(filter.value)"
+  />
+</div>
+
+<tree-root #tree [nodes]="nodes" [options]="options">
+  <ng-template #treeNodeTemplate let-node let-index="index">
+    <span (click)="go(node.data)"> {{ node.data.name }}</span>
+  </ng-template>
 </tree-root>
