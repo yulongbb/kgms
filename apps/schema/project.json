@@ -20,7 +20,9 @@
           "./node_modules/@angular/material/prebuilt-themes/indigo-pink.css",
           "apps/schema/src/styles.css"
         ],
-        "scripts": []
+        "scripts": [
+          "apps/schema/src/assets/js/globe.gl.min.js"
+        ]
       },
       "configurations": {
         "production": {

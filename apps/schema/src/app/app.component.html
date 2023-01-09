@@ -32,7 +32,7 @@
         >
           概念
         </button>
-        
+
         <button
           mat-button
           [routerLink]="['/property/properties']"
@@ -54,12 +54,14 @@
         >
           实例
         </button>
-        <button
-          mat-button
-          [routerLink]="['/graph']"
-          [queryParams]="{ id: id }"
-        >
+        <button mat-button [routerLink]="['/graph']" [queryParams]="{ id: id }">
           图
+        </button>
+        <button mat-button [routerLink]="['/map']" [queryParams]="{ id: id }">
+          地图
+        </button>
+        <button mat-button [routerLink]="['/earth']" [queryParams]="{ id: id }">
+          地球
         </button>
       </div>
       <div>

@@ -3,6 +3,8 @@
 @import 'ag-grid-community/styles/ag-theme-alpine.css';
 @import '~@circlon/angular-tree-component/css/angular-tree-component.css';
 
+@import 'leaflet/dist/leaflet.css';
+
 html,
 body {
     height: 100%;

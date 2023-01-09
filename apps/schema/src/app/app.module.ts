@@ -3,6 +3,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { LibTableModule } from '@lib/table';
 import { LibTreeModule } from '@lib/tree';
+import { LibMapModule } from '@lib/map';
 
 import { AppComponent, DialogComponent } from './app.component';
 import { MaterialModule } from './material.module';
@@ -15,6 +16,8 @@ import { PropertyComponent } from './property/property.component';
 import { DatasetComponent } from './dataset/dataset.component';
 import { BuilderComponent } from './builder/builder.component';
 import { GraphComponent } from './graph/graph.component';
+import { MapComponent } from './map/map.component';
+import { EarthComponent } from './earth/earth.component';
 
 @NgModule({
   declarations: [
@@ -23,7 +26,9 @@ import { GraphComponent } from './graph/graph.component';
     SchemaComponent,
     DatasetComponent,
     BuilderComponent,
-    GraphComponent
+    GraphComponent,
+    MapComponent,
+    EarthComponent,
   ],
   imports: [
     BrowserModule,
@@ -34,7 +39,8 @@ import { GraphComponent } from './graph/graph.component';
     AppRoutingModule,
     MaterialModule,
     LibTableModule,
-    LibTreeModule
+    LibTreeModule,
+    LibMapModule,
   ],
   providers: [AppService],
   bootstrap: [AppComponent],
