@@ -13,7 +13,7 @@ import { AppService } from '../app.service';
 })
 export class SchemaComponent implements OnInit {
   id: any;
-  schema: any;
+  graph: any;
 
   constructor(
     private route: ActivatedRoute,
@@ -23,16 +23,14 @@ export class SchemaComponent implements OnInit {
 
   ngOnInit(): void {
     this.route.queryParams.subscribe((params: any) => {
-      console.log(params['id']);
       if (!params['id']) {
         this.id = null;
-        this.schema = null;
+        this.graph = null;
         return;
       }
       this.id = params['id'];
-      this.appService.getSchema(params['id']).subscribe((schema: any) => {
-        this.schema = schema;
-        console.log(schema)
+      this.appService.getSchema(params["id"]).subscribe((schema: any) => {
+        this.graph = schema;
       });
     });
   }
@@ -41,13 +39,18 @@ export class SchemaComponent implements OnInit {
     this.id = $event.id;
   }
 
+  getSchema(id:any){
+    this.appService.getSchema(id).subscribe((schema: any) => {
+      this.graph = schema;
+    });
+  }
+
 
   openDialog(id:any) {
     const dialogRef = this.dialog.open(DialogComponent, {
       data: { name: '' },
     });
     dialogRef.afterClosed().subscribe((result) => {
-      console.log(result);
       result = result.trim();
       if (!result) {
         return;
@@ -58,7 +61,7 @@ export class SchemaComponent implements OnInit {
           parent: id,
         } as Schema)
         .subscribe((schema) => {
-          console.log(schema);
+          this.getSchema(this.graph.id)
         });
     });
   }
