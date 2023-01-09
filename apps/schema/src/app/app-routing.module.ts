@@ -5,8 +5,9 @@ import { SchemaComponent } from './schema/schema.component';
 import { DatasetComponent } from './dataset/dataset.component';
 import { BuilderComponent } from './builder/builder.component';
 import { GraphComponent } from './graph/graph.component';
-
-
+import { MapComponent } from './map/map.component';
+import { EarthComponent } from './earth/earth.component';
+import { LearnComponent } from './learn/learn.component';
 
 const routes: Routes = [
   { path: '', redirectTo: '/schema', pathMatch: 'full' },
@@ -15,20 +16,22 @@ const routes: Routes = [
   { path: 'builder', component: BuilderComponent },
   {
     path: 'property',
-    loadChildren: () => import('./property/property.module')
-      .then(m => m.PropertyModule),
+    loadChildren: () =>
+      import('./property/property.module').then((m) => m.PropertyModule),
   },
   {
     path: 'instance',
-    loadChildren: () => import('./instance/instance.module')
-      .then(m => m.InstanceModule),
+    loadChildren: () =>
+      import('./instance/instance.module').then((m) => m.InstanceModule),
   },
   { path: 'graph', component: GraphComponent },
-
+  { path: 'map', component: MapComponent },
+  { path: 'earth', component: EarthComponent },
+  { path: 'learn', component: LearnComponent },
 ];
 
 @NgModule({
-  imports: [ RouterModule.forRoot(routes) ],
-  exports: [ RouterModule ]
+  imports: [RouterModule.forRoot(routes)],
+  exports: [RouterModule],
 })
 export class AppRoutingModule {}

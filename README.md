@@ -47,6 +47,11 @@
 
 [sigmajs](https://www.sigmajs.org/)
 
+[leaflet](https://leafletjs.com/)
+
+[globe.gl](https://globe.gl/)
+
+
 
 ## 创建 applications
 
@@ -172,3 +177,8 @@ npm install --save ag-grid-angular --force
 
 
 docker run -di --name mongo -p 27017:27017 mongo
+
+
+
+npm install leaflet --force
+npm install @asymmetrik/ngx-leaflet --force

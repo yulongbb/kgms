@@ -40,7 +40,21 @@
         >
           数据源
         </button>
-       
+        <button
+          mat-button
+          [routerLink]="['/schema']"
+          [queryParams]="{ id: id }"
+        >
+          概念
+        </button>
+
+        <button
+          mat-button
+          [routerLink]="['/property/properties']"
+          [queryParams]="{ id: id }"
+        >
+          属性
+        </button>
         <button
           mat-button
           [routerLink]="['/builder']"
@@ -55,12 +69,17 @@
         >
           实例
         </button>
-        <button
-          mat-button
-          [routerLink]="['/graph']"
-          [queryParams]="{ id: id }"
-        >
+        <button mat-button [routerLink]="['/graph']" [queryParams]="{ id: id }">
           图
+        </button>
+        <button mat-button [routerLink]="['/map']" [queryParams]="{ id: id }">
+          地图
+        </button>
+        <button mat-button [routerLink]="['/earth']" [queryParams]="{ id: id }">
+          地球
+        </button>
+        <button mat-button [routerLink]="['/learn']" [queryParams]="{ id: id }">
+          知识学习
         </button>
       </div>
       <div>
