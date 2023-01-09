@@ -18,6 +18,7 @@ import { BuilderComponent } from './builder/builder.component';
 import { GraphComponent } from './graph/graph.component';
 import { MapComponent } from './map/map.component';
 import { EarthComponent } from './earth/earth.component';
+import { LearnComponent } from './learn/learn.component';
 
 @NgModule({
   declarations: [
@@ -29,6 +30,7 @@ import { EarthComponent } from './earth/earth.component';
     GraphComponent,
     MapComponent,
     EarthComponent,
+    LearnComponent
   ],
   imports: [
     BrowserModule,
