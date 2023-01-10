@@ -71,7 +71,8 @@ def datasets(request):
             g = Graph()
             print(len(df.values))
             for row in df.values:
-                g.add((Literal(row[0]), Literal(row[2]), Literal(row[1])))
+                if row is not None:
+                    g.add((Literal(row[0]), Literal(row[2]), Literal(row[1])))
 
             # print(g.serialize(format='turtle'))
             g.serialize(str(newdoc.docfile).split(

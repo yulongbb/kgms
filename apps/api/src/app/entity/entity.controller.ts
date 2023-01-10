@@ -13,14 +13,14 @@ import { Neo4jService } from 'nest-neo4j';
 export class EntityController {
   constructor(private readonly neo4jService: Neo4jService) {}
 
-  @Post()
-  async create(@Body() triple: any): Promise<any> {
+  @Post(':id')
+  async create(@Param('id') id: string, @Body() triple: any): Promise<any> {
     return await this.neo4jService.write(
       `MERGE (subject:Item {label: ${JSON.stringify(
         triple.subject
-      )}}) WITH subject MERGE (object:Item {label: ${JSON.stringify(
+      )}, schema: ${id}}) WITH subject MERGE (object:Item {label: ${JSON.stringify(
         triple.object
-      )}}) WITH object MATCH (subject:Item),(object:Item) WHERE subject.label = ${JSON.stringify(
+      )}, schema: ${id}}) WITH object MATCH (subject:Item),(object:Item) WHERE subject.label = ${JSON.stringify(
         triple.subject
       )} AND object.label = ${JSON.stringify(
         triple.object
@@ -28,18 +28,21 @@ export class EntityController {
     );
   }
 
-  @Get('')
-  async findAll(@Query() query?: { term: string }): Promise<any> {
+  @Get('schema/:id')
+  async findAll(
+    @Param('id') id: string,
+    @Query() query?: { term: string }
+  ): Promise<any> {
     let nodes;
     if (query.term) {
       nodes = await this.neo4jService.read(
         `MATCH (node:Item)  WHERE node.label CONTAINS ${JSON.stringify(
           query.term
-        )} RETURN node LIMIT 100`
+        )} AND node.schema = ${id} RETURN node LIMIT 100`
       );
     } else {
       nodes = await this.neo4jService.read(
-        `MATCH (node:Item) RETURN node LIMIT 100`
+        `MATCH (node:Item) WHERE node.schema = ${id} RETURN node LIMIT 100`
       );
     }
     return nodes['records'];
@@ -52,7 +55,7 @@ export class EntityController {
    */
   @Get(':id')
   async findOne(@Param('id') id: string): Promise<any> {
-    console.log(id)
+    console.log(id);
     const entity = {};
     const node = await this.neo4jService.read(
       `MATCH (subject:Item) WHERE ID(subject)=${id.replace(
