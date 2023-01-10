@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 
 import { Observable, Subject, of } from 'rxjs';
@@ -12,6 +12,7 @@ import { debounceTime, distinctUntilChanged, switchMap } from 'rxjs/operators';
   styleUrls: ['./instance-search.component.css'],
 })
 export class InstanceSearchComponent {
+  @Input() schema: any;
   instances$!: Observable<any[]>;
   private searchTerms = new Subject<string>();
 
@@ -33,7 +34,9 @@ export class InstanceSearchComponent {
       // switch to new search observable each time the term changes
       switchMap((term: string) =>
         this.http
-          .get<any[]>(`http://localhost:3333/api/entity?term=${term}`)
+          .get<any[]>(
+            `http://localhost:3333/api/entity/schema/${this.schema}?term=${term}`
+          )
           .pipe(
             tap((x) =>
               x.length

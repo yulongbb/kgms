@@ -19,9 +19,10 @@ export class PropertyService {
     const p = await this.propertyRepository.findOneBy({ 'name': property.name })
     console.log(p)
     if(p){
-      property.id = p.id;
+      property.id = p?.id;
     }
-    property.schemas = [{id:1}];
+    console.log(property)
+
     return this.propertyRepository.save(property)
   }
 

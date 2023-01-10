@@ -8,6 +8,7 @@ import { GraphComponent } from './graph/graph.component';
 import { MapComponent } from './map/map.component';
 import { EarthComponent } from './earth/earth.component';
 import { LearnComponent } from './learn/learn.component';
+import { QaComponent } from './qa/qa.component';
 
 const routes: Routes = [
   { path: '', redirectTo: '/schema', pathMatch: 'full' },
@@ -28,6 +29,7 @@ const routes: Routes = [
   { path: 'map', component: MapComponent },
   { path: 'earth', component: EarthComponent },
   { path: 'learn', component: LearnComponent },
+  { path: 'qa', component: QaComponent },
 ];
 
 @NgModule({

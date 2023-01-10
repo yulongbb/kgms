@@ -27,7 +27,7 @@ export class Dataset {
 
   @Field()
   @Column({
-    nullable: false,
+    nullable: true,
   })
   size: number
 }

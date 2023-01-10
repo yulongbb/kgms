@@ -19,20 +19,20 @@
     <mat-toolbar class="d-flex justify-content-between">
       <div>
         <button
-        mat-button
-        [routerLink]="['/schema']"
-        [queryParams]="{ id: id }"
-      >
-        概念
-      </button>
-      
-      <button
-        mat-button
-        [routerLink]="['/property/properties']"
-        [queryParams]="{ id: id }"
-      >
-        属性
-      </button>
+          mat-button
+          [routerLink]="['/schema']"
+          [queryParams]="{ id: id }"
+        >
+          概念
+        </button>
+
+        <button
+          mat-button
+          [routerLink]="['/property/properties']"
+          [queryParams]="{ id: id }"
+        >
+          属性
+        </button>
         <button
           mat-button
           [routerLink]="['/dataset']"
@@ -80,6 +80,9 @@
         </button>
         <button mat-button [routerLink]="['/learn']" [queryParams]="{ id: id }">
           知识学习
+        </button>
+        <button mat-button [routerLink]="['/qa']" [queryParams]="{ id: id }">
+          知识问答
         </button>
       </div>
       <div>
