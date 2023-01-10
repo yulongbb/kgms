@@ -21,7 +21,7 @@ export class PropertyService {
     if(p){
       property.id = p.id;
     }
-    property.schemas = [{id:1}];
+    property.schemas = [{id:11}];
     return this.propertyRepository.save(property)
   }
 

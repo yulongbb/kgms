@@ -86,7 +86,7 @@ class InsertData:
                     data_new[new_key] = value
                     data_new[key] = new_value
             print(data_new)
-            self.collection.insert(data_new)
+            self.collection.insert_one(data_new)
             count += 1
         print('finished insert into database with %s records!'%count)
         return
