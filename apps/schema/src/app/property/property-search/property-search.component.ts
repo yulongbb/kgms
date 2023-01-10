@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 
 import { Observable, Subject, of } from 'rxjs';
@@ -11,6 +11,7 @@ import { debounceTime, distinctUntilChanged, switchMap } from 'rxjs/operators';
   styleUrls: ['./property-search.component.css'],
 })
 export class PropertySearchComponent {
+  @Input() schema:any;
   properties$!: Observable<any[]>;
   private searchTerms = new Subject<string>();
 
@@ -32,7 +33,7 @@ export class PropertySearchComponent {
       // switch to new search observable each time the term changes
       switchMap((term: string) =>
         this.http
-          .get<any[]>(`http://localhost:3333/api/property?term=${term}`)
+          .get<any[]>(`http://localhost:3333/api/property/schema/${this.schema}?term=${term}`)
           .pipe(
             tap((x) =>
               x.length

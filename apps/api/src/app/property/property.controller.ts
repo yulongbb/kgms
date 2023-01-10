@@ -15,13 +15,16 @@ export class PropertyController {
     return await this.propertyService.create(property);
   }
 
-  @Get()
-  async findAll(@Query() query?: { term: string }): Promise<Property[]> {
+  @Get('schema/:id')
+  async findAll(
+    @Param('id') id: string,
+    @Query() query?: { term: string }
+    ): Promise<Property[]> {
     console.log(query);
     if (query.term) {
-      return this.propertyService.findByName(query.term);
+      return this.propertyService.findByName(query.term, id);
     }
-    return this.propertyService.findAll();
+    return this.propertyService.findAll(id);
   }
 
   @Get(':id')

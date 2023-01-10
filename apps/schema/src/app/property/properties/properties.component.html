@@ -1,4 +1,4 @@
-<kgms-property-search></kgms-property-search>
+<kgms-property-search *ngIf="schema" [schema]="schema"></kgms-property-search>
 
 <kgms-ag-grid
   *ngIf="rowData$ && columnDefs"

@@ -36,7 +36,7 @@
             All datasets in the dataset:
             <ul>
                 {% for dataset in datasets %}
-                    <li><a href="/datasets/{{dataset.id}}">{{ dataset.name }}</a>({{ dataset.size }})</li>
+                    <li><a href="/datasets/{{dataset.id}}">{{ dataset.id }}:{{ dataset.name }}</a>({{ dataset.size }})</li>
                 {% endfor %}
             </ul>
         {% else %}
