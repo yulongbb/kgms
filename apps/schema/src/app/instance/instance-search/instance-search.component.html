@@ -4,7 +4,10 @@
 
   <ul class="search-result">
     <li *ngFor="let instance of instances$ | async">
-      <a routerLink="/instance/detail/Q{{ instance._fields[0].identity.low }}">
+      <a
+        routerLink="/instance/detail/{{ instance._fields[0].identity.low }}"
+        [queryParams]="{ id: instance._fields[0].properties.schema.low }"
+      >
         {{ instance._fields[0].properties.label }}
       </a>
     </li>

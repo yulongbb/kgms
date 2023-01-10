@@ -2,7 +2,6 @@ import { Module } from '@nestjs/common';
 import { TypeOrmModule } from '@nestjs/typeorm';
 import { PropertyController } from './property.controller';
 import { Property } from './property.entity';
-import { PropertyResolver } from './property.resolver';
 import { PropertyService } from './property.service';
 
 @Module({
@@ -19,6 +18,6 @@ import { PropertyService } from './property.service';
     autoLoadEntities: true,
   }),],
   controllers: [PropertyController],
-  providers: [PropertyService, PropertyResolver],
+  providers: [PropertyService],
 })
 export class PropertyModule { }

@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { LibTableModule } from '@lib/table';
+import { LibEntityModule } from '@lib/entity';
 
 import { InstanceRoutingModule } from './instance-routing.module';
 
@@ -16,6 +17,6 @@ import { InstanceSearchComponent } from './instance-search/instance-search.compo
     InstanceDetailComponent,
     InstanceSearchComponent,
   ],
-  imports: [CommonModule, InstanceRoutingModule, LibTableModule],
+  imports: [CommonModule, InstanceRoutingModule, LibTableModule,LibEntityModule],
 })
 export class InstanceModule {}

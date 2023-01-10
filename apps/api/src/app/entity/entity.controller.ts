@@ -53,8 +53,22 @@ export class EntityController {
    * @param id
    * @returns
    */
+  @Get('node/:id')
+  async findOne(@Param('id') id: number): Promise<any> {
+    console.log(`MATCH (n) WHERE ID(n)=${JSON.stringify(id)} RETURN n`)
+    const node: any = await this.neo4jService.write(
+      `MATCH (n) WHERE ID(n)=${id} RETURN n`
+    );
+    return node['records'][0]['_fields'][0]['properties'];
+  }
+
+  /**
+   * 查询单个节点信息
+   * @param id
+   * @returns
+   */
   @Get(':id')
-  async findOne(@Param('id') id: string): Promise<any> {
+  async findEntity(@Param('id') id: string): Promise<any> {
     console.log(id);
     const entity = {};
     const node = await this.neo4jService.read(
@@ -85,7 +99,7 @@ export class EntityController {
     entity['type'] = 'type';
 
     const relations = await this.neo4jService.read(
-      `MATCH (subject:Item)-[predicate]->(object) WHERE ID(subject)=${id.replace(
+      `MATCH (subject:Item)-[predicate]-(object) WHERE ID(subject)=${id.replace(
         'Q',
         ''
       )} RETURN subject, predicate, object`

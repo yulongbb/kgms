@@ -28,7 +28,7 @@ export class InstancesComponent {
           field: '_fields.0',
           headerName: 'label',
           cellRenderer: (params: any) => {
-            return `<a href="http://localhost:4200/instance/detail/Q${params.value.identity.low}">${params.value.properties.label}</a>`;
+            return `<a href="http://localhost:4200/instance/detail/Q${params.value.identity.low}?id=${params.value.properties.schema.low}">${params.value.properties.label}</a>`;
           },
         },
       ];

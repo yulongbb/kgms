@@ -1,0 +1,18 @@
+<h1>{{ entity.labels['zh-cn'].value }}({{entity.id}})</h1>
+<p>{{ entity.descriptions['zh-cn'].value }}</p>
+<p>
+  <span *ngFor="let aliase of entity.aliases['zh-cn']">{{
+    aliase.value
+  }}</span>
+</p>
+
+<table>
+  <tbody>
+    <tr *ngFor="let statement of entity.claims | keyvalue">
+        <td>{{statement.key | property}}</td>
+        <td>
+            <kgms-statement [statements]="statement.value"></kgms-statement>
+        </td>
+    </tr>
+  </tbody>
+</table>
