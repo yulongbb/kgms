@@ -1,0 +1,5937 @@
+/*
+Problematic modules: {"ext.echo.badgeicons":"missing","jquery.wikibase.statementview.RankSelector.styles":"missing","jquery.wikibase.toolbarbutton.styles":"missing","mediawiki.legacy.commonPrint":"missing","mediawiki.legacy.shared":"missing","mediawiki.sectionAnchor":"missing"}
+*/
+.mw-echo-alert {
+    background-color: #fc3;
+    color: #000000;
+    border-radius: 2px;
+    padding: 0.25em 0.8em 0.2em 0.8em;
+    font-weight: normal
+}
+
+.vector-user-links .vector-menu-content-list .mw-echo-alert {
+    padding: 0.2em 0.5em;
+    white-space: nowrap;
+    max-width: 270px;
+    overflow: hidden;
+    text-overflow: ellipsis
+}
+
+.vector-user-links .vector-menu-content-list .mw-echo-alert .mw-ui-icon.mw-ui-icon-before:before {
+    display: none
+}
+
+@media (max-width:1200px) {
+    .vector-user-links .vector-menu-content-list .mw-echo-alert {
+        font-size: 12px;
+        position: absolute;
+        top: 100%;
+        right: 0
+    }
+}
+
+.vector-user-links-wide .vector-menu-content-list .mw-echo-alert {
+    font-size: 12px;
+    position: absolute;
+    top: 100%;
+    right: 0
+}
+
+#pt-notifications-alert .mw-echo-notifications-badge,
+#pt-notifications-notice .mw-echo-notifications-badge {
+    position: relative;
+    display: block;
+    box-sizing: border-box;
+    width: 20px;
+    height: 20px;
+    margin: 0 2px;
+    top: 0;
+    text-indent: -9999px;
+    border-radius: 2px;
+    cursor: pointer;
+    text-decoration: none;
+    line-height: normal;
+    opacity: 0.87;
+    color: transparent
+}
+
+#pt-notifications-alert .mw-echo-notifications-badge:hover,
+#pt-notifications-notice .mw-echo-notifications-badge:hover,
+#pt-notifications-alert .mw-echo-notifications-badge:active,
+#pt-notifications-notice .mw-echo-notifications-badge:active,
+#pt-notifications-alert .mw-echo-notifications-badge:focus,
+#pt-notifications-notice .mw-echo-notifications-badge:focus {
+    outline: 0
+}
+
+#pt-notifications-alert .mw-echo-notifications-badge:focus,
+#pt-notifications-notice .mw-echo-notifications-badge:focus {
+    box-shadow: 0 0 0 1px #fff, 0 0 0 3px #36c;
+    opacity: 1
+}
+
+#pt-notifications-alert .mw-echo-notifications-badge:focus:after,
+#pt-notifications-notice .mw-echo-notifications-badge:focus:after {
+    border-color: #36c
+}
+
+#pt-notifications-alert .mw-echo-notifications-badge:after,
+#pt-notifications-notice .mw-echo-notifications-badge:after {
+    position: absolute;
+    display: inline-block;
+    cursor: pointer;
+    top: 9px;
+    text-indent: 0;
+    left: 55%;
+    font-size: 0.9em;
+    font-weight: bold;
+    padding: 0 0.3em;
+    border: 1px solid #fff;
+    border-radius: 2px;
+    background-color: #72777d;
+    content: attr(data-counter-text);
+    color: #fff
+}
+
+#pt-notifications-alert .mw-echo-notifications-badge-dimmed,
+#pt-notifications-notice .mw-echo-notifications-badge-dimmed {
+    opacity: 0.4
+}
+
+#pt-notifications-alert .mw-echo-notifications-badge.mw-echo-notifications-badge-long-label,
+#pt-notifications-notice .mw-echo-notifications-badge.mw-echo-notifications-badge-long-label {
+    margin-right: 0.5em
+}
+
+#pt-notifications-alert .mw-echo-notifications-badge.mw-echo-notifications-badge-long-label:after,
+#pt-notifications-notice .mw-echo-notifications-badge.mw-echo-notifications-badge-long-label:after {
+    left: 35%
+}
+
+#pt-notifications-alert .mw-echo-notifications-badge.mw-echo-notifications-badge-all-read,
+#pt-notifications-notice .mw-echo-notifications-badge.mw-echo-notifications-badge-all-read {
+    opacity: 0.51
+}
+
+#pt-notifications-alert .mw-echo-notifications-badge.mw-echo-notifications-badge-all-read:after,
+#pt-notifications-notice .mw-echo-notifications-badge.mw-echo-notifications-badge-all-read:after {
+    visibility: hidden
+}
+
+#pt-notifications-alert .mw-echo-notifications-badge.oo-ui-flaggedElement-unseen:after,
+#pt-notifications-alert .mw-echo-notifications-badge.mw-echo-unseen-notifications:after {
+    background-color: #dd3333
+}
+
+#pt-notifications-notice .mw-echo-notifications-badge.oo-ui-flaggedElement-unseen:after,
+#pt-notifications-notice .mw-echo-notifications-badge.mw-echo-unseen-notifications:after {
+    background-color: #3366cc
+}
+
+.skin-vector-legacy #pt-notifications-notice .mw-echo-notifications-badge,
+.skin-vector-legacy #pt-notifications-alert .mw-echo-notifications-badge {
+    top: -5px
+}
+
+.skin-vector-legacy #p-personal #pt-notifications-alert,
+.skin-vector-legacy #p-personal #pt-notifications-notice {
+    margin-right: 0.4em
+}
+
+@namespace m url(http://www.w3.org/1998/Math/MathML);
+
+.mwe-math-mathml-inline {
+    display: inline !important
+}
+
+.mwe-math-mathml-display {
+    display: block !important;
+    margin-left: auto;
+    margin-right: auto
+}
+
+.mwe-math-mathml-a11y {
+    clip: rect(1px, 1px, 1px, 1px);
+    overflow: hidden;
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    opacity: 0
+}
+
+.mwe-math-fallback-image-inline {
+    display: inline-block;
+    vertical-align: middle
+}
+
+.mwe-math-fallback-image-display {
+    display: block;
+    margin-left: auto !important;
+    margin-right: auto !important
+}
+
+.mwe-math-fallback-source-inline {
+    display: inline;
+    vertical-align: middle
+}
+
+.mwe-math-fallback-source-display {
+    display: block;
+    margin-left: auto;
+    margin-right: auto
+}
+
+img.tex {
+    vertical-align: middle
+}
+
+div.mwe-math-element {
+    overflow-x: auto;
+    max-width: 100%
+}
+
+.uls-trigger {
+    background: no-repeat url(/w/extensions/UniversalLanguageSelector/lib/jquery.uls/images/language.svg?80b0b) left center;
+    background-size: contain;
+    padding-left: 24px
+}
+
+#pt-uls {
+    padding-top: 0 !important
+}
+
+#pt-uls .uls-trigger {
+    background-image: none;
+    display: inline-block;
+    padding-top: 0.5em !important;
+    padding-left: 0
+}
+
+#pt-uls .uls-trigger:before {
+    content: '';
+    background-image: url(/w/extensions/UniversalLanguageSelector/lib/jquery.uls/images/language.svg?80b0b);
+    background-position: left 0.08333333em;
+    background-repeat: no-repeat;
+    background-size: 1.33333333em 1.33333333em;
+    padding-top: 0.33333333em;
+    padding-left: 1.66666667em;
+    opacity: 0.67
+}
+
+.vector-user-links .uls-trigger {
+    background: none
+}
+
+.skin-vector-legacy {}
+
+.skin-vector-legacy .uls-trigger {
+    background: no-repeat url(/w/extensions/UniversalLanguageSelector/lib/jquery.uls/images/language.svg?80b0b) left center;
+    background-size: contain;
+    padding-left: 24px
+}
+
+.skin-vector-legacy #pt-uls {
+    padding-top: 0 !important
+}
+
+.skin-vector-legacy #pt-uls .uls-trigger {
+    background-image: none;
+    display: inline-block;
+    padding-top: 0.5em !important;
+    padding-left: 0
+}
+
+.skin-vector-legacy #pt-uls .uls-trigger:before {
+    content: '';
+    background-image: url(/w/extensions/UniversalLanguageSelector/lib/jquery.uls/images/language.svg?80b0b);
+    background-position: left 0.08333333em;
+    background-repeat: no-repeat;
+    background-size: 1.33333333em 1.33333333em;
+    padding-top: 0.33333333em;
+    padding-left: 1.66666667em;
+    opacity: 0.67
+}
+
+.client-nojs #ca-ve-edit,
+.ve-not-available #ca-ve-edit,
+.client-nojs .mw-editsection-divider,
+.ve-not-available .mw-editsection-divider,
+.client-nojs .mw-editsection-visualeditor,
+.ve-not-available .mw-editsection-visualeditor {
+    display: none
+}
+
+.client-js .mw-content-ltr .mw-editsection-bracket:first-of-type,
+.client-js .mw-content-rtl .mw-editsection-bracket:not(:first-of-type) {
+    margin-right: 0.25em;
+    color: #54595d
+}
+
+.client-js .mw-content-rtl .mw-editsection-bracket:first-of-type,
+.client-js .mw-content-ltr .mw-editsection-bracket:not(:first-of-type) {
+    margin-left: 0.25em;
+    color: #54595d
+}
+
+.wb-badge.wb-badge-featuredarticle,
+.wb-badge.wb-badge-featuredlist,
+.wb-badge.wb-badge-featuredportal,
+.wb-badge.wb-badge-featuredtext {
+    background-image: url(/w/extensions/Wikidata.org/resources/images/wb-badges-gold.png?c1be4);
+    background-image: linear-gradient(transparent, transparent), url("data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 width=%2212%22 height=%2219%22 viewBox=%220 0 57.6 91.2%22%3E %3Cg fill=%22%23FFD700%22 transform=%22matrix%281.0741053%2C0%2C0%2C1.0741053%2C-20.22352%2C-6.387075%29%22%3E %3Cpath d=%22M45.7%2C61.6c-2.6%2C0-8.6%2C6.1-8.6%2C6.1v21.9c0%2C0.5%2C0.6%2C0.7%2C0.9%2C0.4l7.7-7.6l7.8%2C7.7c0.3%2C0.3%2C0.9%2C0.1%2C0.9-0.4 v-22C54.3%2C67.7%2C48.3%2C61.6%2C45.7%2C61.6z%22/%3E %3Cpath fill=%22%23FFC100%22 d=%22M71.9%2C35.1c0-2.5-6.4-3.9-7.2-6.2c-0.8-2.3%2C3.6-7.3%2C2.2-9.2c-1.4-2-7.5%2C0.6-9.5-0.8c-1.9-1.4-1.3-8-3.7-8.8 c-2.3-0.7-5.6%2C4.9-8.1%2C4.9c-2.5%2C0-5.9-5.7-8.1-4.9c-2.3%2C0.8-1.7%2C7.3-3.7%2C8.8c-2%2C1.4-8-1.2-9.5%2C0.8c-1.4%2C1.9%2C2.9%2C6.9%2C2.2%2C9.2 c-0.7%2C2.3-7.2%2C3.7-7.2%2C6.2c0%2C2.5%2C6.4%2C3.9%2C7.2%2C6.2c0.8%2C2.3-3.6%2C7.3-2.2%2C9.2c1.4%2C2%2C7.5-0.6%2C9.5%2C0.8c1.9%2C1.4%2C1.3%2C8%2C3.7%2C8.8 c2.3%2C0.7%2C5.6-4.9%2C8.1-4.9c2.5%2C0%2C5.9%2C5.7%2C8.1%2C4.9c2.3-0.8%2C1.7-7.3%2C3.7-8.8c2-1.4%2C8%2C1.2%2C9.5-0.8c1.4-1.9-2.9-6.9-2.2-9.2 C65.5%2C39.1%2C71.9%2C37.6%2C71.9%2C35.1zM45.7%2C49.2c-7.8%2C0-14.1-6.3-14.1-14.1s6.3-14.1%2C14.1-14.1s14.1%2C6.3%2C14.1%2C14.1S53.5%2C49.2%2C45.7%2C49.2z%22/%3E %3Ccircle cx=%2245.7%22 cy=%2235.1%22 r=%229.4%22/%3E %3C/g%3E %3C/svg%3E")
+}
+
+.wb-badge.wb-badge-recommendedarticle,
+.wb-badge.wb-badge-goodarticle,
+.wb-badge.wb-badge-goodlist,
+.wb-badge.wb-badge-digitaldocument {
+    background-image: url(/w/extensions/Wikidata.org/resources/images/wb-badges-silver.png?01870);
+    background-image: linear-gradient(transparent, transparent), url("data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 width=%2212%22 height=%2219%22 viewBox=%220 0 57.6 91.2%22%3E %3Cpath fill=%22%23BBB%22 d=%22M28.8 58.15C24.44 58.15 14.4 67.2 14.4 67.2l-0.03 22.65c-0 0.54 1.01 0.75 1.51 0.43 L28.8 81.6 41.66 90.39c0.5 0.32 1.51 0.11 1.51-0.43l0-22.76C43 67.2 33.16 58.15 28.8 58.15z%22/%3E %3Cpath fill=%22%23AAA%22 d=%22m57 31.31c0-2.69-6.87-4.19-7.73-6.66-0.86-2.47 3.87-7.84 2.36-9.88-1.5 -2.15-8.06 0.64-10.2-0.86-2.04-1.5-1.4-8.59-3.97-9.45-2.47-0.75-6.01 5.26-8.7 5.26-2.69 0-6.34-6.12-8.7-5.26-2.47 0.86-1.83 7.84-3.97 9.45-2.15 1.5-8.59-1.29-10.2 0.86-1.5 2.04 3.11 7.41 2.36 9.88-0.75 2.47-7.73 3.97-7.73 6.66 0 2.69 6.87 4.19 7.73 6.66 0.86 2.47-3.87 7.84-2.36 9.88 1.5 2.15 8.06-0.64 10.2 0.86 2.04 1.5 1.4 8.59 3.97 9.45 2.47 0.75 6.01-5.26 8.7-5.26 2.69 0 6.34 6.12 8.7 5.26 2.47-0.86 1.83-7.84 3.97-9.45 2.15-1.5 8.59 1.29 10.2-0.86 1.5 -2.04-3.11-7.41-2.36-9.88 0.86-2.36 7.73-3.97 7.73-6.66zM28.86 46.46 c-8.38 0-15.14-6.77-15.14-15.14 0-8.38 6.77-15.14 15.14-15.14 8.38 0 15.14 6.77 15.14 15.14 0 8.38-6.77 15.14-15.14 15.14z%22/%3E %3Ccircle fill=%22%23BBB%22 cx=%2245.7%22 cy=%2235.1%22 r=%229.4%22 transform=%22matrix%281.0741053%2C0%2C0%2C1.0741053%2C-20.22352%2C-6.387075%29%22/%3E %3C/svg%3E")
+}
+
+.wb-badge.wb-badge-notproofread {
+    background-image: url(/w/extensions/Wikidata.org/resources/images/wb-badges-notproofread.png?2b8a2);
+    background-image: linear-gradient(transparent, transparent), url("data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 width=%2212%22 height=%2219%22 viewBox=%220 0 57.6 91.2%22%3E %3Cg fill=%22%23FFA0A0%22 transform=%22matrix%281.0741053%2C0%2C0%2C1.0741053%2C-20.22352%2C-6.387075%29%22%3E %3Cpath d=%22M45.7%2C61.6c-2.6%2C0-8.6%2C6.1-8.6%2C6.1v21.9c0%2C0.5%2C0.6%2C0.7%2C0.9%2C0.4l7.7-7.6l7.8%2C7.7c0.3%2C0.3%2C0.9%2C0.1%2C0.9-0.4 v-22C54.3%2C67.7%2C48.3%2C61.6%2C45.7%2C61.6z%22/%3E %3Cpath d=%22M71.9%2C35.1c0-2.5-6.4-3.9-7.2-6.2c-0.8-2.3%2C3.6-7.3%2C2.2-9.2c-1.4-2-7.5%2C0.6-9.5-0.8c-1.9-1.4-1.3-8-3.7-8.8 c-2.3-0.7-5.6%2C4.9-8.1%2C4.9c-2.5%2C0-5.9-5.7-8.1-4.9c-2.3%2C0.8-1.7%2C7.3-3.7%2C8.8c-2%2C1.4-8-1.2-9.5%2C0.8c-1.4%2C1.9%2C2.9%2C6.9%2C2.2%2C9.2 c-0.7%2C2.3-7.2%2C3.7-7.2%2C6.2c0%2C2.5%2C6.4%2C3.9%2C7.2%2C6.2c0.8%2C2.3-3.6%2C7.3-2.2%2C9.2c1.4%2C2%2C7.5-0.6%2C9.5%2C0.8c1.9%2C1.4%2C1.3%2C8%2C3.7%2C8.8 c2.3%2C0.7%2C5.6-4.9%2C8.1-4.9c2.5%2C0%2C5.9%2C5.7%2C8.1%2C4.9c2.3-0.8%2C1.7-7.3%2C3.7-8.8c2-1.4%2C8%2C1.2%2C9.5-0.8c1.4-1.9-2.9-6.9-2.2-9.2 C65.5%2C39.1%2C71.9%2C37.6%2C71.9%2C35.1zM45.7%2C49.2c-7.8%2C0-14.1-6.3-14.1-14.1s6.3-14.1%2C14.1-14.1s14.1%2C6.3%2C14.1%2C14.1S53.5%2C49.2%2C45.7%2C49.2z%22/%3E %3Ccircle cx=%2245.7%22 cy=%2235.1%22 r=%229.4%22/%3E %3C/g%3E %3C/svg%3E")
+}
+
+.wb-badge.wb-badge-problematic {
+    background-image: url(/w/extensions/Wikidata.org/resources/images/wb-badges-problematic.png?16ebc);
+    background-image: linear-gradient(transparent, transparent), url("data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 width=%2212%22 height=%2219%22 viewBox=%220 0 57.6 91.2%22%3E %3Cg fill=%22%23B0B0FF%22 transform=%22matrix%281.0741053%2C0%2C0%2C1.0741053%2C-20.22352%2C-6.387075%29%22%3E %3Cpath d=%22M45.7%2C61.6c-2.6%2C0-8.6%2C6.1-8.6%2C6.1v21.9c0%2C0.5%2C0.6%2C0.7%2C0.9%2C0.4l7.7-7.6l7.8%2C7.7c0.3%2C0.3%2C0.9%2C0.1%2C0.9-0.4 v-22C54.3%2C67.7%2C48.3%2C61.6%2C45.7%2C61.6z%22/%3E %3Cpath d=%22M71.9%2C35.1c0-2.5-6.4-3.9-7.2-6.2c-0.8-2.3%2C3.6-7.3%2C2.2-9.2c-1.4-2-7.5%2C0.6-9.5-0.8c-1.9-1.4-1.3-8-3.7-8.8 c-2.3-0.7-5.6%2C4.9-8.1%2C4.9c-2.5%2C0-5.9-5.7-8.1-4.9c-2.3%2C0.8-1.7%2C7.3-3.7%2C8.8c-2%2C1.4-8-1.2-9.5%2C0.8c-1.4%2C1.9%2C2.9%2C6.9%2C2.2%2C9.2 c-0.7%2C2.3-7.2%2C3.7-7.2%2C6.2c0%2C2.5%2C6.4%2C3.9%2C7.2%2C6.2c0.8%2C2.3-3.6%2C7.3-2.2%2C9.2c1.4%2C2%2C7.5-0.6%2C9.5%2C0.8c1.9%2C1.4%2C1.3%2C8%2C3.7%2C8.8 c2.3%2C0.7%2C5.6-4.9%2C8.1-4.9c2.5%2C0%2C5.9%2C5.7%2C8.1%2C4.9c2.3-0.8%2C1.7-7.3%2C3.7-8.8c2-1.4%2C8%2C1.2%2C9.5-0.8c1.4-1.9-2.9-6.9-2.2-9.2 C65.5%2C39.1%2C71.9%2C37.6%2C71.9%2C35.1zM45.7%2C49.2c-7.8%2C0-14.1-6.3-14.1-14.1s6.3-14.1%2C14.1-14.1s14.1%2C6.3%2C14.1%2C14.1S53.5%2C49.2%2C45.7%2C49.2z%22/%3E %3Ccircle cx=%2245.7%22 cy=%2235.1%22 r=%229.4%22/%3E %3C/g%3E %3C/svg%3E")
+}
+
+.wb-badge.wb-badge-proofread {
+    background-image: url(/w/extensions/Wikidata.org/resources/images/wb-badges-proofread.png?2d091);
+    background-image: linear-gradient(transparent, transparent), url("data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 width=%2212%22 height=%2219%22 viewBox=%220 0 57.6 91.2%22%3E %3Cg fill=%22%23FFE867%22 transform=%22matrix%281.0741053%2C0%2C0%2C1.0741053%2C-20.22352%2C-6.387075%29%22%3E %3Cpath d=%22M45.7%2C61.6c-2.6%2C0-8.6%2C6.1-8.6%2C6.1v21.9c0%2C0.5%2C0.6%2C0.7%2C0.9%2C0.4l7.7-7.6l7.8%2C7.7c0.3%2C0.3%2C0.9%2C0.1%2C0.9-0.4 v-22C54.3%2C67.7%2C48.3%2C61.6%2C45.7%2C61.6z%22/%3E %3Cpath d=%22M71.9%2C35.1c0-2.5-6.4-3.9-7.2-6.2c-0.8-2.3%2C3.6-7.3%2C2.2-9.2c-1.4-2-7.5%2C0.6-9.5-0.8c-1.9-1.4-1.3-8-3.7-8.8 c-2.3-0.7-5.6%2C4.9-8.1%2C4.9c-2.5%2C0-5.9-5.7-8.1-4.9c-2.3%2C0.8-1.7%2C7.3-3.7%2C8.8c-2%2C1.4-8-1.2-9.5%2C0.8c-1.4%2C1.9%2C2.9%2C6.9%2C2.2%2C9.2 c-0.7%2C2.3-7.2%2C3.7-7.2%2C6.2c0%2C2.5%2C6.4%2C3.9%2C7.2%2C6.2c0.8%2C2.3-3.6%2C7.3-2.2%2C9.2c1.4%2C2%2C7.5-0.6%2C9.5%2C0.8c1.9%2C1.4%2C1.3%2C8%2C3.7%2C8.8 c2.3%2C0.7%2C5.6-4.9%2C8.1-4.9c2.5%2C0%2C5.9%2C5.7%2C8.1%2C4.9c2.3-0.8%2C1.7-7.3%2C3.7-8.8c2-1.4%2C8%2C1.2%2C9.5-0.8c1.4-1.9-2.9-6.9-2.2-9.2 C65.5%2C39.1%2C71.9%2C37.6%2C71.9%2C35.1zM45.7%2C49.2c-7.8%2C0-14.1-6.3-14.1-14.1s6.3-14.1%2C14.1-14.1s14.1%2C6.3%2C14.1%2C14.1S53.5%2C49.2%2C45.7%2C49.2z%22/%3E %3Ccircle cx=%2245.7%22 cy=%2235.1%22 r=%229.4%22/%3E %3C/g%3E %3C/svg%3E")
+}
+
+.wb-badge.wb-badge-redirect-sitelink {
+    background-image: url(/w/extensions/Wikidata.org/resources/images/wb-badges-redirect-sitelink.png?66626);
+    background-image: linear-gradient(transparent, transparent), url("data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 version=%221.0%22 viewBox=%220 0 142.719 88.125%22%3E %3Cpath d=%22M0 0v66.938h76.594v21.187l66.125-25.906-66.125-34.531v22.53H15.563V0H0z%22 fill=%22%2372777d%22/%3E %3C/svg%3E")
+}
+
+.wb-badge.wb-badge-redirect-intentional-sitelink {
+    background-image: url(/w/extensions/Wikidata.org/resources/images/wb-badges-redirect-intentional-sitelink.png?dd7dd);
+    background-image: linear-gradient(transparent, transparent), url("data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 version=%221.0%22 viewBox=%220 0 142.719 88.125%22%3E %3Cpath d=%22M0 0v66.938h76.594v21.187l66.125-25.906-66.125-34.531v22.53H15.563V0H0z%22 fill=%22%2336c%22/%3E %3C/svg%3E")
+}
+
+.wb-badge.wb-badge-validated {
+    background-image: url(/w/extensions/Wikidata.org/resources/images/wb-badges-validated.png?04830);
+    background-image: linear-gradient(transparent, transparent), url("data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 width=%2212%22 height=%2219%22 viewBox=%220 0 57.6 91.2%22%3E %3Cg fill=%22%2390FF90%22 transform=%22matrix%281.0741053%2C0%2C0%2C1.0741053%2C-20.22352%2C-6.387075%29%22%3E %3Cpath d=%22M45.7%2C61.6c-2.6%2C0-8.6%2C6.1-8.6%2C6.1v21.9c0%2C0.5%2C0.6%2C0.7%2C0.9%2C0.4l7.7-7.6l7.8%2C7.7c0.3%2C0.3%2C0.9%2C0.1%2C0.9-0.4 v-22C54.3%2C67.7%2C48.3%2C61.6%2C45.7%2C61.6z%22/%3E %3Cpath d=%22M71.9%2C35.1c0-2.5-6.4-3.9-7.2-6.2c-0.8-2.3%2C3.6-7.3%2C2.2-9.2c-1.4-2-7.5%2C0.6-9.5-0.8c-1.9-1.4-1.3-8-3.7-8.8 c-2.3-0.7-5.6%2C4.9-8.1%2C4.9c-2.5%2C0-5.9-5.7-8.1-4.9c-2.3%2C0.8-1.7%2C7.3-3.7%2C8.8c-2%2C1.4-8-1.2-9.5%2C0.8c-1.4%2C1.9%2C2.9%2C6.9%2C2.2%2C9.2 c-0.7%2C2.3-7.2%2C3.7-7.2%2C6.2c0%2C2.5%2C6.4%2C3.9%2C7.2%2C6.2c0.8%2C2.3-3.6%2C7.3-2.2%2C9.2c1.4%2C2%2C7.5-0.6%2C9.5%2C0.8c1.9%2C1.4%2C1.3%2C8%2C3.7%2C8.8 c2.3%2C0.7%2C5.6-4.9%2C8.1-4.9c2.5%2C0%2C5.9%2C5.7%2C8.1%2C4.9c2.3-0.8%2C1.7-7.3%2C3.7-8.8c2-1.4%2C8%2C1.2%2C9.5-0.8c1.4-1.9-2.9-6.9-2.2-9.2 C65.5%2C39.1%2C71.9%2C37.6%2C71.9%2C35.1zM45.7%2C49.2c-7.8%2C0-14.1-6.3-14.1-14.1s6.3-14.1%2C14.1-14.1s14.1%2C6.3%2C14.1%2C14.1S53.5%2C49.2%2C45.7%2C49.2z%22/%3E %3Ccircle cx=%2245.7%22 cy=%2235.1%22 r=%229.4%22/%3E %3C/g%3E %3C/svg%3E")
+}
+
+.badge-goodarticle,
+.badge-goodlist,
+.badge-recommendedarticle {
+    list-style-image: url(/w/extensions/WikimediaBadges/resources/images/badge-silver-star.png?70a8c)
+}
+
+.badge-featuredarticle,
+.badge-featuredportal,
+.badge-featuredlist {
+    list-style-image: url(/w/extensions/WikimediaBadges/resources/images/badge-golden-star.png?ed948)
+}
+
+.badge-problematic {
+    list-style-image: url(/w/extensions/WikimediaBadges/resources/images/badge-problematic.png?f3177)
+}
+
+.badge-proofread {
+    list-style-image: url(/w/extensions/WikimediaBadges/resources/images/badge-proofread.png?e81f9)
+}
+
+.badge-validated {
+    list-style-image: url(/w/extensions/WikimediaBadges/resources/images/badge-validated.png?6232c)
+}
+
+.badge-digitaldocument {
+    list-style-image: url(/w/extensions/WikimediaBadges/resources/images/badge-digitaldocument.png?d1c50)
+}
+
+.wikibase-toolbar {
+    white-space: nowrap;
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    user-select: none
+}
+
+@media print {
+    .wikibase-toolbar {
+        display: none
+    }
+}
+
+.mw-content-rtl .wikibase-toolbar {
+    padding-top: 5px
+}
+
+.wikibase-toolbarbutton-disabled a {
+    cursor: default
+}
+
+.wikibase-toolbarbutton-disabled a:link,
+.wikibase-toolbarbutton-disabled a:hover,
+.wikibase-toolbarbutton-disabled a:active,
+.wikibase-toolbarbutton-disabled a:visited {
+    color: #72777d;
+    text-decoration: none
+}
+
+.wikibase-toolbarbutton.oo-ui-buttonElement {
+    padding: 0
+}
+
+.wikibase-toolbarbutton.oo-ui-buttonElement>.oo-ui-buttonElement-button>.oo-ui-iconElement-icon {
+    height: 1em;
+    width: 1em
+}
+
+.wikibase-toolbarbutton.ui-state-disabled.oo-ui-buttonElement>.oo-ui-buttonElement-button>.oo-ui-iconElement-icon {
+    opacity: 0.33
+}
+
+.wikibase-toolbarbutton.ui-state-disabled.oo-ui-buttonElement>.oo-ui-buttonElement-button {
+    cursor: default
+}
+
+.wikibase-toolbar-button a {
+    font-size: small;
+    padding: 0
+}
+
+.wikibase-toolbar-button .wb-icon {
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 16px 16px;
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    vertical-align: middle;
+    opacity: 0.87
+}
+
+.wikibase-toolbar-button a:hover .wb-icon {
+    opacity: 1
+}
+
+.wikibase-toolbar-button.ui-state-disabled a:hover .wb-icon {
+    opacity: 0.5
+}
+
+.wikibase-toolbar-button-edit .wb-icon {
+    background-image: url(/w/extensions/Wikibase/view/resources/jquery/wikibase/toolbar/themes/default/images/icons/ooui/edit.png?1d602);
+    background-image: linear-gradient(transparent, transparent), url("data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 width=%2220%22 height=%2220%22 viewBox=%220 0 20 20%22%3E %3Ctitle%3E edit %3C/title%3E %3Cpath d=%22M16.77 8l1.94-2a1 1 0 0 0 0-1.41l-3.34-3.3a1 1 0 0 0-1.41 0L12 3.23zm-5.81-3.71L1 14.25V19h4.75l9.96-9.96-4.75-4.75z%22/%3E %3C/svg%3E")
+}
+
+.wikibase-toolbar-button-save .wb-icon {
+    background-image: url(/w/extensions/Wikibase/view/resources/jquery/wikibase/toolbar/themes/default/images/icons/ooui/check.png?e3c6e);
+    background-image: linear-gradient(transparent, transparent), url("data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 width=%2220%22 height=%2220%22 viewBox=%220 0 20 20%22%3E %3Ctitle%3E check %3C/title%3E %3Cpath d=%22M7 14.17L2.83 10l-1.41 1.41L7 17 19 5l-1.41-1.42L7 14.17z%22/%3E %3C/svg%3E")
+}
+
+.wikibase-toolbar-button-remove .wb-icon {
+    background-image: url(/w/extensions/Wikibase/view/resources/jquery/wikibase/toolbar/themes/default/images/icons/ooui/trash.png?fd5a7);
+    background-image: linear-gradient(transparent, transparent), url("data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 width=%2220%22 height=%2220%22 viewBox=%220 0 20 20%22%3E %3Ctitle%3E trash %3C/title%3E %3Cpath d=%22M17 2h-3.5l-1-1h-5l-1 1H3v2h14zM4 17a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2V5H4z%22/%3E %3C/svg%3E")
+}
+
+.wikibase-toolbar-button-cancel .wb-icon {
+    background-image: url(/w/extensions/Wikibase/view/resources/jquery/wikibase/toolbar/themes/default/images/icons/ooui/close.png?55121);
+    background-image: linear-gradient(transparent, transparent), url("data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 width=%2220%22 height=%2220%22 viewBox=%220 0 20 20%22%3E %3Ctitle%3E close %3C/title%3E %3Cpath d=%22M3.636 2.224l14.142 14.142-1.414 1.414L2.222 3.638z%22/%3E %3Cpath d=%22M17.776 3.636L3.634 17.778 2.22 16.364 16.362 2.222z%22/%3E %3C/svg%3E")
+}
+
+.wikibase-toolbar-button-add .wb-icon {
+    background-image: url(/w/extensions/Wikibase/view/resources/jquery/wikibase/toolbar/themes/default/images/icons/ooui/add.png?606ba);
+    background-image: linear-gradient(transparent, transparent), url("data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 width=%2220%22 height=%2220%22 viewBox=%220 0 20 20%22%3E %3Ctitle%3E add %3C/title%3E %3Cpath d=%22M16 9h-5V4H9v5H4v2h5v5h2v-5h5V9z%22/%3E %3C/svg%3E")
+}
+
+@media (prefers-reduced-motion:reduce) {
+
+    *,
+    ::before,
+    ::after {
+        animation-delay: -0.01ms !important;
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        scroll-behavior: auto !important;
+        transition-duration: 0ms !important
+    }
+}
+
+.firstHeading:before {
+    content: url(/static/images/mobile/copyright/wikidatawiki-wordmark.svg);
+    display: block;
+    height: 17px;
+    left: -9999px;
+    line-height: 0;
+    margin-bottom: 20px;
+    position: absolute;
+    width: 130px
+}
+
+div.tright,
+div.floatright,
+table.floatright {
+    clear: right;
+    float: right
+}
+
+div.tleft,
+div.floatleft,
+table.floatleft {
+    float: left;
+    clear: left
+}
+
+div.floatright,
+table.floatright {
+    margin: 0 0 0.5em 0.5em
+}
+
+div.floatleft,
+table.floatleft {
+    margin: 0 0.5em 0.5em 0
+}
+
+div.thumb {
+    width: auto;
+    background-color: transparent;
+    margin-bottom: 0.5em
+}
+
+div.tleft {
+    margin: 0.5em 1.4em 1.3em 0
+}
+
+div.tright {
+    margin: 0.5em 0 1.3em 1.4em
+}
+
+.thumbcaption {
+    text-align: left;
+    line-height: 1.4em;
+    padding: 3px
+}
+
+div.thumbinner {
+    padding: 3px;
+    text-align: center;
+    overflow: hidden
+}
+
+.mw-message-box {
+    color: #000;
+    box-sizing: border-box;
+    margin-bottom: 16px;
+    border: 1px solid;
+    padding: 12px 24px;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    overflow: hidden;
+    background-color: #eaecf0;
+    border-color: #a2a9b1
+}
+
+.mw-message-box> :only-child {
+    margin: 0
+}
+
+.mw-message-box h2 {
+    color: inherit;
+    display: block;
+    border: 0;
+    font-size: 1em;
+    font-weight: bold
+}
+
+.mw-message-box .mw-logevent-loglines li {
+    font-size: 90%
+}
+
+.mw-message-box-error {
+    background-color: #fee7e6;
+    border-color: #d33
+}
+
+.mw-message-box-warning {
+    background-color: #fef6e7;
+    border-color: #fc3
+}
+
+.mw-message-box-success {
+    background-color: #d5fdf4;
+    border-color: #14866d
+}
+
+.toctogglecheckbox:checked~ul {
+    display: none
+}
+
+.mw-wiki-logo {
+    background-image: url(/static/images/project-logos/wikidatawiki.png)
+}
+
+@media print {
+    .firstHeading:before {
+        left: auto;
+        position: relative
+    }
+
+    table.floatright,
+    div.floatright {
+        border: 0
+    }
+
+    table.floatleft,
+    div.floatleft {
+        border: 0
+    }
+
+    div.thumb {
+        page-break-inside: avoid
+    }
+
+    div.thumb a {
+        border-bottom: 0
+    }
+
+    div.thumbinner {
+        border: 1px;
+        background-color: #ffffff;
+        font-size: 10pt;
+        color: #666666;
+        border-radius: 2px;
+        min-width: 100px
+    }
+
+    .thumbborder {
+        border: 1pt solid #dddddd
+    }
+
+    .magnify {
+        display: none
+    }
+
+    .mw-parser-output a.external {}
+
+    .mw-parser-output a.external.text:after,
+    .mw-parser-output a.external.autonumber:after {
+        content: ' (' attr(href) ')';
+        word-break: break-all;
+        word-wrap: break-word
+    }
+
+    .mw-parser-output a.external.text[href^='//']:after,
+    .mw-parser-output a.external.autonumber[href^='//']:after {
+        content: ' (https:' attr(href) ')'
+    }
+
+    .mw-editsection,
+    .mw-editsection-like,
+    .mw-indicators,
+    #siteNotice,
+    .usermessage {
+        display: none
+    }
+
+    .printfooter {
+        padding: 1em 0
+    }
+
+    .center {
+        text-align: center
+    }
+
+    a {
+        background: none !important;
+        padding: 0 !important
+    }
+
+    a,
+    a.external,
+    a.new,
+    a.stub {
+        color: inherit !important;
+        text-decoration: inherit !important
+    }
+
+    dt {
+        font-weight: bold
+    }
+
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+        font-weight: bold;
+        page-break-after: avoid;
+        page-break-before: avoid
+    }
+
+    p {
+        margin: 1em 0;
+        line-height: 1.2;
+        orphans: 3;
+        widows: 3
+    }
+
+    img,
+    figure {
+        page-break-inside: avoid
+    }
+
+    img {
+        border: 0;
+        vertical-align: middle
+    }
+
+    pre,
+    .mw-code {
+        background: #fff;
+        color: #000;
+        border: 1pt dashed #000;
+        padding: 1em;
+        font-size: 8pt;
+        white-space: pre-wrap;
+        overflow-x: hidden;
+        word-wrap: break-word
+    }
+
+    ul {
+        list-style-type: square
+    }
+
+    .toctogglecheckbox:checked+.toctitle {
+        display: none
+    }
+
+    .toc {
+        background-color: #f9f9f9;
+        border: 1pt solid #aaa;
+        padding: 5px;
+        display: table
+    }
+
+    .tocnumber,
+    .toctext {
+        display: table-cell
+    }
+
+    .tocnumber {
+        padding-left: 0;
+        padding-right: 0.5em
+    }
+
+    .mw-content-ltr .tocnumber {
+        padding-left: 0;
+        padding-right: 0.5em
+    }
+
+    .mw-content-rtl .tocnumber {
+        padding-left: 0.5em;
+        padding-right: 0
+    }
+}
+
+@media screen {
+    div.thumbinner {
+        border: 1px solid #c8ccd1;
+        background-color: #f8f9fa;
+        font-size: 94%
+    }
+
+    .thumbimage {
+        background-color: #ffffff;
+        border: 1px solid #c8ccd1
+    }
+
+    .thumbcaption {
+        border: 0;
+        font-size: 94%
+    }
+
+    .thumbborder {
+        border: 1px solid #eaecf0
+    }
+
+    .magnify {
+        float: right;
+        margin-left: 3px
+    }
+
+    .magnify a {
+        display: block;
+        text-indent: 15px;
+        white-space: nowrap;
+        overflow: hidden;
+        width: 15px;
+        height: 11px;
+        background-image: url(/w/resources/src/mediawiki.skinning/images/magnify-clip-ltr.svg?8330e);
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none
+    }
+
+    .mw-content-ltr .thumbcaption {
+        text-align: left
+    }
+
+    .mw-content-rtl .thumbcaption {
+        text-align: right
+    }
+
+    .mw-content-ltr .magnify {
+        margin-left: 3px;
+        margin-right: 0;
+        float: right
+    }
+
+    .mw-content-ltr .magnify a {
+        background-image: url(/w/resources/src/mediawiki.skinning/images/magnify-clip-ltr.svg?8330e)
+    }
+
+    .mw-content-rtl .magnify {
+        margin-left: 0;
+        margin-right: 3px;
+        float: left
+    }
+
+    .mw-content-rtl .magnify a {
+        background-image: url(/w/resources/src/mediawiki.skinning/images/magnify-clip-rtl.svg?38fd5)
+    }
+
+    .mw-body-content:after {
+        clear: both;
+        content: '';
+        display: block
+    }
+
+    .mw-body-content a.external.free {
+        word-wrap: break-word
+    }
+
+    .mw-body-content .error {
+        font-size: larger;
+        color: #d33
+    }
+
+    .rtl .mw-parser-output a.external.free,
+    .rtl .mw-parser-output a.external.autonumber {
+        direction: ltr;
+        unicode-bidi: embed
+    }
+
+    .mw-hide-empty-elt .mw-parser-output:not(.mw-show-empty-elt) .mw-empty-elt {
+        display: none
+    }
+
+    .emptyPortlet {
+        display: none
+    }
+
+    .printfooter,
+    .client-nojs #t-print {
+        display: none
+    }
+
+    .mw-editsection {
+        -moz-user-select: none;
+        -webkit-user-select: none;
+        -ms-user-select: none;
+        user-select: none
+    }
+
+    .mw-editsection,
+    .mw-editsection-like {
+        font-size: small;
+        font-weight: normal;
+        margin-left: 1em;
+        vertical-align: baseline;
+        line-height: 0
+    }
+
+    .mw-content-ltr .mw-editsection,
+    .mw-content-rtl .mw-content-ltr .mw-editsection,
+    .mw-content-ltr .mw-editsection-like,
+    .mw-content-rtl .mw-content-ltr .mw-editsection-like {
+        margin-left: 1em;
+        margin-right: 0
+    }
+
+    .mw-content-rtl .mw-editsection,
+    .mw-content-ltr .mw-content-rtl .mw-editsection,
+    .mw-content-rtl .mw-editsection-like,
+    .mw-content-ltr .mw-content-rtl .mw-editsection-like {
+        margin-right: 1em;
+        margin-left: 0
+    }
+
+    .mw-indicators {
+        float: right
+    }
+
+    #siteNotice {
+        position: relative;
+        text-align: center;
+        margin: 0
+    }
+
+    #localNotice {
+        margin-bottom: 0.9em
+    }
+
+    #siteSub {
+        display: none
+    }
+
+    .mw-content-subtitle,
+    #contentSub,
+    #contentSub2 {
+        font-size: 84%;
+        line-height: 1.2em;
+        margin: 0 0 1.4em 1em;
+        color: #54595d;
+        width: auto
+    }
+
+    span.subpages {
+        display: block
+    }
+
+    .usermessage {
+        background-color: #fef6e7;
+        border: 1px solid #fc3;
+        color: #000;
+        font-weight: bold;
+        margin: 2em 0 1em;
+        padding: 0.5em 1em;
+        vertical-align: middle
+    }
+
+    a {
+        text-decoration: none;
+        color: #0645ad;
+        background: none
+    }
+
+    a:not([href]) {
+        cursor: pointer
+    }
+
+    a:visited {
+        color: #0b0080
+    }
+
+    a:active {
+        color: #faa700
+    }
+
+    a:hover,
+    a:focus {
+        text-decoration: underline
+    }
+
+    a:lang(ar),
+    a:lang(kk-arab),
+    a:lang(mzn),
+    a:lang(ps),
+    a:lang(ur) {
+        text-decoration: none
+    }
+
+    img {
+        border: 0;
+        vertical-align: middle
+    }
+
+    hr {
+        height: 1px;
+        background-color: #a2a9b1;
+        border: 0;
+        margin: 0.2em 0
+    }
+
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+        color: #000;
+        margin: 0;
+        padding-top: 0.5em;
+        padding-bottom: 0.17em;
+        overflow: hidden
+    }
+
+    h1,
+    h2 {
+        margin-bottom: 0.6em;
+        border-bottom: 1px solid #a2a9b1
+    }
+
+    h3,
+    h4,
+    h5 {
+        margin-bottom: 0.3em
+    }
+
+    h1 {
+        font-size: 188%;
+        font-weight: normal
+    }
+
+    h2 {
+        font-size: 150%;
+        font-weight: normal
+    }
+
+    h3 {
+        font-size: 128%
+    }
+
+    h4 {
+        font-size: 116%
+    }
+
+    h5 {
+        font-size: 108%
+    }
+
+    h6 {
+        font-size: 100%
+    }
+
+    p {
+        margin: 0.4em 0 0.5em 0
+    }
+
+    p img {
+        margin: 0
+    }
+
+    ul {
+        margin: 0.3em 0 0 1.6em;
+        padding: 0
+    }
+
+    ol {
+        margin: 0.3em 0 0 3.2em;
+        padding: 0;
+        list-style-image: none
+    }
+
+    li {
+        margin-bottom: 0.1em
+    }
+
+    dt {
+        font-weight: bold;
+        margin-bottom: 0.1em
+    }
+
+    dl {
+        margin-top: 0.2em;
+        margin-bottom: 0.5em
+    }
+
+    dd {
+        margin-left: 1.6em;
+        margin-bottom: 0.1em
+    }
+
+    pre,
+    code,
+    tt,
+    kbd,
+    samp,
+    .mw-code {
+        font-family: monospace, monospace
+    }
+
+    pre,
+    code,
+    .mw-code {
+        background-color: #f8f9fa;
+        color: #000;
+        border: 1px solid #eaecf0
+    }
+
+    code {
+        border-radius: 2px;
+        padding: 1px 4px
+    }
+
+    pre,
+    .mw-code {
+        padding: 1em;
+        white-space: pre-wrap;
+        overflow-x: hidden;
+        word-wrap: break-word
+    }
+
+    table {
+        font-size: 100%
+    }
+
+    fieldset {
+        border: 1px solid #2a4b8d;
+        margin: 1em 0 1em 0;
+        padding: 0 1em 1em
+    }
+
+    legend {
+        padding: 0.5em
+    }
+
+    form {
+        border: 0;
+        margin: 0
+    }
+
+    textarea {
+        display: block;
+        box-sizing: border-box;
+        width: 100%;
+        border: 1px solid #c8ccd1;
+        padding: 0.1em
+    }
+
+    .center {
+        width: 100%;
+        text-align: center
+    }
+
+    *.center * {
+        margin-left: auto;
+        margin-right: auto
+    }
+
+    .small {
+        font-size: 94%
+    }
+
+    table.small {
+        font-size: 100%
+    }
+
+    .toc,
+    .toccolours {
+        border: 1px solid #a2a9b1;
+        background-color: #f8f9fa;
+        padding: 5px;
+        font-size: 95%
+    }
+
+    .toc {
+        display: table;
+        padding: 7px
+    }
+
+    .toc h2 {
+        display: inline;
+        border: 0;
+        padding: 0;
+        font-size: 100%;
+        font-weight: bold
+    }
+
+    .toc .toctitle {
+        text-align: center
+    }
+
+    .toc ul {
+        list-style: none;
+        margin: 0.3em 0;
+        padding: 0;
+        text-align: left
+    }
+
+    .toc ul ul {
+        margin: 0 0 0 2em
+    }
+
+    table.toc {
+        border-collapse: collapse
+    }
+
+    table.toc td {
+        padding: 0
+    }
+
+    .tocnumber,
+    .toctext {
+        display: table-cell;
+        text-decoration: inherit
+    }
+
+    .tocnumber {
+        color: #202122;
+        padding-left: 0;
+        padding-right: 0.5em
+    }
+
+    .mw-content-ltr .tocnumber {
+        padding-left: 0;
+        padding-right: 0.5em
+    }
+
+    .mw-content-rtl .tocnumber {
+        padding-left: 0.5em;
+        padding-right: 0
+    }
+
+    .toctogglecheckbox {
+        display: inline !important;
+        position: absolute;
+        opacity: 0;
+        z-index: -1
+    }
+
+    .toctogglespan {
+        font-size: 94%
+    }
+
+    .toctogglespan:before {
+        content: ' ['
+    }
+
+    .toctogglespan:after {
+        content: ']'
+    }
+
+    .toctogglelabel {
+        cursor: pointer;
+        color: #0645ad
+    }
+
+    .toctogglelabel:hover {
+        text-decoration: underline
+    }
+
+    .toctogglecheckbox:focus+.toctitle .toctogglelabel {
+        text-decoration: underline;
+        outline: dotted 1px;
+        outline: auto -webkit-focus-ring-color
+    }
+
+    .toctogglecheckbox:checked+.toctitle .toctogglelabel:after {
+        content: 'show'
+    }
+
+    .toctogglecheckbox:not(:checked)+.toctitle .toctogglelabel:after {
+        content: 'hide'
+    }
+
+    .toc .toctitle {
+        direction: ltr
+    }
+
+    .mw-content-ltr .toc ul,
+    .mw-content-rtl .mw-content-ltr .toc ul {
+        text-align: left
+    }
+
+    .mw-content-rtl .toc ul,
+    .mw-content-ltr .mw-content-rtl .toc ul {
+        text-align: right
+    }
+
+    .mw-content-ltr .toc ul ul,
+    .mw-content-rtl .mw-content-ltr .toc ul ul {
+        margin: 0 0 0 2em
+    }
+
+    .mw-content-rtl .toc ul ul,
+    .mw-content-ltr .mw-content-rtl .toc ul ul {
+        margin: 0 2em 0 0
+    }
+}
+
+@media (-webkit-min-device-pixel-ratio:1.5),
+(min-resolution:1.5dppx),
+(min-resolution:144dpi) {
+    .mw-wiki-logo {
+        background-image: url(/static/images/project-logos/wikidatawiki-1.5x.png);
+        background-size: 135px auto
+    }
+}
+
+@media (-webkit-min-device-pixel-ratio:2),
+(min-resolution:2dppx),
+(min-resolution:192dpi) {
+    .mw-wiki-logo {
+        background-image: url(/static/images/project-logos/wikidatawiki-2x.png);
+        background-size: 135px auto
+    }
+}
+
+@media (prefers-reduced-motion:reduce) {
+
+    *,
+    ::before,
+    ::after {
+        animation-delay: -0.01ms !important;
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        scroll-behavior: auto !important;
+        transition-duration: 0ms !important
+    }
+}
+
+body {
+    margin: 0
+}
+
+main {
+    display: block
+}
+
+hr {
+    box-sizing: content-box;
+    height: 0;
+    overflow: visible
+}
+
+abbr[title] {
+    border-bottom: 1px dotted;
+    cursor: help
+}
+
+@supports (text-decoration:underline dotted) {
+    abbr[title] {
+        border-bottom: 0;
+        text-decoration: underline dotted
+    }
+}
+
+pre,
+code,
+tt,
+kbd,
+samp {
+    font-family: monospace, monospace
+}
+
+sub,
+sup {
+    line-height: 1
+}
+
+img {
+    border: 0
+}
+
+button,
+input,
+optgroup,
+select,
+textarea {
+    margin: 0
+}
+
+button::-moz-focus-inner,
+[type='button']::-moz-focus-inner,
+[type='reset']::-moz-focus-inner,
+[type='submit']::-moz-focus-inner {
+    border-style: none;
+    padding: 0
+}
+
+legend {
+    color: inherit;
+    padding: 0
+}
+
+div.tright,
+div.floatright,
+table.floatright {
+    clear: right;
+    float: right
+}
+
+div.tleft,
+div.floatleft,
+table.floatleft {
+    float: left;
+    clear: left
+}
+
+div.floatright,
+table.floatright {
+    margin: 0 0 0.5em 0.5em
+}
+
+div.floatleft,
+table.floatleft {
+    margin: 0 0.5em 0.5em 0
+}
+
+div.thumb {
+    width: auto;
+    background-color: transparent;
+    margin-bottom: 0.5em
+}
+
+div.tleft {
+    margin: 0.5em 1.4em 1.3em 0
+}
+
+div.tright {
+    margin: 0.5em 0 1.3em 1.4em
+}
+
+.thumbcaption {
+    text-align: left;
+    line-height: 1.4em;
+    padding: 3px
+}
+
+div.thumbinner {
+    padding: 3px;
+    text-align: center;
+    overflow: hidden
+}
+
+.mw-message-box {
+    color: #000;
+    box-sizing: border-box;
+    margin-bottom: 16px;
+    border: 1px solid;
+    padding: 12px 24px;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    overflow: hidden;
+    background-color: #eaecf0;
+    border-color: #a2a9b1
+}
+
+.mw-message-box> :only-child {
+    margin: 0
+}
+
+.mw-message-box h2 {
+    color: inherit;
+    display: block;
+    border: 0;
+    font-size: 1em;
+    font-weight: bold
+}
+
+.mw-message-box .mw-logevent-loglines li {
+    font-size: 90%
+}
+
+.mw-message-box-error {
+    background-color: #fee7e6;
+    border-color: #d33
+}
+
+.mw-message-box-warning {
+    background-color: #fef6e7;
+    border-color: #fc3
+}
+
+.mw-message-box-success {
+    background-color: #d5fdf4;
+    border-color: #14866d
+}
+
+@media screen {
+
+    html,
+    body {
+        height: 100%
+    }
+
+    :focus {
+        outline-color: #3366cc
+    }
+
+    html {
+        font-size: 100%
+    }
+
+    html,
+    body {
+        font-family: sans-serif
+    }
+
+    ul {
+        list-style-image: url(/w/skins/Vector/resources/common/images/bullet-icon.svg?d4515)
+    }
+
+    pre,
+    .mw-code {
+        line-height: 1.3
+    }
+
+    .mw-jump-link:not(:focus) {
+        display: block;
+        position: absolute !important;
+        clip: rect(1px, 1px, 1px, 1px);
+        width: 1px;
+        height: 1px;
+        margin: -1px;
+        border: 0;
+        padding: 0;
+        overflow: hidden
+    }
+
+    .mw-editsection,
+    .mw-editsection-like {
+        font-family: sans-serif
+    }
+
+    .mw-body h1,
+    .mw-body-content h1,
+    .mw-body-content h2 {
+        margin-bottom: 0.25em;
+        padding: 0;
+        font-family: 'Linux Libertine', 'Georgia', 'Times', serif;
+        line-height: 1.3
+    }
+
+    .mw-body h1:lang(ja),
+    .mw-body-content h1:lang(ja),
+    .mw-body-content h2:lang(ja),
+    .mw-body h1:lang(he),
+    .mw-body-content h1:lang(he),
+    .mw-body-content h2:lang(he),
+    .mw-body h1:lang(ko),
+    .mw-body-content h1:lang(ko),
+    .mw-body-content h2:lang(ko) {
+        font-family: sans-serif
+    }
+
+    .mw-body h1:lang(ckb),
+    .mw-body-content h1:lang(ckb),
+    .mw-body-content h2:lang(ckb) {
+        font-family: 'Scheherazade', 'Linux Libertine', 'Georgia', 'Times', serif
+    }
+
+    .mw-body h1:lang(my),
+    .mw-body-content h1:lang(my),
+    .mw-body-content h2:lang(my) {
+        line-height: normal
+    }
+
+    .mw-body h1,
+    .mw-body-content h1 {
+        font-size: 1.8em
+    }
+
+    .vector-body {
+        font-size: 0.875em;
+        font-size: calc(1em * 0.875);
+        line-height: 1.6
+    }
+
+    .vector-body #siteSub {
+        font-size: 12.8px
+    }
+
+    .vector-body h1 {
+        margin-top: 1em
+    }
+
+    .vector-body h2 {
+        margin-top: 1em;
+        font-size: 1.5em
+    }
+
+    .vector-body h3,
+    .vector-body h4,
+    .vector-body h5,
+    .vector-body h6 {
+        margin-top: 0.3em;
+        margin-bottom: 0;
+        padding-bottom: 0;
+        line-height: 1.6
+    }
+
+    .vector-body h3 {
+        font-size: 1.2em
+    }
+
+    .vector-body h3,
+    .vector-body h4 {
+        font-weight: bold
+    }
+
+    .vector-body h4,
+    .vector-body h5,
+    .vector-body h6 {
+        font-size: 100%
+    }
+
+    .vector-body .toc h2 {
+        font-family: sans-serif;
+        font-size: 100%
+    }
+
+    .vector-body p {
+        margin: 0.5em 0
+    }
+
+    .vector-body blockquote {
+        border-left: 4px solid #eaecf0;
+        padding: 8px 32px
+    }
+
+    .vector-body blockquote> :first-child {
+        margin-top: 0
+    }
+
+    .vector-body blockquote> :last-child {
+        margin-bottom: 0
+    }
+
+    .mw-parser-output a.external {
+        background-image: url(/w/skins/Vector/resources/common/images/link-external-small-ltr-progressive.svg?2cd31);
+        background-position: center right;
+        background-repeat: no-repeat;
+        background-size: 0.857em;
+        padding-right: 1em
+    }
+
+    .mw-indicators {
+        font-size: 0.875em;
+        line-height: 1.6;
+        position: relative;
+        float: right
+    }
+
+    .mw-indicator {
+        display: inline-block
+    }
+
+    #localNotice {
+        margin-bottom: 0.9em
+    }
+
+    #siteNotice {
+        font-size: 0.8em;
+        margin: 24px 0;
+        position: relative;
+        text-align: center
+    }
+
+    .vector-menu-dropdown {
+        position: relative
+    }
+
+    .vector-menu-dropdown>.vector-menu-content {
+        position: absolute;
+        top: 100%;
+        left: -1px;
+        opacity: 0;
+        height: 0;
+        visibility: hidden;
+        overflow: hidden;
+        min-width: 100%;
+        margin: 0;
+        padding: 0;
+        z-index: 3
+    }
+
+    .vector-menu-dropdown>.vector-menu-content-list {
+        list-style: none
+    }
+
+    .vector-menu-dropdown .mw-list-item {
+        padding: 0;
+        margin: 0
+    }
+
+    .vector-menu-dropdown .mw-list-item a {
+        display: block;
+        white-space: nowrap;
+        cursor: pointer
+    }
+
+    .vector-menu-dropdown .selected a,
+    .vector-menu-dropdown .selected a:visited {
+        color: #202122;
+        text-decoration: none
+    }
+
+    .vector-menu-checkbox {
+        cursor: pointer;
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: 1;
+        opacity: 0;
+        width: 100%;
+        height: 100%;
+        margin: 0;
+        padding: 0;
+        display: none
+    }
+
+    .vector-menu-checkbox:checked~.vector-menu-content {
+        opacity: 1;
+        visibility: visible;
+        height: auto
+    }
+
+    :not(:checked)>.vector-menu-checkbox {
+        display: block
+    }
+
+    .vector-menu-checkbox:focus+.vector-menu-heading {
+        outline: dotted 1px;
+        outline: auto -webkit-focus-ring-color
+    }
+
+    .vector-search-box-inner {
+        position: relative;
+        height: 100%
+    }
+
+    .vector-search-box-input {
+        background-color: rgba(255, 255, 255, 0.5);
+        color: #000000;
+        width: 100%;
+        height: 2.15384615em;
+        box-sizing: border-box;
+        border: 1px solid #a2a9b1;
+        border-radius: 2px;
+        padding: 5px 2.15384615em 5px 0.4em;
+        box-shadow: inset 0 0 0 1px transparent;
+        font-family: inherit;
+        font-size: 0.8125em;
+        direction: ltr;
+        transition-property: border-color, box-shadow;
+        transition-duration: 250ms;
+        -webkit-appearance: none;
+        -moz-appearance: textfield
+    }
+
+    .vector-search-box-inner:hover .vector-search-box-input {
+        border-color: #72777d
+    }
+
+    .vector-search-box-input:focus,
+    .vector-search-box-inner:hover .vector-search-box-input:focus {
+        outline: 0;
+        border-color: #3366cc;
+        box-shadow: inset 0 0 0 1px #3366cc
+    }
+
+    .vector-search-box-input::-webkit-input-placeholder {
+        color: #72777d;
+        opacity: 1
+    }
+
+    .vector-search-box-input:-ms-input-placeholder {
+        color: #72777d;
+        opacity: 1
+    }
+
+    .vector-search-box-input::-moz-placeholder {
+        color: #72777d;
+        opacity: 1
+    }
+
+    .vector-search-box-input::placeholder {
+        color: #72777d;
+        opacity: 1
+    }
+
+    .vector-search-box-input::-webkit-search-decoration,
+    .vector-search-box-input::-webkit-search-cancel-button,
+    .vector-search-box-input::-webkit-search-results-button,
+    .vector-search-box-input::-webkit-search-results-decoration {
+        display: none
+    }
+
+    .searchButton {
+        background-color: transparent;
+        position: absolute;
+        top: 1px;
+        bottom: 1px;
+        right: 1px;
+        min-width: 28px;
+        width: 2.15384615em;
+        border: 0;
+        padding: 0;
+        cursor: pointer;
+        font-size: 0.8125em;
+        direction: ltr;
+        text-indent: -99999px;
+        white-space: nowrap;
+        overflow: hidden;
+        z-index: 1
+    }
+
+    .searchButton[name='go'] {
+        background: no-repeat center / 1.23076923em url(/w/skins/Vector/resources/common/images/search.svg?ac00d);
+        opacity: 0.67
+    }
+
+    .search-toggle {
+        display: block;
+        float: right
+    }
+
+    .vector-search-box-collapses>div {
+        display: none
+    }
+
+    #p-logo {
+        width: 10em;
+        height: 160px;
+        margin-bottom: 1em
+    }
+
+    #p-logo a {
+        background-position: center center;
+        background-repeat: no-repeat;
+        display: block;
+        width: 10em;
+        height: 160px;
+        text-decoration: none
+    }
+
+    .mw-footer {
+        direction: ltr
+    }
+
+    .mw-footer ul {
+        list-style: none;
+        margin: 0;
+        padding: 0
+    }
+
+    .mw-footer li {
+        color: #202122;
+        margin: 0;
+        padding: 0.5em 0;
+        font-size: 0.75em
+    }
+
+    #footer-icons {
+        float: right
+    }
+
+    #footer-icons li {
+        float: left;
+        margin-left: 0.5em;
+        line-height: 2;
+        text-align: right
+    }
+
+    #footer-info li {
+        line-height: 1.4
+    }
+
+    #footer-places li {
+        float: left;
+        margin-right: 1em;
+        line-height: 2
+    }
+}
+
+@media screen and (min-width:1000px) {
+    .search-toggle {
+        display: none
+    }
+}
+
+@media screen and (min-width:1000px) {
+    .vector-search-box-collapses>div {
+        display: block
+    }
+}
+
+@media print {
+
+    .toc,
+    body {
+        padding: 10px;
+        font-family: 'Linux Libertine', 'Georgia', 'Times', serif
+    }
+
+    .printfooter,
+    .mw-footer,
+    .thumb,
+    figure,
+    table,
+    ol,
+    dl,
+    ul,
+    h3,
+    h4,
+    h5,
+    h6 {
+        font-family: sans-serif
+    }
+
+    img {
+        font-family: 'Linux Libertine', 'Georgia', 'Times', serif
+    }
+
+    .mw-body a:not(.image) {
+        border-bottom: 1px solid #aaa
+    }
+
+    .firstHeading {
+        font-size: 25pt;
+        line-height: 28pt;
+        margin-bottom: 20px;
+        padding-bottom: 5px
+    }
+
+    .firstHeading,
+    h2 {
+        overflow: hidden;
+        border-bottom: 2px solid #000000
+    }
+
+    h3,
+    h4,
+    h5,
+    h6 {
+        margin: 30px 0 0
+    }
+
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+        padding: 0;
+        position: relative
+    }
+
+    h2 {
+        font-size: 18pt;
+        line-height: 24pt;
+        margin-bottom: 0.25em
+    }
+
+    h3 {
+        font-size: 14pt;
+        line-height: 20pt
+    }
+
+    h4,
+    h5,
+    h6 {
+        font-size: 12pt;
+        line-height: 16pt
+    }
+
+    p {
+        font-size: 12pt;
+        line-height: 16pt;
+        margin-top: 5px;
+        text-align: justify
+    }
+
+    p:before {
+        content: '';
+        display: block;
+        width: 120pt;
+        overflow: hidden
+    }
+
+    blockquote {
+        border-left: 2px solid #000000;
+        padding-left: 20px
+    }
+
+    ol,
+    ul {
+        margin: 10px 0 0 1.6em;
+        padding: 0
+    }
+
+    ol li,
+    ul li {
+        padding: 2px 0;
+        font-size: 12pt
+    }
+
+    table ol li,
+    table ul li {
+        font-size: inherit
+    }
+
+    .toc {
+        page-break-before: avoid;
+        page-break-after: avoid;
+        background: none;
+        border: 0;
+        display: table
+    }
+
+    .toc a {
+        border: 0;
+        font-weight: normal
+    }
+
+    .toc>ul>li {
+        margin-bottom: 4px;
+        font-weight: bold
+    }
+
+    .toc ul {
+        margin: 0;
+        list-style: none
+    }
+
+    .toc ul ul {
+        padding-left: 30px
+    }
+
+    .toc li.toclevel-1>a {
+        font-size: 12pt;
+        font-weight: bold
+    }
+
+    #mw-navigation,
+    .noprint,
+    .mw-jump-link,
+    .mw-portlet-lang,
+    .toc .tocnumber,
+    .mw-checkbox-hack-checkbox,
+    .mw-checkbox-hack-button {
+        display: none
+    }
+
+    .printfooter {
+        margin-top: 10px;
+        border-top: 3px solid #000000;
+        padding-top: 10px;
+        font-size: 10pt;
+        clear: both
+    }
+
+    .mw-footer {
+        margin-top: 12px;
+        border-top: 1px solid #eeeeee;
+        padding-top: 5px
+    }
+
+    #footer-info {
+        margin: 0;
+        padding: 0
+    }
+
+    #footer-info li {
+        color: #999;
+        list-style: none;
+        display: block;
+        padding-bottom: 10px;
+        font-size: 10pt
+    }
+
+    #footer-info li a {
+        color: #999 !important
+    }
+
+    #footer-info-lastmod {
+        color: #000000;
+        font-size: 12pt;
+        font-weight: bold
+    }
+}
+
+@media screen {
+    body {
+        background-color: #f8f9fa;
+        color: #202122;
+        overflow-y: scroll
+    }
+
+    .mw-body,
+    .parsoid-body {
+        direction: ltr
+    }
+
+    .mw-body {
+        padding: 0.5em 0 1.5em
+    }
+
+    .mw-body .firstHeading {
+        word-wrap: break-word;
+        margin-bottom: 0
+    }
+
+    .mw-header {
+        position: relative;
+        z-index: 4
+    }
+
+    .mw-body-content {
+        margin-top: 16px
+    }
+
+    .mw-body,
+    #mw-data-after-content,
+    .mw-footer {
+        margin-left: 0
+    }
+
+    .mw-indicators {
+        z-index: 1
+    }
+
+    .vector-page-titlebar:after,
+    .vector-body-before-content:after {
+        clear: both;
+        content: '';
+        display: block
+    }
+
+    .mw-body .mw-portlet-lang {
+        float: right
+    }
+
+    .vector-body {
+        position: relative;
+        z-index: 0
+    }
+
+    #siteSub {
+        display: none;
+        margin-top: 8px
+    }
+
+    #contentSub:not(:empty),
+    #contentSub2 {
+        font-size: 84%;
+        line-height: 1.2em;
+        color: #54595d;
+        width: auto;
+        margin: 8px 0 0
+    }
+
+    .parsoid-body {
+        padding: 0.5em 0 1.5em
+    }
+
+    .mw-page-container {
+        position: relative;
+        z-index: 0;
+        max-width: 99.75em;
+        min-width: 31.25em;
+        min-height: 100%;
+        margin-left: auto;
+        margin-right: auto;
+        padding: 0.05px 1.5em;
+        background-color: #ffffff;
+        box-sizing: border-box
+    }
+
+    .vector-feature-limited-width-disabled .mw-page-container {
+        max-width: none
+    }
+
+    .skin--responsive .mw-page-container {
+        min-width: auto
+    }
+
+    #vector-toc-pinned-container .sidebar-toc:after,
+    #vector-toc-pinned-container .sidebar-toc,
+    .vector-feature-page-tools-disabled .vector-main-menu,
+    .vector-main-menu-container .vector-main-menu {
+        width: 220px
+    }
+
+    .vector-feature-page-tools-disabled .mw-content-container,
+    .vector-feature-page-tools-disabled .mw-table-of-contents-container {
+        max-width: 60em
+    }
+
+    .vector-feature-limited-width-disabled .mw-content-container,
+    .vector-feature-limited-width-disabled .mw-table-of-contents-container,
+    .vector-feature-limited-width-content-disabled .mw-content-container,
+    .vector-feature-limited-width-content-disabled .mw-table-of-contents-container {
+        max-width: none !important;
+        width: 100% !important
+    }
+
+    .vector-feature-page-tools-disabled #mw-sidebar-checkbox:not(:checked)~.vector-sidebar-container-no-toc~.mw-content-container,
+    .vector-feature-page-tools-disabled.vector-toc-unpinned #mw-sidebar-checkbox:not(:checked)~.mw-content-container {
+        grid-column: mainMenu / pageContent;
+        margin-left: auto;
+        margin-right: auto;
+        width: 100%
+    }
+
+    .vector-feature-page-tools-enabled.vector-feature-main-menu-pinned-disabled .vector-sidebar-container-no-toc~.mw-content-container,
+    .vector-feature-page-tools-enabled.vector-toc-unpinned.vector-feature-main-menu-pinned-disabled .mw-content-container {
+        grid-column: mainMenu / pageContent;
+        margin-left: auto;
+        margin-right: auto
+    }
+
+    .search-form__loader:after {
+        content: attr(data-loading-msg);
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        position: absolute;
+        top: 100%;
+        width: 100%;
+        height: calc(40px + 2*8px + 3*1px);
+        box-sizing: border-box;
+        border: 1px solid #a2a9b1;
+        border-top-width: 0;
+        border-radius: 0 0 2px 2px;
+        box-shadow: inset 0 0 0 1px transparent;
+        padding-left: 36px;
+        overflow: hidden;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+        z-index: 1;
+        background: linear-gradient(90deg, #3366cc 0%, #3366cc 100%) -10% 0 / 0 2px no-repeat, #ffffff;
+        animation: search-loader-progress-bar 1200ms linear 500ms infinite alternate
+    }
+
+    .vector-search-box-show-thumbnail.vector-search-box-auto-expand-width .search-form__loader:after {
+        margin-left: 24px;
+        width: calc(100% - 24px)
+    }
+
+    @keyframes search-loader-progress-bar {
+        0% {
+            background-size: 0 2px;
+            background-position: -10% 0
+        }
+
+        30% {
+            background-size: 30% 2px;
+            background-position: -10% 0
+        }
+
+        70% {
+            background-size: 30% 2px;
+            background-position: 110% 0
+        }
+
+        100% {
+            background-size: 0 2px;
+            background-position: 110% 0
+        }
+    }
+
+    .vector-search-box {
+        font-size: 0.875em;
+        font-size: calc(1em * 0.875);
+        flex-grow: 1
+    }
+
+    .vector-search-box>div {
+        max-width: 35.71428571em
+    }
+
+    .vector-search-box-vue .vector-search-box-input,
+    .vector-search-box-vue .searchButton {
+        font-size: inherit
+    }
+
+    .vector-search-box-vue .vector-search-box-input {
+        height: 32px
+    }
+
+    .vector-search-box-vue .searchButton {
+        background-size: 1.42857143em auto
+    }
+
+    .client-js .vector-search-box-vue .vector-typeahead-search .cdx-search-input__end-button {
+        opacity: 0;
+        transition: opacity 250ms
+    }
+
+    .client-js .vector-search-box-vue .vector-typeahead-search .cdx-search-input__end-button:focus {
+        opacity: 1
+    }
+
+    .client-js .vector-search-box-vue .vector-typeahead-search .cdx-text-input__input:not(:hover):not(:focus) {
+        border-right-color: transparent
+    }
+
+    .client-js .vector-search-box-vue .vector-typeahead-search--active .cdx-search-input__end-button,
+    .client-js .vector-search-box-vue .vector-typeahead-search:hover .cdx-search-input__end-button {
+        opacity: 1
+    }
+
+    .client-js .vector-search-box-vue .vector-typeahead-search--active .cdx-text-input,
+    .client-js .vector-search-box-vue .vector-typeahead-search:hover .cdx-text-input {
+        z-index: 1
+    }
+
+    .client-js .vector-search-box-vue .vector-typeahead-search--active .cdx-text-input__input,
+    .client-js .vector-search-box-vue .vector-typeahead-search:hover .cdx-text-input__input {
+        border-top-right-radius: 0;
+        border-bottom-right-radius: 0
+    }
+
+    .client-js .vector-search-box-vue .vector-typeahead-search .cdx-menu-item {
+        margin-bottom: 0
+    }
+
+    .client-js .vector-search-box-vue .vector-typeahead-search .cdx-menu-item a {
+        text-decoration: none
+    }
+
+    .client-js .vector-search-box-vue .vector-typeahead-search.vector-search-box-disable-transitions .cdx-text-input__input:enabled,
+    .client-js .vector-search-box-vue .vector-typeahead-search.vector-search-box-disable-transitions .cdx-text-input__start-icon {
+        transition: none
+    }
+
+    .client-js .vector-search-box-vue .vector-search-box-input {
+        padding-left: 36px;
+        padding-right: 8px
+    }
+
+    .client-js .vector-search-box-vue .searchButton {
+        pointer-events: none;
+        right: auto;
+        top: 0;
+        bottom: 0;
+        left: 1px;
+        width: 36px;
+        opacity: 0.55
+    }
+
+    .client-js .vector-search-box-vue .vector-search-box-input:focus~.searchButton {
+        opacity: 1
+    }
+
+    .client-js .vector-search-box-vue.vector-search-box-show-thumbnail>div {
+        max-width: 37.42857143em
+    }
+
+    .client-js .vector-search-box-vue.vector-search-box-show-thumbnail.vector-search-box-auto-expand-width .searchButton {
+        left: 25px
+    }
+
+    .client-js .vector-search-box-vue.vector-search-box-show-thumbnail.vector-search-box-auto-expand-width .vector-search-box-input {
+        margin-left: 24px;
+        width: calc(100% - 24px)
+    }
+
+    .mixin-vector-legacy-menu-heading-arrow {
+        content: '';
+        background: url(/w/skins/Vector/resources/common/images/arrow-down.svg?9426f) 100% 50% no-repeat;
+        width: 1.23076923em;
+        height: 1.23076923em
+    }
+
+    .vector-page-titlebar .mw-portlet-lang {
+        margin-top: 2px;
+        box-sizing: border-box;
+        height: 2em;
+        flex-shrink: 0
+    }
+
+    .vector-page-titlebar .mw-portlet-lang.mw-ui-icon-flush-right {
+        margin-right: -12px
+    }
+
+    .client-nojs .vector-page-titlebar .mw-portlet-lang .mw-portlet-lang-heading-0 {
+        display: none
+    }
+
+    .vector-page-titlebar .mw-portlet-lang .vector-menu-heading {
+        user-select: none;
+        opacity: 1
+    }
+
+    .vector-page-titlebar .mw-portlet-lang .vector-menu-heading .vector-menu-heading-label {
+        font-size: 0.875em
+    }
+
+    .vector-page-titlebar .mw-portlet-lang .vector-menu-heading.mw-ui-progressive.mw-ui-quiet .mw-ui-icon:before {
+        opacity: 1
+    }
+
+    .vector-page-titlebar .mw-portlet-lang .vector-menu-heading.mw-ui-progressive.mw-ui-quiet:after {
+        background-image: url(/w/skins/Vector/resources/common/images/arrow-down-progressive.svg?f0b59);
+        opacity: 1
+    }
+
+    .vector-page-titlebar .mw-portlet-lang input:active+.vector-menu-heading.mw-ui-progressive.mw-ui-quiet .mw-ui-icon {
+        filter: brightness(0) invert(1)
+    }
+
+    .vector-page-titlebar .mw-portlet-lang input:active+.vector-menu-heading.mw-ui-progressive.mw-ui-quiet:after {
+        background-image: url(/w/skins/Vector/resources/common/images/arrow-down-invert.svg?e24ea)
+    }
+
+    .vector-page-titlebar .mw-portlet-lang .vector-menu-content {
+        top: auto;
+        left: -1px;
+        right: -1px;
+        box-sizing: border-box;
+        max-height: 65vh;
+        overflow: auto;
+        display: none
+    }
+
+    .vector-page-titlebar .mw-portlet-lang .vector-menu-content li a {
+        font-size: inherit
+    }
+
+    .vector-page-titlebar .mw-portlet-lang .vector-menu-checkbox:checked~.vector-menu-content {
+        display: block
+    }
+
+    .vector-page-titlebar .mw-portlet-lang .after-portlet {
+        margin-top: 10px
+    }
+
+    #p-lang-btn.mw-portlet-empty {
+        display: none
+    }
+
+    .mw-interlanguage-selector {
+        display: flex
+    }
+
+    .mw-interlanguage-selector:after {
+        content: '';
+        background: url(/w/skins/Vector/resources/common/images/arrow-down.svg?9426f) 100% 50% no-repeat;
+        width: 1.23076923em;
+        height: 1.23076923em;
+        margin-left: -1px
+    }
+
+    .vector-user-links {
+        display: flex;
+        align-items: center;
+        position: relative;
+        justify-content: flex-end;
+        flex-shrink: 1;
+        font-size: 0.875em
+    }
+
+    .vector-user-links .mw-ui-button {
+        display: flex;
+        align-items: center
+    }
+
+    .vector-user-links .mw-list-item {
+        margin: 0
+    }
+
+    .vector-user-menu .vector-menu-content {
+        left: auto;
+        right: 0;
+        min-width: 200px
+    }
+
+    .vector-user-menu-logout a,
+    .vector-user-menu-create-account a,
+    .vector-user-menu-login a,
+    .mw-portlet-personal .mw-list-item a {
+        min-height: 2rem;
+        display: flex;
+        align-items: center;
+        padding: 0 12px;
+        font-size: 0.875rem;
+        white-space: nowrap;
+        color: #0645ad
+    }
+
+    .vector-user-menu-logout a:visited,
+    .vector-user-menu-create-account a:visited,
+    .vector-user-menu-login a:visited,
+    .mw-portlet-personal .mw-list-item a:visited {
+        color: #0645ad
+    }
+
+    .vector-user-menu-logout a.selected a,
+    .vector-user-menu-create-account a.selected a,
+    .vector-user-menu-login a.selected a,
+    .mw-portlet-personal .mw-list-item a.selected a,
+    .vector-user-menu-logout a.selected a:visited,
+    .vector-user-menu-create-account a.selected a:visited,
+    .vector-user-menu-login a.selected a:visited,
+    .mw-portlet-personal .mw-list-item a.selected a:visited {
+        color: #202122
+    }
+
+    .vector-user-links .mw-portlet-vector-user-menu-overflow .vector-menu-content-list {
+        display: flex;
+        align-items: center
+    }
+
+    .vector-user-links .mw-portlet-vector-user-menu-overflow a:not(.mw-ui-button):not(.mw-echo-notifications-badge) {
+        margin: 0 8px
+    }
+
+    .vector-user-menu-logged-in .vector-menu-heading {
+        width: auto
+    }
+
+    .vector-user-menu-logged-in .vector-menu-heading:before {
+        width: auto
+    }
+
+    .vector-user-menu-anon-editor {
+        min-height: 2rem;
+        display: flex;
+        align-items: center;
+        padding: 0 12px;
+        font-size: 0.875rem;
+        color: #54595d
+    }
+
+    .vector-user-menu-anon-editor:visited {
+        color: #0645ad
+    }
+
+    .vector-user-menu-anon-editor.selected a,
+    .vector-user-menu-anon-editor.selected a:visited {
+        color: #202122
+    }
+
+    .vector-user-menu-anon-editor a:before {
+        content: '('
+    }
+
+    .vector-user-menu-anon-editor a:after {
+        content: ')'
+    }
+
+    .vector-user-menu-login {
+        border-bottom: 1px solid #eaecf0
+    }
+
+    .vector-user-menu-logout {
+        border-top: 1px solid #eaecf0
+    }
+
+    #pt-userpage-2 {
+        max-width: 11.07142857em
+    }
+
+    #pt-userpage-2 a {
+        color: #3366cc
+    }
+
+    #pt-userpage-2 span {
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap
+    }
+
+    .mw-header {
+        min-height: 3.125em;
+        padding: 8px 0;
+        display: flex;
+        flex-wrap: nowrap;
+        align-items: center
+    }
+
+    .mw-header .vector-header-start,
+    .mw-header .vector-header-end {
+        display: flex;
+        align-items: center
+    }
+
+    .mw-header .vector-header-start {
+        float: left
+    }
+
+    .mw-header .vector-header-end {
+        flex-grow: 1
+    }
+
+    .mw-footer {
+        border-top: 1px solid #a2a9b1;
+        padding: 0.75em 0
+    }
+
+    .mw-footer-container {
+        padding-top: 50px;
+        padding-bottom: 82px
+    }
+
+    .vector-menu ul {
+        list-style: none;
+        margin: 0
+    }
+
+    .vector-dropdown>.vector-menu-heading {
+        display: flex
+    }
+
+    .vector-dropdown>.vector-menu-heading:after {
+        content: '';
+        background: url(/w/skins/Vector/resources/common/images/arrow-down.svg?9426f) 100% 50% no-repeat;
+        width: 1.23076923em;
+        height: 1.23076923em;
+        margin-left: -1px
+    }
+
+    .vector-dropdown>.vector-menu-content {
+        background-color: #ffffff;
+        border: 1px solid #a2a9b1;
+        box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.1);
+        transition-property: opacity;
+        transition-duration: 100ms
+    }
+
+    .vector-dropdown .mw-list-item a {
+        min-height: 2rem;
+        display: flex;
+        align-items: center;
+        padding: 0 12px;
+        font-size: 0.875rem;
+        white-space: nowrap;
+        color: #0645ad
+    }
+
+    .vector-dropdown .mw-list-item a:visited {
+        color: #0645ad
+    }
+
+    .vector-dropdown .mw-list-item a.selected a,
+    .vector-dropdown .mw-list-item a.selected a:visited {
+        color: #202122
+    }
+
+    .vector-menu-tabs {
+        float: left
+    }
+
+    .vector-menu-tabs .mw-list-item .mw-ui-icon {
+        margin: 8px 0 0 0
+    }
+
+    .vector-menu-tabs .mw-list-item a {
+        color: #0645ad
+    }
+
+    .vector-menu-tabs .mw-list-item.vector-tab-noicon a:focus,
+    .vector-menu-tabs .mw-list-item.vector-tab-noicon a:hover {
+        text-decoration: none;
+        border-bottom: 1px solid
+    }
+
+    .vector-menu-tabs .mw-list-item.new a,
+    .vector-menu-tabs .mw-list-item.new a:visited {
+        color: #ba0000
+    }
+
+    .vector-menu-tabs .mw-list-item.selected a,
+    .vector-menu-tabs .mw-list-item.selected a:visited {
+        color: #202122;
+        border-bottom: 1px solid
+    }
+
+    .vector-menu-tabs .mw-list-item.vector-tab-noicon,
+    .vector-page-toolbar-container .vector-menu-dropdown {
+        margin: 0 8px
+    }
+
+    .vector-menu-tabs .mw-list-item,
+    .vector-page-toolbar-container .vector-menu-dropdown {
+        float: left;
+        white-space: nowrap;
+        margin-bottom: 0
+    }
+
+    .vector-menu-tabs .mw-list-item>a,
+    .vector-page-toolbar-container .vector-menu-dropdown>a,
+    .vector-menu-tabs .mw-list-item>.vector-menu-heading,
+    .vector-page-toolbar-container .vector-menu-dropdown>.vector-menu-heading {
+        display: inline-flex;
+        position: relative;
+        cursor: pointer;
+        max-height: 3.15384615em;
+        box-sizing: border-box;
+        font-weight: normal
+    }
+
+    .vector-menu-tabs .mw-list-item>.vector-menu-heading,
+    .vector-page-toolbar-container .vector-menu-dropdown>.vector-menu-heading {
+        font-size: inherit
+    }
+
+    .vector-menu-tabs .mw-list-item.vector-tab-noicon>a,
+    .vector-page-toolbar-container .vector-menu-dropdown.vector-tab-noicon>a,
+    .vector-menu-tabs .mw-list-item>.vector-menu-heading,
+    .vector-page-toolbar-container .vector-menu-dropdown>.vector-menu-heading {
+        padding: 18px 0 7px 0;
+        margin-bottom: -1px
+    }
+
+    .mw-checkbox-hack-checkbox {
+        display: none
+    }
+
+    .mw-checkbox-hack-button {
+        display: inline-block;
+        cursor: pointer
+    }
+
+    .vector-feature-page-tools-enabled.vector-feature-main-menu-pinned-enabled .vector-header-start .vector-main-menu-landmark,
+    .vector-feature-page-tools-enabled.vector-feature-main-menu-pinned-disabled .vector-main-menu-container .vector-main-menu-landmark {
+        display: none
+    }
+
+    .vector-feature-page-tools-disabled #mw-sidebar-checkbox:not(:checked)~.vector-main-menu-container .vector-main-menu {
+        display: none
+    }
+
+    .vector-main-menu {
+        box-sizing: border-box
+    }
+
+    .vector-main-menu #p-navigation .vector-menu-heading {
+        display: none
+    }
+
+    .vector-feature-page-tools-disabled .vector-main-menu,
+    #vector-main-menu-pinned-container .vector-main-menu {
+        padding: 12px 19px 12px 9px;
+        background-color: #f8f9fa
+    }
+
+    #vector-main-menu-unpinned-container .vector-main-menu {
+        width: 250px;
+        display: flex;
+        flex-direction: column
+    }
+
+    #vector-main-menu-unpinned-container .vector-main-menu .vector-menu-heading,
+    #vector-main-menu-unpinned-container .vector-main-menu .vector-main-menu-group {
+        margin: 0
+    }
+
+    .vector-main-menu-unpinned-container #vector-main-menu-unpinned-container .vector-main-menu {
+        width: 250px;
+        display: flex;
+        flex-direction: column
+    }
+
+    .vector-main-menu-unpinned-container #vector-main-menu-unpinned-container .vector-main-menu .vector-menu-heading,
+    .vector-main-menu-unpinned-container #vector-main-menu-unpinned-container .vector-main-menu .vector-main-menu-group {
+        margin: 0
+    }
+
+    .vector-main-menu-unpinned-container #vector-main-menu-unpinned-container .vector-main-menu .vector-menu-content {
+        margin-left: 0
+    }
+
+    .vector-main-menu-action .vector-main-menu-action-item {
+        margin-top: 4px;
+        margin-bottom: 4px
+    }
+
+    .vector-main-menu-action .vector-main-menu-action-item .vector-main-menu-action-heading {
+        margin-bottom: 0.75em
+    }
+
+    .vector-main-menu-action .vector-main-menu-action-item .vector-main-menu-action-content>* {
+        font-size: 0.75em
+    }
+
+    .vector-main-menu-action .vector-main-menu-action-item .vector-main-menu-action-content>a {
+        font-weight: bold
+    }
+
+    .vector-main-menu-action .vector-main-menu-action-item .vector-language-sidebar-alert {
+        padding: 0.75em
+    }
+
+    #mw-sidebar-button:before {}
+
+    .vector-feature-page-tools-disabled #mw-sidebar-button:before {
+        background-image: url(/w/skins/Vector/resources/skins.vector.styles/images/chevronHorizontal-ltr.svg?c223c)
+    }
+
+    .vector-feature-page-tools-disabled #mw-sidebar-checkbox:not(:checked)~.mw-header #mw-sidebar-button:before {
+        background-image: url("data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 width=%2220%22 height=%2220%22 viewBox=%220 0 20 20%22%3E %3Ctitle%3E menu %3C/title%3E %3Cpath d=%22M1 3v2h18V3zm0 8h18V9H1zm0 6h18v-2H1z%22/%3E %3C/svg%3E")
+    }
+
+    #mw-sidebar-button:hover:before {
+        opacity: 1
+    }
+
+    .vector-main-menu-group,
+    .vector-main-menu-action-item {
+        margin: 0 0.6em 0 0.7em;
+        padding: 0.25em 0;
+        direction: ltr
+    }
+
+    .vector-main-menu-group .vector-menu-heading,
+    .vector-main-menu-action-item .vector-menu-heading {
+        align-self: center;
+        color: #54595d;
+        font-weight: normal;
+        cursor: default;
+        border-color: #c8ccd1;
+        border-width: 1px;
+        font-size: 0.75em;
+        margin: 0.5em 0 0 0.66666667em;
+        padding: 0.25em 0;
+        border-bottom-style: solid
+    }
+
+    .vector-main-menu-group .vector-menu-content,
+    .vector-main-menu-action-item .vector-menu-content {
+        margin-left: 0.5em;
+        padding-top: 0
+    }
+
+    .vector-main-menu-group .vector-menu-content ul,
+    .vector-main-menu-action-item .vector-menu-content ul {
+        padding-top: 0.3em
+    }
+
+    .vector-main-menu-group .vector-menu-content li,
+    .vector-main-menu-action-item .vector-menu-content li {
+        margin: 0;
+        padding: 0.25em 0;
+        font-size: 0.75em;
+        line-height: 1.125em;
+        word-wrap: break-word
+    }
+
+    .vector-main-menu-group .vector-menu-content li a,
+    .vector-main-menu-action-item .vector-menu-content li a {
+        color: #0645ad
+    }
+
+    .vector-main-menu-group .vector-menu-content li a:visited,
+    .vector-main-menu-action-item .vector-menu-content li a:visited {
+        color: #0b0080
+    }
+
+    .vector-page-titlebar {
+        display: flex;
+        justify-content: flex-end;
+        box-shadow: 0 1px #a2a9b1;
+        align-items: center
+    }
+
+    .vector-page-titlebar-blank {
+        box-shadow: none
+    }
+
+    .vector-page-titlebar .firstHeading {
+        flex-grow: 1;
+        border: 0
+    }
+
+    .vector-page-toolbar-container {
+        display: flex;
+        font-size: 0.8125em;
+        box-shadow: 0 1px #c8ccd1;
+        margin-bottom: 1px
+    }
+
+    .vector-page-toolbar-container .mw-portlet-views {
+        display: none
+    }
+
+    #left-navigation {
+        display: flex;
+        margin-left: -8px;
+        flex-grow: 1
+    }
+
+    #right-navigation {
+        display: flex;
+        margin-right: -8px
+    }
+
+    #right-navigation .vector-menu-content {
+        left: auto;
+        right: -1px
+    }
+
+    .vector-feature-page-tools-pinned-enabled .vector-page-toolbar-container .vector-page-tools-landmark,
+    .vector-feature-page-tools-pinned-disabled .vector-column-end .vector-page-tools-landmark {
+        display: none
+    }
+
+    .vector-page-tools {}
+
+    .vector-page-tools .vector-menu-heading {
+        min-height: 2rem;
+        display: flex;
+        align-items: center;
+        padding: 0 12px;
+        font-size: 0.875rem;
+        align-self: center;
+        color: #54595d;
+        font-weight: normal;
+        cursor: default;
+        border-color: #c8ccd1;
+        border-width: 1px
+    }
+
+    .vector-page-tools .vector-menu-heading:visited {
+        color: #0645ad
+    }
+
+    .vector-page-tools .vector-menu-heading.selected a,
+    .vector-page-tools .vector-menu-heading.selected a:visited {
+        color: #202122
+    }
+
+    .vector-page-tools .mw-list-item a {
+        min-height: 2rem;
+        display: flex;
+        align-items: center;
+        padding: 0 12px;
+        font-size: 0.875rem;
+        white-space: nowrap;
+        color: #0645ad
+    }
+
+    .vector-page-tools .mw-list-item a:visited {
+        color: #0645ad
+    }
+
+    .vector-page-tools .mw-list-item a.selected a,
+    .vector-page-tools .mw-list-item a.selected a:visited {
+        color: #202122
+    }
+
+    #vector-page-tools-pinned-container .vector-page-tools {
+        padding-left: 45px;
+        width: 140px
+    }
+
+    #vector-page-tools-pinned-container .vector-page-tools .vector-menu-heading,
+    #vector-page-tools-pinned-container .vector-page-tools .mw-list-item a {
+        padding-left: 0;
+        padding-right: 0
+    }
+
+    .vector-page-tools .vector-pinnable-header {
+        padding: 18px 0 7px 0
+    }
+
+    .vector-feature-page-tools-disabled .vector-page-tools-landmark .vector-more-collapsible-item,
+    .vector-page-tools .vector-more-collapsible-item {
+        display: block
+    }
+
+    .vector-pinnable-header {
+        border-bottom: 1px solid #eaecf0
+    }
+
+    .vector-menu-dropdown .vector-pinnable-header {
+        line-height: 2rem;
+        padding: 0 12px
+    }
+
+    .vector-pinnable-header-label {
+        display: inline-block;
+        color: #54595d;
+        font-size: 0.875rem;
+        margin: 0;
+        padding: 0;
+        border: 0
+    }
+
+    .vector-pinnable-header-toggle-button {
+        display: none;
+        border: 0;
+        padding: 0;
+        background-color: transparent;
+        color: #3366cc;
+        cursor: pointer
+    }
+
+    .vector-pinnable-header-toggle-button:hover {
+        color: #447ff5
+    }
+
+    .vector-pinnable-header-toggle-button:before {
+        content: '[';
+        color: #54595d
+    }
+
+    .vector-pinnable-header-toggle-button:after {
+        content: ']';
+        color: #54595d
+    }
+
+    .client-js .vector-pinnable-header-unpinned .vector-pinnable-header-pin-button,
+    .client-js .vector-pinnable-header-pinned .vector-pinnable-header-unpin-button {
+        display: inline-block
+    }
+
+    .vector-feature-page-tools-enabled .vector-pinnable-element .vector-menu {
+        border-top: 1px solid #eaecf0
+    }
+
+    .vector-feature-page-tools-enabled .vector-pinnable-element .vector-menu:first-child,
+    .vector-feature-page-tools-enabled .vector-pinnable-element .vector-pinnable-header+.vector-menu {
+        border: 0
+    }
+
+    .vector-sticky-header {
+        width: 100%;
+        max-width: 99.75em;
+        height: 3.125rem;
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        z-index: 4;
+        transition: transform 250ms linear;
+        align-items: center;
+        margin: 0 auto;
+        background: #ffffff;
+        background-color: #fffffff7;
+        border-bottom: 1px solid #eaecf0;
+        justify-content: space-between;
+        box-sizing: border-box;
+        padding: 6px 2.75em;
+        display: none;
+        transform: translateY(-100%);
+        opacity: 0
+    }
+
+    .vector-feature-limited-width-disabled .vector-sticky-header {
+        max-width: none
+    }
+
+    .vector-sticky-header-start,
+    .vector-sticky-header-end,
+    .vector-sticky-header-icons,
+    .vector-sticky-header-context-bar {
+        display: flex;
+        align-items: center
+    }
+
+    .vector-sticky-header-start {
+        flex-grow: 1;
+        min-width: 0
+    }
+
+    .vector-sticky-header-context-bar-primary,
+    .vector-sticky-header-end {
+        white-space: nowrap
+    }
+
+    .vector-sticky-header-context-bar {
+        border-left: 1px solid #c8c8c8;
+        padding-left: 30px;
+        min-width: 0;
+        margin-left: 30px
+    }
+
+    .vector-sticky-header-toc-container {
+        display: none;
+        position: relative
+    }
+
+    .vector-toc-unpinned .vector-sticky-header-toc-container {
+        display: block
+    }
+
+    .vector-sticky-header-context-bar-primary {
+        overflow: hidden;
+        font-family: 'Linux Libertine', 'Georgia', 'Times', serif;
+        font-size: 1.5em;
+        text-overflow: ellipsis
+    }
+
+    .vector-sticky-header-context-bar-primary wbr {
+        display: none
+    }
+
+    .vector-sticky-header-icons {
+        font-size: 0.875em;
+        column-gap: 8px
+    }
+
+    .vector-sticky-header .vector-search-box {
+        display: none
+    }
+
+    .vector-sticky-header.vector-header-search-toggled .vector-sticky-header-search-toggle,
+    .vector-sticky-header.vector-header-search-toggled .vector-sticky-header-context-bar {
+        display: none
+    }
+
+    .vector-sticky-header.vector-header-search-toggled .vector-search-box {
+        display: block;
+        margin-left: 4px
+    }
+
+    .vector-sticky-header.vector-header-search-toggled .vector-search-box-show-thumbnail {
+        margin-left: -9px
+    }
+
+    .vector-sticky-header.vector-header-search-toggled .vector-search-box-show-thumbnail .cdx-text-input__start-icon {
+        color: #202122
+    }
+
+    @keyframes rotate {
+        from {
+            transform: rotate(0deg)
+        }
+
+        to {
+            transform: rotate(360deg)
+        }
+    }
+
+    .mw-watchlink a:before {
+        transition: transform 500ms
+    }
+
+    .mw-watchlink .loading:before {
+        outline: 0;
+        cursor: default;
+        pointer-events: none;
+        transform-origin: 50% 50%
+    }
+
+    .mw-ui-icon-wikimedia-unStar:before,
+    .mw-ui-icon-wikimedia-star.loading:before {
+        transform: rotate(72deg)
+    }
+
+    .mw-table-of-contents-container {
+        align-self: start;
+        height: 100%
+    }
+
+    #vector-toc-pinned-container {
+        position: sticky;
+        top: 0
+    }
+
+    .sidebar-toc {
+        max-height: 75vh;
+        padding: 20px 12px 20px 27px;
+        box-sizing: border-box;
+        overflow-y: auto;
+        overflow-x: hidden;
+        background-color: #ffffff
+    }
+
+    .sidebar-toc .vector-toc-pinnable-header {
+        padding: 0 0 12px 0;
+        border: 0;
+        line-height: initial
+    }
+
+    .sidebar-toc .vector-pinnable-header-label {
+        overflow: unset
+    }
+
+    .sidebar-toc .sidebar-toc-numb {
+        display: none
+    }
+
+    .sidebar-toc .sidebar-toc-toggle {
+        display: none;
+        position: absolute;
+        top: 1px;
+        left: calc(-1 * 1.834em - 1px);
+        width: 1.834em;
+        height: 1.834em;
+        font-size: 0.75em;
+        transition: 100ms;
+        color: transparent;
+        cursor: pointer
+    }
+
+    .sidebar-toc .sidebar-toc-link {
+        word-break: break-word;
+        color: #0645ad;
+        display: block
+    }
+
+    .sidebar-toc .sidebar-toc-list-item-active>.sidebar-toc-link,
+    .sidebar-toc .sidebar-toc-level-1-active:not(.sidebar-toc-list-item-expanded)>.sidebar-toc-link,
+    .sidebar-toc .sidebar-toc-list-item-active.sidebar-toc-level-1-active>.sidebar-toc-link {
+        color: #202122;
+        font-weight: bold
+    }
+
+    .sidebar-toc .sidebar-toc-list-item-active>.sidebar-toc-link .sidebar-toc-text,
+    .sidebar-toc .sidebar-toc-level-1-active:not(.sidebar-toc-list-item-expanded)>.sidebar-toc-link .sidebar-toc-text,
+    .sidebar-toc .sidebar-toc-list-item-active.sidebar-toc-level-1-active>.sidebar-toc-link .sidebar-toc-text {
+        width: calc(100% + 12px)
+    }
+
+    .sidebar-toc .sidebar-toc-level-1-active:not(.sidebar-toc-list-item-active)>.sidebar-toc-link {
+        color: #202122
+    }
+
+    .sidebar-toc .sidebar-toc-text {
+        padding: 4px 0
+    }
+
+    .sidebar-toc .sidebar-toc-contents,
+    .sidebar-toc .sidebar-toc-list {
+        margin: 0;
+        list-style: none;
+        line-height: 18px
+    }
+
+    .sidebar-toc .sidebar-toc-list-item {
+        display: block;
+        position: relative;
+        list-style-type: none;
+        padding-left: 8px
+    }
+
+    .sidebar-toc .sidebar-toc-list-item.sidebar-toc-level-1 {
+        padding-left: 0
+    }
+
+    .sidebar-toc .sidebar-toc-list-item a {
+        font-size: 0.875em
+    }
+
+    .client-js .sidebar-toc .sidebar-toc-level-1 .sidebar-toc-list-item {
+        display: none
+    }
+
+    .client-js .sidebar-toc .sidebar-toc-level-1.sidebar-toc-list-item-expanded .sidebar-toc-list-item {
+        display: block
+    }
+
+    .client-js .sidebar-toc .sidebar-toc-toggle {
+        display: block
+    }
+
+    .client-js .sidebar-toc .sidebar-toc-level-1.sidebar-toc-list-item-expanded .sidebar-toc-toggle {
+        transform: rotate(0deg)
+    }
+
+    .client-js body.ltr .sidebar-toc .sidebar-toc-toggle {
+        transform: rotate(-90deg)
+    }
+
+    .client-js body.rtl .sidebar-toc .sidebar-toc-toggle {
+        transform: rotate(90deg)
+    }
+
+    #vector-toc-collapsed-button {
+        display: none;
+        margin-right: 4px;
+        z-index: 3;
+        background-color: #ffffff
+    }
+
+    .vector-page-titlebar-toc {
+        display: none;
+        margin-right: 4px;
+        z-index: 3;
+        background-color: #ffffff
+    }
+
+    .vector-page-titlebar-toc.ve-active {
+        display: none !important
+    }
+
+    .mw-ui-icon:before {
+        opacity: 1
+    }
+}
+
+@media screen and (min-width:1000px) {
+    .mw-page-container {
+        padding-left: 2.75em;
+        padding-right: 2.75em
+    }
+}
+
+@media screen and (min-width:1200px) {
+    .mw-page-container {
+        padding-left: 3.25em;
+        padding-right: 3.25em
+    }
+}
+
+@media screen and (min-width:1200px) {
+
+    #vector-toc-pinned-container .sidebar-toc:after,
+    #vector-toc-pinned-container .sidebar-toc,
+    .vector-feature-page-tools-disabled .vector-main-menu,
+    .vector-main-menu-container .vector-main-menu {
+        width: 244px
+    }
+}
+
+@media screen and (min-width:1000px) {
+    .mw-page-container-inner {
+        display: grid;
+        width: 100%;
+        column-gap: 8px;
+        grid-template: min-content min-content min-content 1fr min-content / 232px minmax(0, 1fr);
+        grid-template-areas: 'header header' 'siteNotice siteNotice' 'mainMenu pageContent' 'toc pageContent' 'footer footer'
+    }
+
+    .vector-sitenotice-container {
+        grid-area: siteNotice
+    }
+
+    .mw-table-of-contents-container {
+        grid-area: toc
+    }
+
+    .mw-header {
+        grid-area: header
+    }
+
+    .vector-main-menu-container {
+        grid-area: mainMenu
+    }
+
+    .mw-content-container {
+        grid-area: pageContent
+    }
+
+    .mw-footer-container {
+        grid-area: footer
+    }
+}
+
+@media screen and (min-width:1200px) {
+    .mw-page-container-inner {
+        grid-template-columns: 284px minmax(0, 1fr)
+    }
+}
+
+@media screen and (min-width:1000px) {
+    .vector-feature-page-tools-enabled .mw-body {
+        display: grid;
+        grid-auto-rows: auto;
+        grid-template-columns: minmax(0, 60em) min-content;
+        grid-template-areas: 'titlebar .' 'toolbar columnEnd' 'content columnEnd'
+    }
+
+    .vector-feature-limited-width-disabled.vector-feature-page-tools-enabled .mw-body,
+    .vector-feature-limited-width-content-disabled.vector-feature-page-tools-enabled .mw-body {
+        grid-template-columns: 1fr min-content
+    }
+
+    .vector-feature-page-tools-enabled .mw-body .vector-page-titlebar {
+        grid-area: titlebar
+    }
+
+    .vector-feature-page-tools-enabled .mw-body .vector-page-toolbar {
+        grid-area: toolbar
+    }
+
+    .vector-feature-page-tools-enabled .mw-body #bodyContent {
+        grid-area: content
+    }
+
+    .vector-feature-page-tools-enabled .mw-body .vector-column-end {
+        grid-area: columnEnd
+    }
+}
+
+@media screen and (min-width:720px) {
+    .vector-user-menu .user-links-collapsible-item {
+        display: none
+    }
+}
+
+@media screen and (min-width:1000px) {
+    .vector-user-links .mw-portlet-vector-user-menu-overflow {
+        margin-right: 8px
+    }
+
+    .vector-user-links .mw-portlet-vector-user-menu-overflow .vector-menu-content-list {
+        column-gap: 8px
+    }
+}
+
+@media screen and (max-width:719px) {
+    .vector-user-links .mw-portlet-vector-user-menu-overflow .user-links-collapsible-item {
+        display: none
+    }
+}
+
+@media screen and (min-width:1200px) {
+    #pt-userpage-2 {
+        max-width: 14.28571429em
+    }
+}
+
+@media screen and (min-width:1200px) {
+
+    .mw-header .vector-search-box:not(.vector-search-box-auto-expand-width),
+    html:not(.client-js) .mw-header .vector-search-box {
+        padding-left: 24px
+    }
+}
+
+@media screen and (min-width:1000px) {
+    .mw-header .vector-search-box {
+        margin-right: 12px
+    }
+}
+
+@media screen and (max-width:999px) {
+    .mw-header {}
+
+    .mw-header.vector-header-search-toggled #mw-sidebar-button,
+    .mw-header.vector-header-search-toggled .mw-logo,
+    .mw-header.vector-header-search-toggled .search-toggle {
+        display: none
+    }
+
+    .mw-header.vector-header-search-toggled .vector-search-box-collapses>div {
+        display: block
+    }
+
+    .mw-header.vector-header-search-toggled .vector-search-box {
+        position: relative;
+        margin-left: 8px;
+        margin-right: 12px
+    }
+
+    .mw-header.vector-header-search-toggled .vector-search-box>div {
+        max-width: none
+    }
+
+    .mw-header.vector-header-search-toggled .cdx-search-input__input-wrapper {
+        position: static
+    }
+
+    .mw-header.vector-header-search-toggled .cdx-typeahead-search--expanded .cdx-search-input__end-button {
+        border-bottom-right-radius: 0
+    }
+}
+
+@media screen and (max-width:999px) {
+    .vector-feature-page-tools-disabled .vector-main-menu {
+        width: 100%
+    }
+}
+
+@media screen and (min-width:1000px) {
+
+    .vector-feature-page-tools-disabled .vector-main-menu,
+    #vector-main-menu-pinned-container .vector-main-menu {
+        margin-left: -28px
+    }
+}
+
+@media screen and (min-width:720px) {
+    .vector-page-toolbar-container .mw-portlet-views:not(.emptyPortlet) {
+        display: block
+    }
+}
+
+@media screen and (min-width:720px) {
+
+    .vector-feature-page-tools-disabled .vector-page-tools-landmark .vector-more-collapsible-item,
+    .vector-page-tools .vector-more-collapsible-item {
+        display: none
+    }
+}
+
+@media screen and (max-width:719px) {
+
+    .vector-feature-page-tools-disabled .vector-page-tools-landmark .vector-has-collapsible-items,
+    .vector-page-tools .vector-has-collapsible-items {
+        display: block
+    }
+}
+
+@media screen and (min-width:1200px) {
+    .vector-sticky-header {
+        padding: 6px 3.25em
+    }
+}
+
+@media screen and (min-width:1000px) {
+    .client-js.vector-sticky-header-enabled {
+        scroll-padding-top: 3.125rem
+    }
+
+    .client-js.vector-sticky-header-enabled .vector-sticky-header {
+        display: flex
+    }
+
+    .client-js.vector-sticky-header-enabled .vector-sticky-header-visible .vector-sticky-header {
+        opacity: 1;
+        transform: translateY(0)
+    }
+
+    .client-js.vector-sticky-header-enabled .vector-toc-pinned #vector-toc-pinned-container,
+    .client-js.vector-sticky-header-enabled .mw-sticky-header-element,
+    .client-js.vector-sticky-header-enabled .charts-stickyhead th {
+        top: 3.125rem !important
+    }
+}
+
+@media screen and (min-width:1000px) {
+    .vector-toc-pinned #vector-toc-pinned-container {
+        padding-top: 1.5em
+    }
+
+    .vector-toc-pinned #mw-sidebar-checkbox:not(:checked)~.mw-table-of-contents-container #vector-toc-pinned-container {
+        margin-top: 1.5em
+    }
+
+    #vector-toc-pinned-container .sidebar-toc,
+    #vector-toc-pinned-container .sidebar-toc:after {
+        margin-left: -27px
+    }
+
+    .vector-toc-pinned #vector-toc-pinned-container .sidebar-toc:after {
+        content: '';
+        display: block;
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        height: 30px;
+        background: linear-gradient(rgba(255, 255, 255, 0), #ffffff);
+        background-repeat: no-repeat;
+        background-position: -12px;
+        pointer-events: none
+    }
+}
+
+@media screen and (max-width:999px) {
+    .client-nojs #vector-toc-collapsed-button {
+        display: block;
+        padding: 7px 12px
+    }
+
+    .client-nojs #vector-toc-collapsed-button:hover,
+    .client-nojs #vector-toc-collapsed-button:active {
+        background-color: #f8f9fa
+    }
+
+    .client-nojs #vector-toc-pinned-container {
+        position: relative
+    }
+
+    .client-nojs .sidebar-toc {
+        display: none;
+        position: absolute;
+        width: auto;
+        min-width: 200px;
+        max-width: min(51em, 75vw);
+        top: 36px;
+        left: -12px;
+        margin-top: 8px;
+        border: 1px solid #a2a9b1;
+        z-index: 3
+    }
+
+    .client-nojs #vector-toc-collapsed-checkbox:checked~.mw-table-of-contents-container .sidebar-toc {
+        display: block
+    }
+}
+
+@media screen and (max-width:999px) {
+    .vector-page-titlebar-toc .vector-menu-heading {
+        padding: 7px 12px
+    }
+}
+
+@media screen and (max-width:999px) {
+    .client-js #vector-toc-pinned-container .sidebar-toc {
+        display: none
+    }
+
+    .client-js .sidebar-toc .vector-pinnable-header-toggle-button {
+        display: none
+    }
+
+    .client-js .vector-page-titlebar-toc {
+        display: block
+    }
+
+    .client-js .vector-page-titlebar-toc .sidebar-toc {
+        width: max-content;
+        box-sizing: content-box;
+        min-width: 161px;
+        max-width: min(48.5625em, 75vw)
+    }
+
+    .client-js .vector-below-page-title .vector-page-titlebar-toc {
+        position: fixed;
+        top: 0;
+        left: 0;
+        margin: 0
+    }
+}
+
+@media screen and (min-width:1000px) {
+    .client-js .vector-toc-unpinned:not(.vector-sticky-header-visible) .vector-page-titlebar-toc {
+        display: block
+    }
+
+    .client-js .vector-toc-unpinned:not(.vector-sticky-header-visible) .vector-page-titlebar-toc .sidebar-toc {
+        width: max-content;
+        box-sizing: content-box;
+        min-width: 161px;
+        max-width: min(48.5625em, 75vw)
+    }
+
+    .client-js .vector-toc-unpinned.vector-sticky-header-visible .sidebar-toc {
+        width: max-content;
+        box-sizing: content-box;
+        min-width: 161px;
+        max-width: min(48.5625em, 75vw)
+    }
+}
+
+@media all {
+    .mw-logo {
+        display: flex;
+        height: 100%;
+        align-items: center;
+        min-width: 13.875em
+    }
+
+    .vector-feature-page-tools-disabled .mw-logo {
+        margin-left: 24px
+    }
+
+    .vector-feature-page-tools-enabled.vector-feature-main-menu-pinned-disabled .mw-logo {
+        margin-left: 20px
+    }
+
+    .mw-logo-icon {
+        float: left;
+        margin-right: 10px;
+        display: none;
+        width: 3.125em;
+        height: 3.125em
+    }
+
+    .mw-logo-container {
+        float: left;
+        max-width: 120px
+    }
+
+    .mw-logo-container img {
+        width: 100%
+    }
+
+    .mw-logo-wordmark {
+        display: block;
+        margin: 0 auto
+    }
+
+    .mw-logo-tagline {
+        display: block;
+        margin: 5px auto 0
+    }
+}
+
+@media all and (min-width:720px) {
+    .mw-logo-icon {
+        display: block
+    }
+}
+
+@media all and (min-width:720px) {
+    .mw-logo-container {
+        max-width: none
+    }
+
+    .mw-logo-container img {
+        width: auto
+    }
+}
+
+@media print {
+
+    .vector-page-toolbar,
+    #mw-sidebar-checkbox,
+    .vector-header-start>*:not(.mw-logo),
+    .vector-header-end,
+    #mw-panel-toc,
+    #vector-sticky-header,
+    #p-lang-btn,
+    #footer {
+        display: none
+    }
+}
+
+.mw-table-of-contents-container {
+    display: none
+}
+
+@supports (display:grid) {
+    .mw-table-of-contents-container {
+        display: block
+    }
+}
+
+@media screen {
+    div.thumbinner {
+        border: 1px solid #c8ccd1;
+        background-color: #f8f9fa;
+        font-size: 94%
+    }
+
+    .thumbimage {
+        background-color: #ffffff;
+        border: 1px solid #c8ccd1
+    }
+
+    .thumbcaption {
+        border: 0;
+        font-size: 94%
+    }
+
+    .thumbborder {
+        border: 1px solid #eaecf0
+    }
+
+    .magnify {
+        float: right;
+        margin-left: 3px
+    }
+
+    .magnify a {
+        display: block;
+        text-indent: 15px;
+        white-space: nowrap;
+        overflow: hidden;
+        width: 15px;
+        height: 11px;
+        background-image: url(/w/resources/src/mediawiki.skinning/images/magnify-clip-ltr.svg?8330e);
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none
+    }
+
+    .mw-content-ltr .thumbcaption {
+        text-align: left
+    }
+
+    .mw-content-rtl .thumbcaption {
+        text-align: right
+    }
+
+    .mw-content-ltr .magnify {
+        margin-left: 3px;
+        margin-right: 0;
+        float: right
+    }
+
+    .mw-content-ltr .magnify a {
+        background-image: url(/w/resources/src/mediawiki.skinning/images/magnify-clip-ltr.svg?8330e)
+    }
+
+    .mw-content-rtl .magnify {
+        margin-left: 0;
+        margin-right: 3px;
+        float: left
+    }
+
+    .mw-content-rtl .magnify a {
+        background-image: url(/w/resources/src/mediawiki.skinning/images/magnify-clip-rtl.svg?38fd5)
+    }
+
+    a.new {
+        color: #ba0000
+    }
+
+    a.mw-selflink {
+        color: inherit;
+        font-weight: bold;
+        text-decoration: inherit
+    }
+
+    a.mw-selflink:hover {
+        cursor: inherit;
+        text-decoration: inherit
+    }
+
+    a.mw-selflink:active,
+    a.mw-selflink:visited {
+        color: inherit
+    }
+
+    a.new:visited {
+        color: #a55858
+    }
+
+    .mw-parser-output a.extiw,
+    .mw-parser-output a.external {
+        color: #3366bb
+    }
+
+    .mw-parser-output a.extiw:visited,
+    .mw-parser-output a.external:visited {
+        color: #663366
+    }
+
+    .mw-parser-output a.extiw:active,
+    .mw-parser-output a.external:active {
+        color: #bb6633
+    }
+
+    .mw-underline-always a {
+        text-decoration: underline
+    }
+
+    .mw-underline-never a {
+        text-decoration: none
+    }
+
+    .plainlinks a.external {
+        background: none !important;
+        padding: 0 !important
+    }
+
+    .mw-body-content:after {
+        clear: both;
+        content: '';
+        display: block
+    }
+
+    .mw-body-content a.external.free {
+        word-wrap: break-word
+    }
+
+    .mw-body-content .error {
+        font-size: larger;
+        color: #d33
+    }
+
+    .rtl .mw-parser-output a.external.free,
+    .rtl .mw-parser-output a.external.autonumber {
+        direction: ltr;
+        unicode-bidi: embed
+    }
+
+    .mw-hide-empty-elt .mw-parser-output:not(.mw-show-empty-elt) .mw-empty-elt {
+        display: none
+    }
+
+    .wikitable {
+        background-color: #f8f9fa;
+        color: #202122;
+        margin: 1em 0;
+        border: 1px solid #a2a9b1;
+        border-collapse: collapse
+    }
+
+    .wikitable>tr>th,
+    .wikitable>tr>td,
+    .wikitable>*>tr>th,
+    .wikitable>*>tr>td {
+        border: 1px solid #a2a9b1;
+        padding: 0.2em 0.4em
+    }
+
+    .wikitable>tr>th,
+    .wikitable>*>tr>th {
+        background-color: #eaecf0;
+        text-align: center
+    }
+
+    .wikitable>caption {
+        font-weight: bold
+    }
+
+    #catlinks {
+        text-align: left
+    }
+
+    .catlinks {
+        border: 1px solid #a2a9b1;
+        background-color: #f8f9fa;
+        padding: 5px;
+        margin-top: 1em;
+        clear: both
+    }
+
+    .catlinks ul {
+        display: inline;
+        margin: 0;
+        padding: 0;
+        list-style: none
+    }
+
+    .catlinks li {
+        display: inline-block;
+        line-height: 1.25em;
+        border-left: 1px solid #a2a9b1;
+        margin: 0.125em 0;
+        padding: 0 0.5em
+    }
+
+    .catlinks li:first-child {
+        padding-left: 0.25em;
+        border-left: 0
+    }
+
+    .catlinks li a.mw-redirect {
+        font-style: italic
+    }
+
+    .mw-hidden-cats-hidden,
+    .catlinks-allhidden {
+        display: none
+    }
+
+    .emptyPortlet {
+        display: none
+    }
+
+    .printfooter,
+    .client-nojs #t-print {
+        display: none
+    }
+
+    .mw-editsection {
+        -moz-user-select: none;
+        -webkit-user-select: none;
+        -ms-user-select: none;
+        user-select: none
+    }
+
+    .mw-editsection,
+    .mw-editsection-like {
+        font-size: small;
+        font-weight: normal;
+        margin-left: 1em;
+        vertical-align: baseline;
+        line-height: 0
+    }
+
+    .mw-content-ltr .mw-editsection,
+    .mw-content-rtl .mw-content-ltr .mw-editsection,
+    .mw-content-ltr .mw-editsection-like,
+    .mw-content-rtl .mw-content-ltr .mw-editsection-like {
+        margin-left: 1em;
+        margin-right: 0
+    }
+
+    .mw-content-rtl .mw-editsection,
+    .mw-content-ltr .mw-content-rtl .mw-editsection,
+    .mw-content-rtl .mw-editsection-like,
+    .mw-content-ltr .mw-content-rtl .mw-editsection-like {
+        margin-right: 1em;
+        margin-left: 0
+    }
+
+    .usermessage {
+        background-color: #fef6e7;
+        border: 1px solid #fc3;
+        color: #000;
+        font-weight: bold;
+        margin: 2em 0 1em;
+        padding: 0.5em 1em;
+        vertical-align: middle
+    }
+
+    a {
+        text-decoration: none;
+        color: #0645ad;
+        background: none
+    }
+
+    a:not([href]) {
+        cursor: pointer
+    }
+
+    a:visited {
+        color: #0b0080
+    }
+
+    a:active {
+        color: #faa700
+    }
+
+    a:hover,
+    a:focus {
+        text-decoration: underline
+    }
+
+    a:lang(ar),
+    a:lang(kk-arab),
+    a:lang(mzn),
+    a:lang(ps),
+    a:lang(ur) {
+        text-decoration: none
+    }
+
+    img {
+        border: 0;
+        vertical-align: middle
+    }
+
+    hr {
+        height: 1px;
+        background-color: #a2a9b1;
+        border: 0;
+        margin: 0.2em 0
+    }
+
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+        color: #000;
+        margin: 0;
+        padding-top: 0.5em;
+        padding-bottom: 0.17em;
+        overflow: hidden
+    }
+
+    h1,
+    h2 {
+        margin-bottom: 0.6em;
+        border-bottom: 1px solid #a2a9b1
+    }
+
+    h3,
+    h4,
+    h5 {
+        margin-bottom: 0.3em
+    }
+
+    h1 {
+        font-size: 188%;
+        font-weight: normal
+    }
+
+    h2 {
+        font-size: 150%;
+        font-weight: normal
+    }
+
+    h3 {
+        font-size: 128%
+    }
+
+    h4 {
+        font-size: 116%
+    }
+
+    h5 {
+        font-size: 108%
+    }
+
+    h6 {
+        font-size: 100%
+    }
+
+    p {
+        margin: 0.4em 0 0.5em 0
+    }
+
+    p img {
+        margin: 0
+    }
+
+    ul {
+        margin: 0.3em 0 0 1.6em;
+        padding: 0
+    }
+
+    ol {
+        margin: 0.3em 0 0 3.2em;
+        padding: 0;
+        list-style-image: none
+    }
+
+    li {
+        margin-bottom: 0.1em
+    }
+
+    dt {
+        font-weight: bold;
+        margin-bottom: 0.1em
+    }
+
+    dl {
+        margin-top: 0.2em;
+        margin-bottom: 0.5em
+    }
+
+    dd {
+        margin-left: 1.6em;
+        margin-bottom: 0.1em
+    }
+
+    pre,
+    code,
+    tt,
+    kbd,
+    samp,
+    .mw-code {
+        font-family: monospace, monospace
+    }
+
+    pre,
+    code,
+    .mw-code {
+        background-color: #f8f9fa;
+        color: #000;
+        border: 1px solid #eaecf0
+    }
+
+    code {
+        border-radius: 2px;
+        padding: 1px 4px
+    }
+
+    pre,
+    .mw-code {
+        padding: 1em;
+        white-space: pre-wrap;
+        overflow-x: hidden;
+        word-wrap: break-word
+    }
+
+    table {
+        font-size: 100%
+    }
+
+    fieldset {
+        border: 1px solid #2a4b8d;
+        margin: 1em 0 1em 0;
+        padding: 0 1em 1em
+    }
+
+    legend {
+        padding: 0.5em
+    }
+
+    form {
+        border: 0;
+        margin: 0
+    }
+
+    textarea {
+        display: block;
+        box-sizing: border-box;
+        width: 100%;
+        border: 1px solid #c8ccd1;
+        padding: 0.1em
+    }
+
+    .center {
+        width: 100%;
+        text-align: center
+    }
+
+    *.center * {
+        margin-left: auto;
+        margin-right: auto
+    }
+
+    .small {
+        font-size: 94%
+    }
+
+    table.small {
+        font-size: 100%
+    }
+
+    @counter-style meetei {
+        system: numeric;
+        symbols: '\ABF0' '\ABF1' '\ABF2' '\ABF3' '\ABF4' '\ABF5' '\ABF6' '\ABF7' '\ABF8' '\ABF9';
+        suffix: ') '
+    }
+
+    @counter-style santali {
+        system: numeric;
+        symbols: '\1C50' '\1C51' '\1C52' '\1C53' '\1C54' '\1C55' '\1C56' '\1C57' '\1C58' '\1C59'
+    }
+
+    @counter-style myanmar_with_period {
+        system: numeric;
+        symbols: '\1040' '\1041' '\1042' '\1043' '\1044' '\1045' '\1046' '\1047' '\1048' '\1049';
+        suffix: '\104B\0020'
+    }
+
+    ol:lang(azb) li,
+    ol:lang(bcc) li,
+    ol:lang(bgn) li,
+    ol:lang(bqi) li,
+    ol:lang(fa) li,
+    ol:lang(glk) li,
+    ol:lang(kk-arab) li,
+    ol:lang(lrc) li,
+    ol:lang(luz) li,
+    ol:lang(mzn) li {
+        list-style-type: persian
+    }
+
+    ol:lang(ckb) li,
+    ol:lang(sdh) li {
+        list-style-type: arabic-indic
+    }
+
+    ol:lang(hi) li,
+    ol:lang(mai) li,
+    ol:lang(mr) li,
+    ol:lang(ne) li {
+        list-style-type: devanagari
+    }
+
+    ol:lang(as) li,
+    ol:lang(bn) li {
+        list-style-type: bengali
+    }
+
+    ol:lang(mni) li {
+        list-style-type: meetei
+    }
+
+    ol:lang(or) li {
+        list-style-type: oriya
+    }
+
+    ol:lang(sat) li {
+        list-style-type: santali
+    }
+
+    ol:lang(blk) li,
+    ol:lang(kjp) li,
+    ol:lang(ksw) li,
+    ol:lang(mnw) li,
+    ol:lang(my) li,
+    ol:lang(shn) li {
+        list-style-type: myanmar_with_period
+    }
+
+    .mw-content-ltr ul,
+    .mw-content-rtl .mw-content-ltr ul {
+        margin: 0.3em 0 0 1.6em;
+        padding: 0
+    }
+
+    .mw-content-rtl ul,
+    .mw-content-ltr .mw-content-rtl ul {
+        margin: 0.3em 1.6em 0 0;
+        padding: 0
+    }
+
+    .mw-content-ltr ol,
+    .mw-content-rtl .mw-content-ltr ol {
+        margin: 0.3em 0 0 3.2em;
+        padding: 0
+    }
+
+    .mw-content-rtl ol,
+    .mw-content-ltr .mw-content-rtl ol {
+        margin: 0.3em 3.2em 0 0;
+        padding: 0
+    }
+
+    .mw-content-ltr dd,
+    .mw-content-rtl .mw-content-ltr dd {
+        margin-left: 1.6em;
+        margin-right: 0
+    }
+
+    .mw-content-rtl dd,
+    .mw-content-ltr .mw-content-rtl dd {
+        margin-right: 1.6em;
+        margin-left: 0
+    }
+
+    h1:lang(anp),
+    h1:lang(as),
+    h1:lang(bh),
+    h1:lang(bho),
+    h1:lang(blk),
+    h1:lang(bn),
+    h1:lang(gu),
+    h1:lang(hi),
+    h1:lang(kjp),
+    h1:lang(kn),
+    h1:lang(ks),
+    h1:lang(ksw),
+    h1:lang(mag),
+    h1:lang(ml),
+    h1:lang(mr),
+    h1:lang(my),
+    h1:lang(mai),
+    h1:lang(mnw),
+    h1:lang(ne),
+    h1:lang(new),
+    h1:lang(or),
+    h1:lang(pa),
+    h1:lang(pi),
+    h1:lang(rki),
+    h1:lang(sa),
+    h1:lang(shn),
+    h1:lang(syl),
+    h1:lang(ta),
+    h1:lang(te) {
+        line-height: 1.6em !important
+    }
+
+    h2:lang(anp),
+    h2:lang(as),
+    h2:lang(bh),
+    h2:lang(bho),
+    h2:lang(blk),
+    h2:lang(bn),
+    h2:lang(gu),
+    h2:lang(hi),
+    h2:lang(kjp),
+    h2:lang(kn),
+    h2:lang(ks),
+    h2:lang(ksw),
+    h2:lang(mag),
+    h2:lang(ml),
+    h2:lang(mr),
+    h2:lang(my),
+    h2:lang(mai),
+    h2:lang(mnw),
+    h2:lang(ne),
+    h2:lang(new),
+    h2:lang(or),
+    h2:lang(pa),
+    h2:lang(pi),
+    h2:lang(rki),
+    h2:lang(sa),
+    h2:lang(shn),
+    h2:lang(syl),
+    h2:lang(ta),
+    h2:lang(te),
+    h3:lang(anp),
+    h3:lang(as),
+    h3:lang(bh),
+    h3:lang(bho),
+    h3:lang(blk),
+    h3:lang(bn),
+    h3:lang(gu),
+    h3:lang(hi),
+    h3:lang(kjp),
+    h3:lang(kn),
+    h3:lang(ks),
+    h3:lang(ksw),
+    h3:lang(mag),
+    h3:lang(ml),
+    h3:lang(mr),
+    h3:lang(my),
+    h3:lang(mai),
+    h3:lang(mnw),
+    h3:lang(ne),
+    h3:lang(new),
+    h3:lang(or),
+    h3:lang(pa),
+    h3:lang(pi),
+    h3:lang(rki),
+    h3:lang(sa),
+    h3:lang(shn),
+    h3:lang(syl),
+    h3:lang(ta),
+    h3:lang(te),
+    h4:lang(anp),
+    h4:lang(as),
+    h4:lang(bh),
+    h4:lang(bho),
+    h4:lang(blk),
+    h4:lang(bn),
+    h4:lang(gu),
+    h4:lang(hi),
+    h4:lang(kjp),
+    h4:lang(kn),
+    h4:lang(ks),
+    h4:lang(ksw),
+    h4:lang(mag),
+    h4:lang(ml),
+    h4:lang(mr),
+    h4:lang(my),
+    h4:lang(mai),
+    h4:lang(mnw),
+    h4:lang(ne),
+    h4:lang(new),
+    h4:lang(or),
+    h4:lang(pa),
+    h4:lang(pi),
+    h4:lang(rki),
+    h4:lang(sa),
+    h4:lang(shn),
+    h4:lang(syl),
+    h4:lang(ta),
+    h4:lang(te),
+    h5:lang(anp),
+    h5:lang(as),
+    h5:lang(bh),
+    h5:lang(bho),
+    h5:lang(blk),
+    h5:lang(bn),
+    h5:lang(gu),
+    h5:lang(hi),
+    h5:lang(kjp),
+    h5:lang(kn),
+    h5:lang(ks),
+    h5:lang(ksw),
+    h5:lang(mag),
+    h5:lang(ml),
+    h5:lang(mr),
+    h5:lang(my),
+    h5:lang(mai),
+    h5:lang(mnw),
+    h5:lang(ne),
+    h5:lang(new),
+    h5:lang(or),
+    h5:lang(pa),
+    h5:lang(pi),
+    h5:lang(rki),
+    h5:lang(sa),
+    h5:lang(shn),
+    h5:lang(syl),
+    h5:lang(ta),
+    h5:lang(te),
+    h6:lang(anp),
+    h6:lang(as),
+    h6:lang(bh),
+    h6:lang(bho),
+    h6:lang(blk),
+    h6:lang(bn),
+    h6:lang(gu),
+    h6:lang(hi),
+    h6:lang(kjp),
+    h6:lang(kn),
+    h6:lang(ks),
+    h6:lang(ksw),
+    h6:lang(mag),
+    h6:lang(ml),
+    h6:lang(mr),
+    h6:lang(my),
+    h6:lang(mai),
+    h6:lang(mnw),
+    h6:lang(ne),
+    h6:lang(new),
+    h6:lang(or),
+    h6:lang(pa),
+    h6:lang(pi),
+    h6:lang(rki),
+    h6:lang(sa),
+    h6:lang(shn),
+    h6:lang(syl),
+    h6:lang(ta),
+    h6:lang(te) {
+        line-height: 1.4em
+    }
+
+    h2:lang(th) {
+        line-height: 1.6
+    }
+}
+
+@media print {
+
+    table.floatright,
+    div.floatright {
+        border: 0
+    }
+
+    table.floatleft,
+    div.floatleft {
+        border: 0
+    }
+
+    div.thumb {
+        page-break-inside: avoid
+    }
+
+    div.thumb a {
+        border-bottom: 0
+    }
+
+    div.thumbinner {
+        border: 1px;
+        background-color: #ffffff;
+        font-size: 10pt;
+        color: #666666;
+        border-radius: 2px;
+        min-width: 100px
+    }
+
+    .thumbborder {
+        border: 1pt solid #dddddd
+    }
+
+    .magnify {
+        display: none
+    }
+
+    .mw-parser-output a.external {}
+
+    .mw-parser-output a.external.text:after,
+    .mw-parser-output a.external.autonumber:after {
+        content: ' (' attr(href) ')';
+        word-break: break-all;
+        word-wrap: break-word
+    }
+
+    .mw-parser-output a.external.text[href^='//']:after,
+    .mw-parser-output a.external.autonumber[href^='//']:after {
+        content: ' (https:' attr(href) ')'
+    }
+
+    .wikitable {
+        background: #fff;
+        margin: 1em 0;
+        border: 1pt solid #aaa;
+        border-collapse: collapse;
+        font-size: 10pt;
+        page-break-inside: avoid
+    }
+
+    .wikitable>caption {
+        padding: 5px;
+        font-size: 10pt
+    }
+
+    .wikitable>tr>th,
+    .wikitable>tr>td,
+    .wikitable>*>tr>th,
+    .wikitable>*>tr>td {
+        background: #fff !important;
+        color: #000 !important;
+        border: 1pt solid #aaa;
+        padding: 0.4em 0.6em
+    }
+
+    .wikitable>tr>th,
+    .wikitable>*>tr>th {
+        text-align: center
+    }
+
+    table.listing,
+    table.listing td {
+        border: 1pt solid #000;
+        border-collapse: collapse
+    }
+
+    .catlinks ul {
+        display: inline;
+        padding: 0;
+        list-style: none
+    }
+
+    .catlinks li {
+        display: inline-block;
+        line-height: 1.15;
+        margin: 0.1em 0;
+        border-left: 1pt solid #aaa;
+        padding: 0 0.4em
+    }
+
+    .catlinks li:first-child {
+        border-left: 0;
+        padding-left: 0.2em
+    }
+
+    .mw-hidden-catlinks,
+    .catlinks {
+        display: none
+    }
+
+    .mw-editsection,
+    .mw-editsection-like,
+    .mw-indicators,
+    #siteNotice,
+    .usermessage {
+        display: none
+    }
+
+    .printfooter {
+        padding: 1em 0
+    }
+
+    .center {
+        text-align: center
+    }
+
+    a {
+        background: none !important;
+        padding: 0 !important
+    }
+
+    a,
+    a.external,
+    a.new,
+    a.stub {
+        color: inherit !important;
+        text-decoration: inherit !important
+    }
+
+    dt {
+        font-weight: bold
+    }
+
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+        font-weight: bold;
+        page-break-after: avoid;
+        page-break-before: avoid
+    }
+
+    p {
+        margin: 1em 0;
+        line-height: 1.2;
+        orphans: 3;
+        widows: 3
+    }
+
+    img,
+    figure {
+        page-break-inside: avoid
+    }
+
+    img {
+        border: 0;
+        vertical-align: middle
+    }
+
+    pre,
+    .mw-code {
+        background: #fff;
+        color: #000;
+        border: 1pt dashed #000;
+        padding: 1em;
+        font-size: 8pt;
+        white-space: pre-wrap;
+        overflow-x: hidden;
+        word-wrap: break-word
+    }
+
+    ul {
+        list-style-type: square
+    }
+}
+
+.wb-entitypage .mw-notification-area {
+    position: fixed
+}
+
+h1 .wikibase-title-id {
+    color: #72777d;
+    font-size: 0.6em;
+    margin-left: 0.4em;
+    unicode-bidi: embed
+}
+
+.skin-vector .wikibase-title .wb-language-fallback-indicator {
+    font-size: 0.3888em;
+    font-family: sans-serif;
+    color: #202122
+}
+
+h1 .wikibase-title-id:before {
+    content: ' '
+}
+
+.wb-entitypage .ui-state-disabled {
+    opacity: 1
+}
+
+.wb-entitypage .ui-state-disabled input,
+.wb-entitypage input.ui-state-disabled,
+.wb-entitypage .ui-state-disabled textarea {
+    background-color: #f8f9fa;
+    color: #54595d
+}
+
+.wb-entitypage .ui-state-disabled .wb-edit input:not(.ui-state-disabled),
+.wb-entitypage .ui-state-disabled .wb-edit textarea {
+    background-color: #fff;
+    color: inherit
+}
+
+.wb-actionmsg {
+    font-style: italic
+}
+
+.ui-closeable {
+    background-color: #fff;
+    border-bottom: 1px solid #c8ccd1;
+    border-top: 1px solid #c8ccd1;
+    padding: 0.2em 10px;
+    font-size: 0.9em
+}
+
+.ui-closeable.wb-edit {
+    background-color: #eaf3ff
+}
+
+.ui-closeable.wb-error {
+    background-color: #fee7e6
+}
+
+.wikibase-copyrightnotification-container a {
+    cursor: pointer
+}
+
+.wb-clear {
+    clear: both
+}
+
+span.wb-itemlink-id {
+    font-size: 0.85em;
+    unicode-bidi: embed
+}
+
+#bodyContent {
+    clear: both
+}
+
+.wikibase-entityview #toc {
+    display: none
+}
+
+h2.wb-section-heading {
+    position: relative;
+    float: left;
+    margin-bottom: 0.2em;
+    margin-top: 1em;
+    padding-left: 10px;
+    border-bottom: 0;
+    width: 100%
+}
+
+.wikibase-entityview input {
+    border: 1px solid #a2a9b1;
+    border-radius: 0;
+    box-sizing: border-box
+}
+
+.wikibase-entityview textarea {
+    font-family: inherit
+}
+
+.wb-hr {
+    float: left;
+    width: 100%;
+    height: 1px;
+    margin: 0
+}
+
+.wikibase-entityview .wikibase-toolbar-container {
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 18em
+}
+
+.wikibase-entityview .wikibase-toolbar-container>.wikibase-toolbar-container {
+    position: static;
+    width: auto
+}
+
+.wb-empty {
+    color: #a2a9b1
+}
+
+.wb-entity-undefinedinfo {
+    color: #54595d;
+    font-style: italic
+}
+
+.wb-placeholder-dir-rtl::placeholder {
+    direction: rtl;
+    text-align: right
+}
+
+.wb-placeholder-dir-ltr::placeholder {
+    direction: ltr;
+    text-align: left
+}
+
+div.wikibase-statementview textarea {
+    margin: 0;
+    box-sizing: border-box
+}
+
+.wikibase-statementgrouplistview {}
+
+.wikibase-statementgrouplistview .wikibase-statementlistview {
+    position: relative;
+    background-color: #fff;
+    float: left;
+    margin-left: 15em;
+    width: calc(100% - 15em - 2px);
+    border: 1px solid #c8ccd1
+}
+
+.wikibase-statementgrouplistview :target {
+    outline: 2px solid #3366cc
+}
+
+.wikibase-statementgrouplistview .wikibase-statementlistview .wikibase-statementview:target {
+    outline: 2px solid #3366cc;
+    z-index: 1
+}
+
+.wikibase-statementgrouplistview .wikibase-statementgroupview-property {
+    width: 15em;
+    background: #eaecf0;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    z-index: 1
+}
+
+.wikibase-statementgrouplistview .wikibase-statementgroupview-property .wikibase-statementgroupview-property-label {
+    float: left;
+    word-wrap: break-word;
+    padding: 10px;
+    padding-bottom: 0;
+    transition: top 0.1s ease-out;
+    position: sticky;
+    top: 10px
+}
+
+div.wikibase-statementview {
+    width: 100%
+}
+
+div.wikibase-statementview-mainsnak {
+    position: relative;
+    margin-right: 18em;
+    max-width: 32em;
+    word-wrap: break-word
+}
+
+div.wikibase-statementview-mainsnak .wikibase-snakview-property-container {
+    display: none
+}
+
+.wikibase-statementview.wb-new .wikibase-statementview-mainsnak .wikibase-snakview-property-container {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: -15em;
+    width: 15em;
+    display: block;
+    z-index: 2
+}
+
+div.wikibase-snakview {
+    padding: 10px 5px 5px 10px
+}
+
+div.wikibase-snakview .wikibase-snakview-value-container {
+    margin-left: 16px;
+    min-height: 1.6em
+}
+
+.wikibase-snakview .wikibase-snakview-value,
+.wikibase-snakview .wikibase-snakview-indicators {
+    display: inline
+}
+
+.wikibase-snakview .wikibase-snakview-value .valueview {
+    display: inherit
+}
+
+.wikibase-snakview.wb-edit .wikibase-snakview-value {
+    display: block
+}
+
+.wikibase-snakview.wb-edit .wikibase-snakview-indicators {
+    display: none
+}
+
+div .wikibase-snakview-value span.error.wb-format-error {
+    display: block;
+    color: #f00;
+    font-size: inherit;
+    font-style: italic
+}
+
+.wikibase-statementlistview>.wikibase-toolbar-wrapper {
+    background-color: #eaecf0;
+    display: block;
+    float: left;
+    position: relative;
+    width: 100%
+}
+
+.wikibase-statementlistview.wb-new>.wikibase-toolbar-wrapper {
+    border-top: 0
+}
+
+.wikibase-statementlistview>.wikibase-toolbar-wrapper .wikibase-toolbar-container {
+    position: static;
+    line-height: 2em;
+    float: right
+}
+
+.wb-language-fallback-indicator {
+    font-style: italic;
+    line-height: 1;
+    font-size: 0.8em
+}
+
+.wb-language-fallback-indicator.wb-language-fallback-variant {
+    display: none
+}
+
+.wb-calendar-name {
+    font-style: italic;
+    margin-left: 0.5em;
+    line-height: 1
+}
+
+.wikibase-statementgrouplistview .wb-new>.wikibase-statementlistview>.wikibase-toolbar-wrapper .wikibase-addtoolbar-container {
+    display: none
+}
+
+.wikibase-statementgrouplistview .wikibase-statementgroupview-property.wb-edit,
+.wikibase-statementgroupview-property.wb-edit+.wikibase-statementlistview>.wikibase-toolbar-wrapper {
+    background-color: #b6c8ec
+}
+
+.wikibase-statementgrouplistview .wikibase-statementgroupview-property.wb-error {
+    background-color: #efa0a0
+}
+
+.wikibase-statementgrouplistview .wikibase-statementview.wb-error,
+.wikibase-statementgrouplistview .wikibase-statementview.wb-error .wb-claim {
+    background-color: #fee7e6
+}
+
+.wikibase-statementlistview.wb-new {
+    margin-bottom: 0;
+    border: 0
+}
+
+.wikibase-statementgrouplistview .wikibase-statementlistview.wb-new .wikibase-statementview {
+    border: 1px solid #c8ccd1;
+    width: 100%;
+    margin-bottom: 1em
+}
+
+.wikibase-statementgrouplistview .wikibase-statementview.wb-new {
+    padding-bottom: 0
+}
+
+.wikibase-statementgrouplistview .wb-new .wikibase-statementview-mainsnak {
+    margin: 0 18em 0 0
+}
+
+.wikibase-statementgrouplistview .wb-new .wikibase-statementview-mainsnak .wikibase-snakview-property {
+    padding: 10px
+}
+
+.wikibase-statementgrouplistview .wb-new .wikibase-statementview-mainsnak .wikibase-snakview-property input {
+    width: 100%;
+    box-sizing: border-box
+}
+
+.wikibase-statementgrouplistview .wb-new .wikibase-statementview-mainsnak .wikibase-snakview-value {
+    min-height: 1.5em;
+    max-width: 32em
+}
+
+.wikibase-snakview-typeselector {
+    position: absolute;
+    left: 12px
+}
+
+.wikibase-snakview-unsupportedsnaktype,
+.wikibase-snakview-variation-valuesnak-unsupporteddatavalue,
+.wikibase-snakview-variation-valuesnak-datavaluetypemismatch,
+.wikibase-snakview-variation-valuesnak-nonewvaluefordeletedproperty,
+span.wikibase-snakview-variation-somevaluesnak,
+span.wikibase-snakview-variation-novaluesnak {
+    color: #54595d;
+    font-style: italic;
+    line-height: 1.2
+}
+
+.wikibase-snakview-variation-valuesnak-datavaluetypemismatch,
+.wikibase-snakview-variation-valuesnak-nonewvaluefordeletedproperty {
+    color: #f00
+}
+
+.wikibase-snakview-variation-valuesnak-datavaluetypemismatch-message div {
+    font-size: 84%;
+    margin-top: 0.4em
+}
+
+.wikibase-snakview-variation-valuesnak textarea {
+    width: 100%
+}
+
+.wikibase-statementview-qualifiers {
+    padding-left: 2em
+}
+
+.wikibase-statementview-qualifiers .wikibase-snaklistview .wikibase-snaklistview-listview .wikibase-snakview-property {
+    width: 12em;
+    position: absolute;
+    font-size: 90%
+}
+
+.wikibase-statementview-qualifiers .wikibase-snaklistview .wikibase-snaklistview-listview .wikibase-snakview-property input {
+    width: 100%;
+    font-size: 100%;
+    top: 0;
+    position: absolute
+}
+
+.wikibase-statementview-qualifiers .wikibase-snaklistview .wikibase-snaklistview-listview .wikibase-snakview-value-container {
+    margin-left: 12em;
+    position: relative
+}
+
+.wikibase-statementview-qualifiers .wikibase-snaklistview .wikibase-snaklistview-listview .wikibase-snakview-value-container .wikibase-snakview-body {
+    margin-left: 16px;
+    margin-right: 18em;
+    word-wrap: break-word
+}
+
+.wikibase-statementview-qualifiers .wikibase-snaklistview .wikibase-snaklistview-listview .wikibase-snakview-value-container .wikibase-snakview-value .valueview-value {
+    font-size: 90%
+}
+
+.wikibase-statementview-qualifiers .wikibase-snaklistview .wikibase-snaklistview-listview .wikibase-snakview-value-container .wikibase-snakview-typeselector {
+    left: 0
+}
+
+.wikibase-statementview-qualifiers .wikibase-snaklistview .wikibase-snaklistview-listview .wikibase-snakview-value-container .wikibase-snakview-value .valueview-value textarea {
+    box-sizing: border-box
+}
+
+.wikibase-statementview-qualifiers .wikibase-snaklistview .wikibase-snaklistview-listview .wikibase-snakview {
+    position: relative;
+    line-height: 1.2;
+    min-height: 1.5em;
+    padding-top: 4px;
+    padding-bottom: 2px
+}
+
+.wikibase-statementview-qualifiers .wikibase-snaklistview .wikibase-snaklistview-listview .wikibase-snakview>.wikibase-toolbar-container {
+    top: 5px
+}
+
+.wikibase-statementview-qualifiers>.wikibase-toolbar-container {
+    float: right;
+    margin-bottom: 1em;
+    position: static;
+    display: none
+}
+
+.wikibase-statementview.wb-edit .wikibase-statementview-qualifiers>.wikibase-toolbar-container {
+    display: block
+}
+
+.wikibase-statementgrouplistview>.wikibase-toolbar-container {
+    float: right;
+    position: static
+}
+
+.wikibase-statementview {
+    border-bottom: 1px solid #eaecf0;
+    float: left;
+    width: 100%;
+    position: relative;
+    padding-bottom: 1em
+}
+
+.wikibase-statementview:last-child {
+    border-bottom: 0
+}
+
+.wikibase-statementview .wikibase-statementview-rankselector {
+    position: absolute;
+    margin-left: 0.2em;
+    margin-top: 10px;
+    z-index: 1
+}
+
+.wikibase-statementview .wikibase-statementview-rankselector .wikibase-rankselector {
+    background: none;
+    border: 0
+}
+
+.wikibase-statementview>.wikibase-toolbar {
+    display: block
+}
+
+.wikibase-statementview .wikibase-toolbar-container {
+    top: 10px;
+    white-space: nowrap
+}
+
+.wikibase-statementview .commons-media-caption {
+    font-size: 94%
+}
+
+.wikibase-statementview .wikibase-kartographer-caption {
+    clear: both
+}
+
+.wikibase-statementview div.thumb img,
+.wikibase-statementview div.thumb audio,
+.wikibase-statementview div.thumb video,
+.wikibase-statementview div a.mw-kartographer-map {
+    border: 1px solid #c8ccd1
+}
+
+.wikibase-statementview-references-heading {
+    color: #72777d;
+    margin-top: 0.5em;
+    display: flex
+}
+
+.wikibase-statementview-references-heading,
+.wikibase-statementview-references {
+    padding-left: 2em;
+    clear: both
+}
+
+.client-js .wikibase-entitytermsview-entitytermsforlanguagelistview.wikibase-initially-collapsed,
+.client-js body:not(.wb-diffpage):not(.wb-oldrevpage) .wikibase-initially-collapsed {
+    display: none
+}
+
+.wikibase-referenceview {
+    position: relative;
+    background: #f8f9fa;
+    overflow: hidden;
+    margin-bottom: 0.5em
+}
+
+.wikibase-referenceview .wikibase-referenceview-listview {
+    padding-top: 0.3em
+}
+
+.wikibase-referenceview .wikibase-referenceview-heading {
+    min-height: 1.5em;
+    padding: 5px;
+    background-color: #eaecf0;
+    display: none
+}
+
+.wikibase-referenceview .wikibase-referenceview-heading .wikibase-toolbar-container {
+    top: 5px
+}
+
+.wikibase-referenceview.wb-edit {
+    background-color: #eaf3ff
+}
+
+.wikibase-referenceview.wb-edit>.wikibase-referenceview-heading {
+    background-color: #b6c8ec;
+    display: block
+}
+
+.wikibase-referenceview.wb-error {
+    background-color: #fee7e6
+}
+
+.wikibase-referenceview.wb-error>.wikibase-referenceview-heading {
+    background-color: #efa0a0
+}
+
+.wikibase-referenceview .wikibase-snaklistview-listview .wikibase-snakview-property {
+    width: 12em;
+    position: absolute;
+    font-size: 90%
+}
+
+.wikibase-referenceview .wikibase-snaklistview-listview .wikibase-snakview-property input {
+    width: 100%;
+    font-size: 100%;
+    top: 0;
+    position: absolute
+}
+
+.wikibase-referenceview .wikibase-snaklistview-listview .wikibase-snakview-value-container {
+    margin-left: 12em;
+    position: relative
+}
+
+.wikibase-referenceview .wikibase-snaklistview-listview .wikibase-snakview-value-container .wikibase-snakview-body {
+    margin-left: 16px;
+    margin-right: 18em;
+    word-wrap: break-word
+}
+
+.wikibase-referenceview .wikibase-snaklistview-listview .wikibase-snakview-value-container .wikibase-snakview-value .valueview-value {
+    font-size: 90%
+}
+
+.wikibase-referenceview .wikibase-snaklistview-listview .wikibase-snakview-value-container .wikibase-snakview-typeselector {
+    left: 0
+}
+
+.wikibase-referenceview .wikibase-snaklistview-listview .wikibase-snakview-value-container .wikibase-snakview-value .valueview-value textarea {
+    box-sizing: border-box
+}
+
+.wikibase-referenceview .wikibase-snaklistview-listview .wikibase-snakview {
+    position: relative;
+    line-height: 1.2;
+    min-height: 1.7em;
+    padding-top: 0.3em;
+    padding-bottom: 0.3em
+}
+
+.wikibase-referenceview .wb-edittoolbar {
+    position: absolute;
+    right: 0;
+    top: 0
+}
+
+.wikibase-referenceview .wikibase-toolbar-container {
+    top: 0.3em
+}
+
+.wikibase-referenceview .wikibase-snaklistview-listview .wikibase-snakview>.wb-removetoolbar {
+    position: absolute;
+    top: 5px;
+    right: 0
+}
+
+.wikibase-referenceview>.wikibase-addtoolbar-container {
+    float: right;
+    margin-bottom: 1em;
+    position: static
+}
+
+.wikibase-statementview-references>.wikibase-toolbar-container {
+    float: right;
+    position: static
+}
+
+div.listview-item.wikibase-referenceview-tabs.ui-tabs.ui-widget.ui-widget-content {
+    font-size: 100%;
+    background-image: none;
+    padding: 0;
+    border-radius: 0;
+    border: 0
+}
+
+.wikibase-referenceview-tabs {}
+
+.wikibase-referenceview-tabs div.ui-tabs-panel.ui-widget-content {
+    padding-right: 0
+}
+
+.wikibase-referenceview-tabs .wikibase-addtoolbar-container {
+    float: right;
+    margin-bottom: 1em;
+    position: static;
+    padding-right: 15em;
+    width: auto
+}
+
+.wikibase-referenceview-tabs .ui-widget-header {
+    border: 0
+}
+
+.wikibase-referenceview-tabs .ui-state-default>.ui-tabs-anchor {
+    color: #000
+}
+
+.wikibase-referenceview-tabs .ui-tabs-active>.ui-tabs-anchor {
+    font-weight: bold
+}
+
+.wikibase-referenceview-tabs ul.ui-tabs-nav.ui-widget-header {
+    padding-left: 10px;
+    padding-top: 5px
+}
+
+.wikibase-referenceview-tabs li.ui-tabs.ui-tabs-nav {
+    margin-left: 0.5em
+}
+
+.wikibase-referenceview-tabs li.ui-state-default {
+    border: 0;
+    background-color: #b6c8ec;
+    background-image: none
+}
+
+.wikibase-referenceview-tabs li.ui-state-default.ui-tabs-active.ui-state-active {
+    background-color: #eaf3ff
+}
+
+.wikibase-snakview-indicators .wikibase-snakview-indicator {
+    margin-left: 0.5em
+}
+
+.wikibase-sitelinks {
+    display: none
+}
+
+.wb-sitelinks-heading .wikibase-sitelinkgroupview-counter {
+    font-size: 67%;
+    margin-left: 0.6em;
+    line-height: 100%
+}
+
+.wb-propertypage .wikibase-propertyview-datatype {
+    background-color: #f8f9fa;
+    border: 1px solid #c8ccd1;
+    border-collapse: separate;
+    float: left;
+    width: 100%
+}
+
+.wb-propertypage .wikibase-propertyview-datatype-value {
+    font-weight: bold;
+    padding: 10px
+}
+
+table.diff table.wb-details {
+    margin-left: 2em;
+    line-height: 1em;
+    border: 0;
+    padding: 0
+}
+
+table.diff table.wb-details th {
+    font-size: 80%;
+    font-weight: bold;
+    text-align: left;
+    padding: 0;
+    border: 0
+}
+
+table.diff table.wb-details td {
+    font-size: 80%;
+    font-weight: normal;
+    text-align: left;
+    margin: 0;
+    border: 0
+}
+
+.wikibase-pageImage {
+    display: none;
+    border: 1px solid #c8ccd1;
+    position: relative;
+    width: 100%;
+    margin: 0 2em 2em 0
+}
+
+.wikibase-pageImage .help {
+    position: absolute;
+    top: 5px;
+    right: 0
+}
+
+.wikibase-pageImage .help .wikibase-wbtooltip {
+    text-decoration: none;
+    display: block
+}
+
+.wikibase-aliasesview,
+.wikibase-aliasesview-empty {
+    float: left;
+    width: 100%
+}
+
+.wikibase-aliasesview .wikibase-aliasesview-container {
+    display: block !important;
+    padding-left: 10px;
+    padding-right: 19em;
+    position: relative
+}
+
+.wikibase-aliasesview-label {
+    float: left;
+    font-weight: bold;
+    margin-right: 1em;
+    margin-top: 1px;
+    margin-bottom: -3px
+}
+
+.wikibase-aliasesview.wb-empty .wikibase-aliasesview-label {
+    font-weight: normal
+}
+
+.wikibase-aliasesview .wikibase-aliasesview-label,
+.wikibase-aliasesview ul {
+    overflow: auto
+}
+
+.wikibase-aliasesview div {
+    display: inline
+}
+
+.wikibase-aliasesview ul {
+    margin: 0;
+    padding: 0;
+    line-height: inherit
+}
+
+.wikibase-aliasesview li {
+    float: left;
+    margin: 0.2em 12px 0.2em 0;
+    display: inline;
+    list-style-type: none;
+    border: 1px solid #c8ccd1;
+    padding: 0 12px 0 7px;
+    line-height: 136%;
+    background-color: #f8f9fa
+}
+
+.wikibase-aliasesview ul.tagadata li {
+    margin: 0.2em 4px 0.2em 0
+}
+
+.wikibase-aliasesview ul.tagadata li.tagadata-choice {
+    line-height: 136%
+}
+
+.wikibase-aliasesview .tagadata-choice input {
+    padding-top: 0 !important;
+    padding-bottom: 0 !important
+}
+
+.wikibase-aliasesview.wb-edit ul {
+    background: transparent;
+    font-size: 1em
+}
+
+.wikibase-descriptionview.wb-empty {
+    background-color: inherit
+}
+
+.wikibase-descriptionview .wikibase-descriptionview-input {
+    font-family: inherit;
+    font-size: inherit
+}
+
+.wikibase-descriptionview .wikibase-descriptionview-input:focus {
+    background-color: #eaf3ff
+}
+
+.wikibase-entityview:after {
+    clear: both;
+    content: '';
+    display: block
+}
+
+@media screen and (min-width:1570px) {
+    .wikibase-entityview {
+        width: 100%
+    }
+}
+
+.wikibase-entityview>* {
+    float: left
+}
+
+.wikibase-entityview .wikibase-entityview-main {
+    margin: 0 2em 2em 0;
+    max-width: 65em;
+    width: 100%
+}
+
+.wikibase-entitytermsview {
+    float: left;
+    margin-bottom: 1em;
+    position: relative;
+    width: 100%
+}
+
+.wikibase-entitytermsview .wikibase-entitytermsview-heading .wikibase-entitytermsview-heading-aliases ul {
+    color: #72777d;
+    margin: 0;
+    word-wrap: break-word
+}
+
+.wikibase-entitytermsview .wikibase-entitytermsview-heading .wikibase-entitytermsview-heading-aliases ul:after {
+    content: '';
+    clear: left;
+    display: block
+}
+
+.wikibase-entitytermsview .wikibase-entitytermsview-heading .wikibase-entitytermsview-heading-aliases li {
+    display: block;
+    float: left
+}
+
+.wikibase-entitytermsview .wikibase-entitytermsview-heading .wikibase-entitytermsview-heading-aliases li:before {
+    content: attr(data-aliases-separator);
+    padding: 0 0.4em
+}
+
+.wikibase-entitytermsview .wikibase-entitytermsview-heading .wikibase-entitytermsview-heading-aliases li:first-child:before {
+    content: '';
+    padding: 0
+}
+
+.wikibase-entitytermsview .wikibase-entitytermsview-heading .wikibase-entitytermsview-heading-description {
+    word-wrap: break-word
+}
+
+.wikibase-entitytermsview .wikibase-entitytermsview-heading {
+    margin-bottom: 1em
+}
+
+.wikibase-entitytermsview .wikibase-entitytermsview-entitytermsforlanguagelistview-toggler {
+    display: inline-block;
+    margin-top: 0
+}
+
+.wikibase-entitytermsview .wikibase-entitytermsview-entitytermsforlanguagelistview-configure {
+    display: inline-block;
+    font-size: 0.7em;
+    margin-left: 0.4em;
+    vertical-align: super
+}
+
+@media print {
+    .wikibase-entitytermsview .wikibase-entitytermsview-entitytermsforlanguagelistview-toggler {
+        display: none
+    }
+
+    .wikibase-entitytermsview .wikibase-entitytermsview-entitytermsforlanguagelistview-configure {
+        display: none
+    }
+}
+
+.wikibase-entitytermsview .wikibase-entitytermsview-entitytermsforlanguagelistview-configure-hidden {
+    display: none
+}
+
+.wikibase-entitytermsview-entitytermsforlanguagelistview {
+    margin-top: 2.6em
+}
+
+.wikibase-entitytermsview-entitytermsforlanguagelistview-toggler~.wikibase-entitytermsview-entitytermsforlanguagelistview {
+    margin-top: 0
+}
+
+.wikibase-entitytermsview .wikibase-toolbar-container {
+    width: auto;
+    height: 100%
+}
+
+.wikibase-entitytermsview .wikibase-toolbar-container .wikibase-toolbar-container {
+    position: sticky;
+    z-index: 2;
+    background-color: #fff
+}
+
+.wikibase-entitytermsview .wikibase-entitytermsview-heading-container>.wikibase-toolbar-container {
+    float: right;
+    margin-top: 1.9em;
+    position: static
+}
+
+.wikibase-entitytermsforlanguagelistview {
+    background: #fff;
+    border: 1px solid #c8ccd1;
+    border-spacing: 0;
+    display: table;
+    padding-bottom: 1em;
+    table-layout: fixed;
+    width: 100%;
+    word-wrap: break-word
+}
+
+.wikibase-entitytermsforlanguagelistview.wb-edit {
+    border-color: #2a4b8d
+}
+
+.wikibase-entitytermsforlanguagelistview th {
+    font-weight: inherit;
+    padding: 0;
+    text-align: left
+}
+
+.wikibase-entitytermsforlanguagelistview .wikibase-entitytermsforlanguagelistview-header .wikibase-entitytermsforlanguagelistview-header-row .wikibase-entitytermsforlanguagelistview-cell {
+    background-color: #eaecf0;
+    border-right: 1px solid #fff;
+    padding-left: 0.4em;
+    position: sticky;
+    top: 0
+}
+
+.wikibase-entitytermsforlanguagelistview .wikibase-entitytermsforlanguagelistview-header .wikibase-entitytermsforlanguagelistview-header-row .wikibase-entitytermsforlanguagelistview-cell:last-child {
+    border-right: 0
+}
+
+.wikibase-entitytermsforlanguagelistview.wb-edit .wikibase-entitytermsforlanguagelistview-header .wikibase-entitytermsforlanguagelistview-header-row .wikibase-entitytermsforlanguagelistview-cell {
+    background: #eaf3ff
+}
+
+.wikibase-entitytermsforlanguagelistview .wikibase-entitytermsforlanguagelistview-header .wikibase-entitytermsforlanguagelistview-header-row .wikibase-entitytermsforlanguagelistview-language {
+    width: 15%
+}
+
+.wikibase-entitytermsforlanguagelistview .wikibase-entitytermsforlanguagelistview-header .wikibase-entitytermsforlanguagelistview-header-row .wikibase-entitytermsforlanguagelistview-label {
+    width: 25%
+}
+
+.wikibase-entitytermsforlanguagelistview .wikibase-entitytermsforlanguagelistview-header .wikibase-entitytermsforlanguagelistview-header-row .wikibase-entitytermsforlanguagelistview-description {
+    width: 35%
+}
+
+.wikibase-entitytermsforlanguagelistview .wikibase-entitytermsforlanguagelistview-header .wikibase-entitytermsforlanguagelistview-header-row .wikibase-entitytermsforlanguagelistview-aliases {
+    width: 25%
+}
+
+.wikibase-entitytermsforlanguagelistview .wikibase-entitytermsforlanguagelistview-listview .wikibase-entitytermsforlanguageview .wikibase-entitytermsforlanguageview-language,
+.wikibase-entitytermsforlanguagelistview .wikibase-entitytermsforlanguagelistview-listview .wikibase-entitytermsforlanguageview .wikibase-entitytermsforlanguageview-label,
+.wikibase-entitytermsforlanguagelistview .wikibase-entitytermsforlanguagelistview-listview .wikibase-entitytermsforlanguageview .wikibase-entitytermsforlanguageview-description,
+.wikibase-entitytermsforlanguagelistview .wikibase-entitytermsforlanguagelistview-listview .wikibase-entitytermsforlanguageview .wikibase-entitytermsforlanguageview-aliases {
+    line-height: 136%;
+    overflow: hidden;
+    padding-left: 0.4em;
+    padding-right: 0.4em;
+    padding-top: 0.8em;
+    text-overflow: ellipsis;
+    vertical-align: top
+}
+
+.wikibase-entitytermsforlanguagelistview .wikibase-entitytermsforlanguagelistview-listview .wikibase-entitytermsforlanguageview .wikibase-entitytermsforlanguageview-language {
+    width: 4%;
+    word-wrap: normal
+}
+
+.wikibase-entitytermsforlanguagelistview .wikibase-entitytermsforlanguagelistview-listview .wikibase-entitytermsforlanguageview .wikibase-entitytermsforlanguageview-aliases .wikibase-aliasesview .wikibase-aliasesview-list-item {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap
+}
+
+.wikibase-entitytermsforlanguagelistview .wikibase-entitytermsforlanguagelistview-listview .wikibase-entitytermsforlanguageview textarea {
+    white-space: pre-wrap
+}
+
+.wikibase-entitytermsforlanguagelistview .wikibase-entitytermsforlanguagelistview-listview .wikibase-entitytermsforlanguageview .wikibase-entitytermsforlanguageview-label input,
+.wikibase-entitytermsforlanguagelistview .wikibase-entitytermsforlanguagelistview-listview .wikibase-entitytermsforlanguageview .wikibase-entitytermsforlanguageview-description input,
+.wikibase-entitytermsforlanguagelistview .wikibase-entitytermsforlanguagelistview-listview .wikibase-entitytermsforlanguageview .wikibase-entitytermsforlanguageview-label textarea,
+.wikibase-entitytermsforlanguagelistview .wikibase-entitytermsforlanguagelistview-listview .wikibase-entitytermsforlanguageview .wikibase-entitytermsforlanguageview-description textarea {
+    background: none;
+    border: 0;
+    border-bottom: 1px solid #c8ccd1;
+    outline: 0
+}
+
+.wikibase-entitytermsforlanguagelistview .wikibase-entitytermsforlanguagelistview-listview .wikibase-entitytermsforlanguageview .wikibase-entitytermsforlanguageview-label input:focus,
+.wikibase-entitytermsforlanguagelistview .wikibase-entitytermsforlanguagelistview-listview .wikibase-entitytermsforlanguageview .wikibase-entitytermsforlanguageview-description input:focus,
+.wikibase-entitytermsforlanguagelistview .wikibase-entitytermsforlanguagelistview-listview .wikibase-entitytermsforlanguageview .wikibase-entitytermsforlanguageview-label textarea:focus,
+.wikibase-entitytermsforlanguagelistview .wikibase-entitytermsforlanguagelistview-listview .wikibase-entitytermsforlanguageview .wikibase-entitytermsforlanguageview-description textarea:focus {
+    border-color: #2a4b8d
+}
+
+.wikibase-entitytermsforlanguagelistview .wikibase-entitytermsforlanguagelistview-listview .wikibase-entitytermsforlanguageview .wikibase-entitytermsforlanguageview-aliases li {
+    background: none;
+    border: 0;
+    display: block;
+    float: none;
+    margin: 0;
+    padding: 0
+}
+
+.wikibase-entitytermsview .wikibase-entitytermsview-entitytermsforlanguagelistview .wikibase-entitytermsforlanguageview .wikibase-entitytermsforlanguageview-language {
+    word-wrap: normal
+}
+
+.wikibase-entitytermsforlanguagelistview .wikibase-entitytermsforlanguagelistview-listview .wikibase-entitytermsforlanguageview .wikibase-entitytermsforlanguageview-aliases .wikibase-aliasesview-list {
+    margin: 0
+}
+
+.wikibase-entitytermsforlanguagelistview .wikibase-entitytermsforlanguagelistview-listview .wikibase-entitytermsforlanguageview .wikibase-entitytermsforlanguageview-aliases .tagadata-label-text {
+    padding: 0
+}
+
+.wikibase-entitytermsforlanguagelistview .wikibase-entitytermsforlanguagelistview-listview .wikibase-entitytermsforlanguageview .wikibase-entitytermsforlanguageview-aliases .tagadata-close {
+    display: none
+}
+
+.wikibase-entitytermsforlanguagelistview .wikibase-entitytermsforlanguagelistview-listview .wikibase-entitytermsforlanguageview .wikibase-entitytermsforlanguageview-aliases .ui-state-default {
+    color: #000
+}
+
+.wikibase-entitytermsforlanguagelistview .wikibase-entitytermsforlanguagelistview-listview .wikibase-entitytermsforlanguageview .wikibase-entitytermsforlanguageview-aliases input {
+    border-bottom: 1px solid #c8ccd1
+}
+
+.wikibase-entitytermsforlanguagelistview .wikibase-entitytermsforlanguagelistview-listview .wikibase-entitytermsforlanguageview .wikibase-entitytermsforlanguageview-aliases input:focus {
+    border-color: #2a4b8d
+}
+
+.wikibase-entitytermsview-entitytermsforlanguagelistview .wikibase-entitytermsforlanguagelistview-more {
+    padding: 0.4em
+}
+
+.wikibase-entitytermsforlanguageview input {
+    background-color: transparent
+}
+
+.wikibase-entitytermsforlanguageview .wb-error {
+    background-color: #fee7e6
+}
+
+.wikibase-entitytermsforlanguageview .wb-editsection {
+    width: 18em;
+    position: static;
+    float: none;
+    padding: 0;
+    margin-left: 0
+}
+
+.wikibase-entitytermsforlanguageview .wb-editsection .wikibase-toolbar {
+    width: 18em
+}
+
+.wikibase-entitytermsforlanguageview .wb-editsection .wikibase-toolbar .wikibase-toolbar {
+    margin-left: 1px
+}
+
+.wikibase-entitytermsforlanguageview .wb-editsection .wikibase-toolbar .wikibase-toolbar {
+    margin-left: 0
+}
+
+.wikibase-labelview.wb-empty {
+    background-color: inherit
+}
+
+.wikibase-labelview .wikibase-labelview-input {
+    font-family: inherit;
+    font-size: inherit
+}
+
+.wikibase-labelview .wikibase-labelview-input:focus {
+    background-color: #eaf3ff
+}
+
+.wikibase-sitelinkgrouplistview {
+    float: left
+}
+
+@media screen and (min-width:1570px) {
+    .wikibase-sitelinkgrouplistview {
+        width: 26em
+    }
+}
+
+.wikibase-sitelinkgroupview {
+    border: 1px solid #c8ccd1;
+    float: left;
+    margin: 0 2em 2em 0;
+    padding-bottom: 0.6em;
+    width: 30em
+}
+
+@media screen and (min-width:1570px) {
+    .wikibase-sitelinkgroupview {
+        margin-right: 0;
+        width: 100%
+    }
+}
+
+.wikibase-sitelinkgroupview.wb-edit {
+    border-color: #2a4b8d
+}
+
+.wikibase-sitelinkgroupview .wikibase-sitelinkgroupview-heading-section {
+    position: sticky;
+    top: 0;
+    margin-bottom: 0.3em
+}
+
+.wikibase-sitelinkgroupview .wikibase-sitelinkgroupview-heading-container {
+    background-color: #fff
+}
+
+.wikibase-sitelinkgroupview.wb-edit .wikibase-sitelinkgroupview-heading-container {
+    background-color: #eaf3ff
+}
+
+.wikibase-sitelinkgroupview .wikibase-sitelinkgroupview-heading-section h3 {
+    display: inline;
+    float: none;
+    font-weight: normal;
+    padding-left: 0.5em;
+    width: auto
+}
+
+.wikibase-sitelinkgroupview .wikibase-sitelinkgroupview-heading-container>.wikibase-toolbar-container {
+    display: inline;
+    padding-left: 0.5em;
+    position: static;
+    width: auto
+}
+
+.wikibase-sitelinklistview .wikibase-sitelinklistview-listview {
+    line-height: 1;
+    list-style: outside none none;
+    margin: 0 0 0 10px;
+    clear: both
+}
+
+.wikibase-sitelinklistview .wikibase-sitelinklistview-listview>* {
+    margin: 1px 0
+}
+
+.wikibase-sitelinklistview .wikibase-sitelinkview {
+    clear: both;
+    float: left;
+    line-height: 1.2;
+    width: 100%
+}
+
+.wikibase-sitelinklistview .wikibase-sitelinkview .wikibase-sitelinkview-siteid-container {
+    background: #eaecf0;
+    border: 1px solid #c8ccd1;
+    display: table-cell;
+    line-height: 1.5;
+    padding-left: 0.2em;
+    padding-right: 0;
+    vertical-align: middle
+}
+
+.wikibase-sitelinklistview .wikibase-sitelinkview .wikibase-sitelinkview-siteid-container .wikibase-sitelinkview-siteid {
+    background: none;
+    display: inline-block;
+    min-width: 1.5em;
+    padding: 0 0.2em 0 0;
+    text-align: center
+}
+
+.wikibase-sitelinklistview .wikibase-sitelinkview .wikibase-sitelinkview-link {
+    display: table-cell;
+    padding-left: 0.4em;
+    vertical-align: middle;
+    word-break: break-all
+}
+
+.wikibase-sitelinklistview .wikibase-sitelinkview .wikibase-sitelinkview-link .wikibase-sitelinkview-page {
+    -webkit-hyphens: auto;
+    -moz-hyphens: auto;
+    -ms-hyphens: auto;
+    hyphens: auto;
+    word-break: break-word;
+    word-wrap: break-word
+}
+
+.wikibase-sitelinklistview .wikibase-sitelinkview.wb-edit {
+    white-space: nowrap
+}
+
+.wikibase-sitelinklistview .wikibase-sitelinkview.wb-edit .wikibase-sitelinkview-siteid-container {
+    display: inline-block
+}
+
+.wikibase-sitelinklistview .wikibase-sitelinkview.wb-edit .wikibase-sitelinkview-link {
+    display: inline
+}
+
+.wikibase-sitelinklistview .wikibase-sitelinkview.wb-edit .wikibase-sitelinkview-link .wikibase-sitelinkview-page {
+    word-break: normal
+}
+
+.wikibase-sitelinklistview .wikibase-sitelinkview .wikibase-toolbar-container {
+    padding-left: 0.5em;
+    position: static
+}
+
+.wikibase-sitelinklistview .wikibase-sitelinkview .wikibase-removetoolbar-container {
+    background: #fff;
+    line-height: 1.5;
+    margin-left: 0;
+    padding: 0 0.2em;
+    vertical-align: bottom;
+    width: auto
+}
+
+.wikibase-sitelinklistview .wikibase-sitelinkview .wikibase-removetoolbar-container * {
+    line-height: 0
+}
+
+.wb-badge {
+    background-image: url(/w/extensions/Wikibase/view/resources/jquery/wikibase/themes/default/images/wb-badges-default.png?34549);
+    background-image: linear-gradient(transparent, transparent), url("data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 width=%2212%22 height=%2219%22 viewBox=%220 0 57.6 91.2%22%3E %3Cg fill=%22%2336c%22 transform=%22matrix%281.0741053%2C0%2C0%2C1.0741053%2C-20.22352%2C-6.387075%29%22%3E %3Cpath d=%22M45.7%2C61.6c-2.6%2C0-8.6%2C6.1-8.6%2C6.1v21.9c0%2C0.5%2C0.6%2C0.7%2C0.9%2C0.4l7.7-7.6l7.8%2C7.7c0.3%2C0.3%2C0.9%2C0.1%2C0.9-0.4 v-22C54.3%2C67.7%2C48.3%2C61.6%2C45.7%2C61.6z%22/%3E %3Cpath d=%22M71.9%2C35.1c0-2.5-6.4-3.9-7.2-6.2c-0.8-2.3%2C3.6-7.3%2C2.2-9.2c-1.4-2-7.5%2C0.6-9.5-0.8c-1.9-1.4-1.3-8-3.7-8.8 c-2.3-0.7-5.6%2C4.9-8.1%2C4.9c-2.5%2C0-5.9-5.7-8.1-4.9c-2.3%2C0.8-1.7%2C7.3-3.7%2C8.8c-2%2C1.4-8-1.2-9.5%2C0.8c-1.4%2C1.9%2C2.9%2C6.9%2C2.2%2C9.2 c-0.7%2C2.3-7.2%2C3.7-7.2%2C6.2c0%2C2.5%2C6.4%2C3.9%2C7.2%2C6.2c0.8%2C2.3-3.6%2C7.3-2.2%2C9.2c1.4%2C2%2C7.5-0.6%2C9.5%2C0.8c1.9%2C1.4%2C1.3%2C8%2C3.7%2C8.8 c2.3%2C0.7%2C5.6-4.9%2C8.1-4.9c2.5%2C0%2C5.9%2C5.7%2C8.1%2C4.9c2.3-0.8%2C1.7-7.3%2C3.7-8.8c2-1.4%2C8%2C1.2%2C9.5-0.8c1.4-1.9-2.9-6.9-2.2-9.2 C65.5%2C39.1%2C71.9%2C37.6%2C71.9%2C35.1z M45.7%2C49.2c-7.8%2C0-14.1-6.3-14.1-14.1s6.3-14.1%2C14.1-14.1s14.1%2C6.3%2C14.1%2C14.1S53.5%2C49.2%2C45.7%2C49.2 z%22/%3E %3Ccircle cx=%2245.7%22 cy=%2235.1%22 r=%229.4%22/%3E %3C/g%3E %3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: 0 center;
+    display: inline-block;
+    height: 19px;
+    vertical-align: middle;
+    width: 12px
+}
+
+.wb-badge:not(:last-child) {
+    margin-right: 4px
+}
+
+.wb-badge-empty {
+    background-image: url(/w/extensions/Wikibase/view/resources/jquery/wikibase/themes/default/images/wb-badges-empty.png?a8747);
+    background-image: linear-gradient(transparent, transparent), url("data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 width=%2212%22 height=%2219%22 viewBox=%220 0 57.6 91.2%22%3E %3Cpath fill=%22%23000%22 opacity=%22.7%22 d=%22m57 31.31c0-2.69-6.87-4.19-7.73-6.66-0.86-2.47 3.87-7.84 2.36-9.88-1.5-2.15-8.06 0.64-10.2-0.86-2.04-1.5-1.4-8.59-3.97-9.45-2.47-0.75-6.01 5.26-8.7 5.26-2.69 0-6.34-6.12-8.7-5.26-2.47 0.86-1.83 7.84-3.97 9.45-2.15 1.5-8.59-1.29-10.2 0.86-1.5 2.04 3.11 7.41 2.36 9.88-0.75 2.47-7.73 3.97-7.73 6.66 0 2.69 6.87 4.19 7.73 6.66 0.86 2.47-3.87 7.84-2.36 9.88 1.5 2.15 8.06-0.64 10.2 0.86 2.04 1.5 1.4 8.59 3.97 9.45 2.47 0.75 6.01-5.26 8.7-5.26 2.69 0 6.34 6.12 8.7 5.26 2.47-0.86 1.83-7.84 3.97-9.45 2.15-1.5 8.59 1.29 10.2-0.86 1.5-2.04-3.11-7.41-2.36-9.88 0.86-2.36 7.73-3.97 7.73-6.66zM28.86 51.96c-11.42 0-20.64-9.22-20.64-20.64 0-11.42 9.22-20.64 20.64-20.64 11.42 0 20.64 9.22 20.64 20.64 0 11.42-9.22 20.64-20.64 20.64zm-0 7.82c-2.79 0-9.24 6.55-9.24 6.55V89.85c0 0.54 0.64 0.75 0.97 0.43l8.27-8.16 8.38 8.27c0.32 0.32 0.97 0.11 0.97-0.43V66.33c-0.11 0-6.55-6.55-9.34-6.55zm0.02 4.05c1.88 0 6.23 4.42 6.3 4.42v15.93c0 0.36-0.43 0.51-0.65 0.29l-5.65-5.58-5.58 5.5c-0.22 0.22-0.65 0.07-0.65-0.29V68.24c0 0 4.35-4.42 6.23-4.42z%22/%3E %3C/svg%3E")
+}
+
+.wikibase-sitelinkview input {
+    background-color: transparent;
+    border-left: 0;
+    border-right: 0;
+    border-top: 0;
+    margin: 0;
+    font-family: inherit;
+    font-size: 1em;
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    outline: 0
+}
+
+.wikibase-sitelinkview input:focus {
+    border-color: #2a4b8d;
+    background-color: #eaf3ff
+}
+
+.wikibase-sitelinkview .wikibase-removetoolbar {
+    display: none
+}
+
+.wikibase-sitelinkview.wb-edit .wikibase-removetoolbar {
+    display: inline-block
+}
+
+.wikibase-sitelinkview .wikibase-toolbar-button-remove {
+    display: inline-block;
+    overflow: hidden;
+    vertical-align: middle;
+    width: 20px
+}
+
+.wb-badge:first-child {
+    margin-left: 0.4em
+}
+
+.wikibase-statementgroupview {
+    float: left;
+    margin-bottom: 2em;
+    position: relative;
+    width: 100%
+}
+
+.wikibase-statementgroupview .wikibase-statementgroupview-property {
+    border: 1px solid #c8ccd1;
+    border-right: 0
+}
+
+.wikibase-statementgroupview .wikibase-statementlistview {
+    float: left
+}

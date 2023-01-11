@@ -1,3 +1,163 @@
-<p *ngFor="let statement of statements">
-  {{ statement.mainsnak.datavalue.value.id | value }}
-</p>
+
+
+
+
+<div class="wikibase-statementview-mainsnak-container" *ngFor="let statement of statements">
+  <div class="wikibase-statementview-mainsnak" dir="auto">
+    <div
+      class="wikibase-snakview wikibase-snakview-8341117a9d5614ef0dc5c1a66f72a72184c325d0"
+    >
+      <div class="wikibase-snakview-property-container">
+        <div
+          class="wikibase-snakview-property"
+          dir="auto"
+        ></div>
+      </div>
+      <div
+        class="wikibase-snakview-value-container"
+        dir="auto"
+      >
+        <div class="wikibase-snakview-typeselector"></div>
+        <div class="wikibase-snakview-body">
+          <div
+            class="wikibase-snakview-value wikibase-snakview-variation-valuesnak"
+          >
+            <a
+              title="Property:P8"
+              [href]="'/instance/detail/'+statement.mainsnak.datavalue.value.id+'?id='+id" 
+              > {{ statement.mainsnak.datavalue.value.id | value }}</a>
+          </div>
+          <div class="wikibase-snakview-indicators"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="wikibase-statementview-qualifiers">
+    <div class="wikibase-listview">
+      <div class="wikibase-snaklistview">
+        <div class="wikibase-snaklistview-listview">
+          <div
+            class="wikibase-snakview wikibase-snakview-540be5ea2588746e0a3ad4ebb105cfa30b97b9ba"
+          >
+            <div
+              class="wikibase-snakview-property-container"
+            >
+              <div
+                class="wikibase-snakview-property"
+                dir="auto"
+              >
+                <a
+                  title="Property:P22"
+                  href="/mediawiki/index.php?title=Property:P22"
+                  >property scope</a
+                >
+              </div>
+            </div>
+            <div
+              class="wikibase-snakview-value-container"
+              dir="auto"
+            >
+              <div
+                class="wikibase-snakview-typeselector"
+              ></div>
+              <div class="wikibase-snakview-body">
+                <div
+                  class="wikibase-snakview-value wikibase-snakview-variation-valuesnak"
+                >
+                  <a
+                    title="Item:Q108"
+                    href="/mediawiki/index.php?title=Item:Q108"
+                    >subclass of</a
+                  >
+                </div>
+                <div
+                  class="wikibase-snakview-indicators"
+                ></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<span
+  class="wikibase-toolbar-container wikibase-edittoolbar-container"
+>
+  <span
+    class="wikibase-toolbar wikibase-toolbar-item wikibase-toolbar-container"
+  >
+    <span
+      class="wikibase-toolbarbutton wikibase-toolbar-item wikibase-toolbar-button wikibase-toolbar-button-untaint"
+    >
+      <!-- <a href="#" title="">✅ untaint</a> -->
+    </span>
+    <span
+      class="wikibase-toolbarbutton wikibase-toolbar-item wikibase-toolbar-button wikibase-toolbar-button-taint"
+    >
+      <!-- <a href="#" title="">❌ taint</a> -->
+    </span>
+  </span>
+</span>
+<div class="wikibase-statementview-references-container">
+  <div class="wikibase-statementview-references-heading">
+    1 reference
+  </div>
+  <div class="wikibase-statementview-references">
+    <div class="wikibase-listview">
+      <div
+        class="wikibase-referenceview wikibase-referenceview-494d19440afadcfe890ead9a243a40b395f156b1"
+      >
+        <div class="wikibase-referenceview-heading"></div>
+        <div class="wikibase-referenceview-listview">
+          <div class="wikibase-snaklistview">
+            <div class="wikibase-snaklistview-listview">
+              <div
+                class="wikibase-snakview wikibase-snakview-820f60aa928f14af0dffa2967aefb891bc4a8ebd"
+              >
+                <div
+                  class="wikibase-snakview-property-container"
+                >
+                  <div
+                    class="wikibase-snakview-property"
+                    dir="auto"
+                  >
+                    <a
+                      title="Property:P11"
+                      href="/mediawiki/index.php?title=Property:P11"
+                      >property</a
+                    >
+                  </div>
+                </div>
+
+                <div
+                  class="wikibase-snakview-value-container"
+                  dir="auto"
+                >
+                  <div
+                    class="wikibase-snakview-typeselector"
+                  ></div>
+                  <div class="wikibase-snakview-body">
+                    <div
+                      class="wikibase-snakview-value wikibase-snakview-variation-valuesnak"
+                    >
+                      <a
+                        title="Property:P84"
+                        href="/mediawiki/index.php?title=Property:P84"
+                        >I'm a test property</a
+                      >
+                    </div>
+
+                    <div
+                      class="wikibase-snakview-indicators"
+                    ></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

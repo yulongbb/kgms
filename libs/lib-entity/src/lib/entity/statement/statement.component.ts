@@ -1,4 +1,5 @@
 import { Component, Input } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'kgms-statement',
@@ -7,5 +8,9 @@ import { Component, Input } from '@angular/core';
 })
 export class StatementComponent {
   @Input() statements: any;
+  id:any;
 
+  constructor(private route: ActivatedRoute) {
+    this.id = this.route.snapshot.queryParamMap.get('id');
+  }
 }
