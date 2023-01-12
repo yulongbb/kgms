@@ -1,6 +1,6 @@
 <kgms-instance-search *ngIf="schema" [schema]="schema"></kgms-instance-search>
 
-<kgms-ag-grid
+<kgms-ag-grid style="height: 500px;"
   *ngIf="rowData$ && columnDefs"
   [rowData$]="rowData$"
   [columnDefs]="columnDefs"

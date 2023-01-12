@@ -33,7 +33,7 @@
         >
           属性
         </button>
-  
+
         <button
           mat-button
           [routerLink]="['/dataset']"
@@ -81,6 +81,8 @@
         </button>
       </div>
     </mat-toolbar>
-    <router-outlet></router-outlet>
+    <main class="p-2">
+      <router-outlet></router-outlet>
+    </main>
   </mat-drawer-content>
 </mat-drawer-container>
