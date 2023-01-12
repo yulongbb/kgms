@@ -11,7 +11,8 @@
 }
 
 html,
-body {
+body,
+main{
     height: 100%;
 }
 
