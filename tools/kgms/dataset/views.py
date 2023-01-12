@@ -37,6 +37,8 @@ def dataset(request, dataset_id):
     dataset = get_object_or_404(Dataset, pk=dataset_id)
     url = "http://localhost:8000/"+str(str(dataset.docfile).split(
         '.')[0]+'.ttl')
+    
+    print(url)
 
     # Create a Graph
     g = Graph()
