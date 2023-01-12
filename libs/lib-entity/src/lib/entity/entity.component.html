@@ -1,18 +1,163 @@
-<h1>{{ entity.labels['zh-cn'].value }}({{entity.id}})</h1>
-<p>{{ entity.descriptions['zh-cn'].value }}</p>
+<!-- <p>{{ entity.descriptions['zh-cn'].value }}</p>
 <p>
-  <span *ngFor="let aliase of entity.aliases['zh-cn']">{{
-    aliase.value
-  }}</span>
-</p>
+  <span *ngFor="let aliase of entity.aliases['zh-cn']">{{ aliase.value }}</span>
+</p> -->
 
-<table>
-  <tbody>
-    <tr *ngFor="let statement of entity.claims | keyvalue">
-        <td>{{statement.key | property}}</td>
-        <td>
-            <kgms-statement [statements]="statement.value"></kgms-statement>
-        </td>
-    </tr>
-  </tbody>
-</table>
+<div id="bodyContent" class="mw-body-content">
+  <div id="mw-content-text" lang="en" dir="ltr" class="mw-content-ltr">
+    <div
+      id="wb-item-Q73"
+      class="wikibase-entityview wb-item"
+      lang="en"
+      dir="ltr"
+    >
+      <div class="wikibase-entityview-main">
+        <h1 id="firstHeading" class="firstHeading" lang="en">
+          <span class="wikibase-title">
+            <span class="wikibase-title-label">{{
+              entity.labels['zh-cn'].value
+            }}</span>
+            <span class="wikibase-title-id">({{ entity.id }})</span>
+          </span>
+        </h1>
+
+        <div class="wikibase-entitytermsview">
+          <div class="wikibase-entitytermsview-heading">
+            <div class="wikibase-entitytermsview-heading-description wb-empty">
+              {{ entity.descriptions['zh-cn'].value }}
+            </div>
+            <div class="wikibase-entitytermsview-heading-aliases wb-empty">
+              <ul class="wikibase-entitytermsview-aliases">
+                <li *ngFor="let aliase of entity.aliases['zh-cn']">{{ aliase.value }}</li>
+              </ul>
+            </div>
+          </div>
+          <div class="wikibase-entitytermsview-entitytermsforlanguagelistview">
+            <table class="wikibase-entitytermsforlanguagelistview">
+              <thead class="wikibase-entitytermsforlanguagelistview-header">
+                <tr class="wikibase-entitytermsforlanguagelistview-header-row">
+                  <th
+                    scope="col"
+                    class="wikibase-entitytermsforlanguagelistview-cell wikibase-entitytermsforlanguagelistview-language"
+                  >
+                    Language
+                  </th>
+                  <th
+                    scope="col"
+                    class="wikibase-entitytermsforlanguagelistview-cell wikibase-entitytermsforlanguagelistview-label"
+                  >
+                    Label
+                  </th>
+                  <th
+                    scope="col"
+                    class="wikibase-entitytermsforlanguagelistview-cell wikibase-entitytermsforlanguagelistview-description"
+                  >
+                    Description
+                  </th>
+                  <th
+                    scope="col"
+                    class="wikibase-entitytermsforlanguagelistview-cell wikibase-entitytermsforlanguagelistview-aliases"
+                  >
+                    Also known as
+                  </th>
+                </tr>
+              </thead>
+              <tbody class="wikibase-entitytermsforlanguagelistview-listview">
+                <tr
+                  class="wikibase-entitytermsforlanguageview wikibase-entitytermsforlanguageview-en"
+                >
+                  <th class="wikibase-entitytermsforlanguageview-language">
+                    English
+                  </th>
+                  <td class="wikibase-entitytermsforlanguageview-label">
+                    <div class="wikibase-labelview" dir="ltr" lang="en">
+                      <div class="wikibase-labelview-container">
+                        <span class="wikibase-labelview-text"
+                          >Gossip protocol</span
+                        >
+                      </div>
+                    </div>
+                  </td>
+                  <td class="wikibase-entitytermsforlanguageview-description">
+                    <div
+                      class="wikibase-descriptionview wb-empty"
+                      dir="ltr"
+                      lang="en"
+                    >
+                      <div class="wikibase-descriptionview-container">
+                        <span class="wikibase-descriptionview-text"
+                          >No description defined</span
+                        >
+                      </div>
+                    </div>
+                  </td>
+                  <td class="wikibase-entitytermsforlanguageview-aliases">
+                    <div class="wikibase-aliasesview wb-empty">
+                      <ul
+                        class="wikibase-aliasesview-list"
+                        dir=""
+                        lang="en"
+                      ></ul>
+                    </div>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <div id="toc"></div>
+          <h2
+            class="wb-section-heading section-heading wikibase-statements"
+            dir="auto"
+          >
+            <span class="mw-headline" id="claims">属性</span>
+          </h2>
+          <div class="wikibase-statementgrouplistview">
+            <div class="wikibase-listview">
+              <div
+                *ngFor="let statement of entity.claims | keyvalue"
+                class="wikibase-statementgroupview"
+                id="P3"
+                data-property-id="P3"
+              >
+                <div class="wikibase-statementgroupview-property">
+                  <div
+                    class="wikibase-statementgroupview-property-label"
+                    dir="auto"
+                  >
+                    <a
+                      title="Property:P3"
+                      href="/mediawiki/index.php?title=Property:P3"
+                     
+                      >{{ statement.key | property }}</a
+                    >
+                  </div>
+                </div>
+                <div class="wikibase-statementlistview">
+                  <div class="wikibase-statementlistview-listview">
+                    <div
+                      id="Q73$c14f0d0c-4b50-784a-48ef-3c8d55d2a03b"
+                      class="wikibase-statementview wikibase-statement-Q73$c14f0d0c-4b50-784a-48ef-3c8d55d2a03b wb-normal"
+                    >
+                      <div class="wikibase-statementview-rankselector">
+                        <div class="wikibase-rankselector ui-state-disabled">
+                          <span
+                            class="ui-icon ui-icon-rankselector wikibase-rankselector-normal"
+                            title="Normal rank"
+                          ></span>
+                        </div>
+                      </div>
+                      <kgms-statement
+                                      [statements]="statement.value"
+                                    ></kgms-statement>
+                      
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
