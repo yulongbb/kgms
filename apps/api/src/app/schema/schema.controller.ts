@@ -1,4 +1,4 @@
-import { Body, Controller, Delete, Get, Param, Post } from '@nestjs/common';
+import { Body, Controller, Delete, Get, Param, Post, Put } from '@nestjs/common';
 import { Schema } from './schema.entity';
 import { SchemaService } from './schema.service';
 
@@ -43,6 +43,12 @@ export class SchemaController {
   async delete(@Param('id') id: number): Promise<Schema> {
     return this.schemaService.delete(id);
   }
+
+  @Put(':id/:eid')
+  async updateWikidataUrl(@Param('id')id: number,@Param('eid') eid: string): Promise<Schema> {
+    return this.schemaService.updateWikidataUrl(id,eid );
+  }
+
 
 
 }

@@ -9,6 +9,8 @@
 
 <tree-root #tree [nodes]="nodes" [options]="options">
   <ng-template #treeNodeTemplate let-node let-index="index">
-    <span (click)="go(node.data)"> {{ node.data.name }}</span>
+    <span (click)="go(node.data)">
+      {{ node.data.name }}(<a [routerLink]="['/instance/detail',node.data?.wikidataUrl ]" [queryParams]="{ id: graph }">{{ node.data?.wikidataUrl }})</a></span
+    >
   </ng-template>
 </tree-root>

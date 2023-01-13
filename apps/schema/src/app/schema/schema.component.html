@@ -2,7 +2,7 @@
 
 <button  *ngIf="id" mat-flat-button color="primary" (click)="openDialog(id)">创建</button>
 
-<kgms-angular-tree-component  *ngIf="id" [nodes]="graph?.children" (selected)="select($event)">
+<kgms-angular-tree-component  *ngIf="id" [graph]="id" [nodes]="graph?.children" (selected)="select($event)">
   
 </kgms-angular-tree-component>
 

@@ -6,6 +6,7 @@ import { Component, Input, Output, EventEmitter } from '@angular/core';
   styleUrls: ['./angular-tree-component.component.css'],
 })
 export class AngularTreeComponentComponent {
+  @Input() graph: any;
   @Input() nodes: any;
   @Output() selected = new EventEmitter<string>();
   options = {};
