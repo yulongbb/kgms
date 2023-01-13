@@ -69,7 +69,6 @@ export class EntityController {
    */
   @Get(':id')
   async findEntity(@Param('id') id: string): Promise<any> {
-    console.log(id);
     const entity = {};
     const node = await this.neo4jService.read(
       `MATCH (subject:Item) WHERE ID(subject)=${id.replace(
@@ -77,7 +76,12 @@ export class EntityController {
         ''
       )} RETURN subject`
     );
+    console.log(node['records'][0]['_fields'][0]['properties']['type']);
+
     entity['id'] = `Q${node['records'][0]['_fields'][0]['identity']['low']}`;
+    entity['type'] = node['records'][0]['_fields'][0]['properties']['type'];
+
+    
     entity['labels'] = {};
     entity['labels']['zh-cn'] = {
       language: 'zh-cn',
@@ -96,8 +100,6 @@ export class EntityController {
     });
 
     entity['modified'] = new Date();
-    entity['type'] = 'type';
-
     const relations = await this.neo4jService.read(
       `MATCH (subject:Item)-[predicate]-(object) WHERE ID(subject)=${id.replace(
         'Q',

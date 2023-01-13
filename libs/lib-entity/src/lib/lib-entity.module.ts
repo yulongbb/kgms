@@ -4,11 +4,18 @@ import { EntityComponent } from './entity/entity.component';
 import { StatementComponent } from './entity/statement/statement.component';
 import { PropertyPipe } from './pipes/property.pipe';
 import { ValuePipe } from './pipes/value.pipe';
+import { MediaComponent } from './media/media.component';
 
 @NgModule({
   imports: [CommonModule],
-  declarations: [EntityComponent, StatementComponent,PropertyPipe,ValuePipe],
-  entryComponents: [PropertyPipe,ValuePipe],
-  exports: [EntityComponent,StatementComponent],
+  declarations: [
+    EntityComponent,
+    StatementComponent,
+    PropertyPipe,
+    ValuePipe,
+    MediaComponent,
+  ],
+  entryComponents: [PropertyPipe, ValuePipe],
+  exports: [EntityComponent, StatementComponent,MediaComponent],
 })
 export class LibEntityModule {}

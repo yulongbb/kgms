@@ -28,7 +28,9 @@
             </div>
             <div class="wikibase-entitytermsview-heading-aliases wb-empty">
               <ul class="wikibase-entitytermsview-aliases">
-                <li *ngFor="let aliase of entity.aliases['zh-cn']">{{ aliase.value }}</li>
+                <li *ngFor="let aliase of entity.aliases['zh-cn']">
+                  {{ aliase.value }}
+                </li>
               </ul>
             </div>
           </div>
@@ -127,7 +129,6 @@
                     <a
                       title="Property:P3"
                       href="/mediawiki/index.php?title=Property:P3"
-                     
                       >{{ statement.key | property }}</a
                     >
                   </div>
@@ -147,9 +148,8 @@
                         </div>
                       </div>
                       <kgms-statement
-                                      [statements]="statement.value"
-                                    ></kgms-statement>
-                      
+                        [statements]="statement.value"
+                      ></kgms-statement>
                     </div>
                   </div>
                 </div>

@@ -24,6 +24,11 @@ export class InstancesComponent {
             return `Q${params.value}`;
           },
         },
+
+        {
+          field: '_fields.0.properties.type',
+          headerName: 'type',
+        },
         {
           field: '_fields.0',
           headerName: 'label',

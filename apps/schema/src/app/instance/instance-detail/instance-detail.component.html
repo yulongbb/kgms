@@ -1,1 +1,4 @@
-<kgms-entity *ngIf="instance" [entity]="instance"></kgms-entity>
+<kgms-entity *ngIf="instance&&instance.type!=='media'" [entity]="instance"></kgms-entity>
+
+<kgms-media  *ngIf="instance&&instance.type==='media'" [entity]="instance"></kgms-media>
+<!-- {{instance|json}} -->
