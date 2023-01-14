@@ -182,3 +182,6 @@ docker run -di --name mongo -p 27017:27017 mongo;3.4.2
 
 npm install leaflet --force
 npm install @asymmetrik/ngx-leaflet --force
+
+
+scrapy crawl baike
