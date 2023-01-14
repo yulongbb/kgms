@@ -1,0 +1,51 @@
+load csv with headers from 'file:///entities/company.csv' as row
+with row.object as name
+merge (p:企业 {name: name})
+
+load csv with headers from 'file:///entities/date.csv' as row
+with row.object as date
+merge (p:日期 {date: date})
+
+load csv with headers from 'file:///entities/people.csv' as row
+with row.object as name
+merge (p:人物 {name: name})
+
+load csv with headers from 'file:///entities/work.csv' as row
+with row.subject as name
+merge (p:作品 {name: name})
+
+load csv with headers from 'file:///relationships/act.csv' as row
+with row.subject as subject, row.object as object
+match (p:作品 {name: subject})
+match (q:人物 {name: object})
+merge (p)-[rel:主演]->(q)
+
+load csv with headers from 'file:///relationships/author.csv' as row
+with row.subject as subject, row.object as object
+match (p:作品 {name: subject})
+match (q:人物 {name: object})
+merge (p)-[rel:作者]->(q)
+
+load csv with headers from 'file:///relationships/com_make.csv' as row
+with row.subject as subject, row.object as object
+match (p:作品 {name: subject})
+match (q:企业 {name: object})
+merge (p)-[rel:出品公司]->(q)
+
+load csv with headers from 'file:///relationships/debut.csv' as row
+with row.subject as subject, row.object as object
+match (p:作品 {name: subject})
+match (q:日期 {date: object})
+merge (p)-[rel:上映日期]->(q)
+
+load csv with headers from 'file:///relationships/direct.csv' as row
+with row.subject as subject, row.object as object
+match (p:作品 {name: subject})
+match (q:人物 {name: object})
+merge (p)-[rel:导演]->(q)
+
+load csv with headers from 'file:///relationships/write.csv' as row
+with row.subject as subject, row.object as object
+match (p:作品 {name: subject})
+match (q:人物 {name: object})
+merge (p)-[rel:编剧]->(q)
