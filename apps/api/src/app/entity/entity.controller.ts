@@ -31,13 +31,20 @@ export class EntityController {
   @Get('schema/:id')
   async findAll(
     @Param('id') id: string,
-    @Query() query?: { term: string }
+    @Query() query?: { term: string; name: string }
   ): Promise<any> {
     let nodes;
     if (query.term) {
       nodes = await this.neo4jService.read(
         `MATCH (node:Item)  WHERE node.label CONTAINS ${JSON.stringify(
           query.term
+        )} AND node.schema = ${id} RETURN node LIMIT 100`
+      );
+    }
+    if (query.name) {
+      nodes = await this.neo4jService.read(
+        `MATCH (node:Item)  WHERE node.label = ${JSON.stringify(
+          query.name
         )} AND node.schema = ${id} RETURN node LIMIT 100`
       );
     } else {
@@ -55,7 +62,7 @@ export class EntityController {
    */
   @Get('node/:id')
   async findOne(@Param('id') id: number): Promise<any> {
-    console.log(`MATCH (n) WHERE ID(n)=${JSON.stringify(id)} RETURN n`)
+    console.log(`MATCH (n) WHERE ID(n)=${JSON.stringify(id)} RETURN n`);
     const node: any = await this.neo4jService.write(
       `MATCH (n) WHERE ID(n)=${id} RETURN n`
     );
@@ -81,7 +88,6 @@ export class EntityController {
     entity['id'] = `Q${node['records'][0]['_fields'][0]['identity']['low']}`;
     entity['type'] = node['records'][0]['_fields'][0]['properties']['type'];
 
-    
     entity['labels'] = {};
     entity['labels']['zh-cn'] = {
       language: 'zh-cn',

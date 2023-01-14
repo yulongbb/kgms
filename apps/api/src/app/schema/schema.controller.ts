@@ -1,4 +1,12 @@
-import { Body, Controller, Delete, Get, Param, Post, Put } from '@nestjs/common';
+import {
+  Body,
+  Controller,
+  Delete,
+  Get,
+  Param,
+  Post,
+  Put,
+} from '@nestjs/common';
 import { Schema } from './schema.entity';
 import { SchemaService } from './schema.service';
 
@@ -8,17 +16,16 @@ export class SchemaController {
 
   /**
    * 新增图谱或概念
-   * @param createSchemaDto 
+   * @param createSchemaDto
    */
   @Post()
-  async create(@Body() createSchemaDto: any): Promise<Schema>  {
-   return await this.schemaService.create(createSchemaDto);
+  async create(@Body() createSchemaDto: any): Promise<Schema> {
+    return await this.schemaService.create(createSchemaDto);
   }
-
 
   /**
    * 查询所有图谱信息
-   * @returns 
+   * @returns
    */
   @Get()
   async schemas(): Promise<Schema[]> {
@@ -26,18 +33,15 @@ export class SchemaController {
     return schemas;
   }
 
-
   /**
    * 查询单个图谱信息
-   * @param id 
-   * @returns 
+   * @param id
+   * @returns
    */
   @Get(':id')
   async findOne(@Param('id') id: number): Promise<Schema> {
     return this.schemaService.findTree(id);
   }
-
-
 
   @Delete(':id')
   async delete(@Param('id') id: number): Promise<Schema> {
@@ -45,10 +49,10 @@ export class SchemaController {
   }
 
   @Put(':id/:eid')
-  async updateWikidataUrl(@Param('id')id: number,@Param('eid') eid: string): Promise<Schema> {
-    return this.schemaService.updateWikidataUrl(id,eid );
+  async updateWikidataUrl(
+    @Param('id') id: number,
+    @Param('eid') eid: string
+  ): Promise<Schema> {
+    return this.schemaService.updateWikidataUrl(id, eid);
   }
-
-
-
 }
