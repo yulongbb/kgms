@@ -20,9 +20,12 @@ def turtles(request, dataset_id):
     url = "http://localhost:8000/"+str(str(dataset.docfile).split(
         '.')[0]+'.ttl')
 
+    print(url)
+
     # Create a Graph
     g = Graph()
     s = requests.get(url).content
+    
     g.parse(io.StringIO(s.decode('utf-8')), format="turtle")
     triples = []
     print(len(g))
