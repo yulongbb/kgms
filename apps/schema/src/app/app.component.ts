@@ -22,6 +22,7 @@ export class AppComponent implements OnInit {
   schemas: any;
 
   id: any;
+  graph: any;
 
   constructor(
     private appService: AppService,
@@ -37,6 +38,9 @@ export class AppComponent implements OnInit {
   ngOnInit(): void {
     this.route.queryParams.subscribe((params:any)=>{
       this.id = params['id'];
+      this.appService.getSchema(params['id']).subscribe((graph:any)=>{
+        this.graph = graph;
+      })
     })
   }
 

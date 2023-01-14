@@ -1,8 +1,5 @@
-<mat-drawer-container class="example-container">
-  <mat-drawer mode="side" opened>
-    <mat-toolbar>
-      <a [routerLink]="['/']">知识图谱构建工具</a>
-    </mat-toolbar>
+<mat-drawer-container class="example-container" autosize>
+  <mat-drawer #drawer class="example-sidenav" mode="side">
     <mat-selection-list #shoes [multiple]="false">
       <mat-list-option
         *ngFor="let shoe of schemas"
@@ -18,6 +15,8 @@
   <mat-drawer-content>
     <mat-toolbar class="d-flex justify-content-between">
       <div>
+        <a *ngIf="graph" (click)="drawer.toggle()">{{ graph.name }}</a>
+        <a *ngIf="!graph" (click)="drawer.toggle()">知识图谱构建工具</a>
         <button
           mat-button
           [routerLink]="['/schema']"
