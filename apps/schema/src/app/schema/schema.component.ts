@@ -12,6 +12,7 @@ import { AppService } from '../app.service';
   styleUrls: ['./schema.component.css'],
 })
 export class SchemaComponent implements OnInit {
+  schemas:any;
   id: any;
   graph: any;
 
@@ -19,7 +20,11 @@ export class SchemaComponent implements OnInit {
     private route: ActivatedRoute,
     public dialog: MatDialog,
     private appService: AppService
-  ) {}
+  ) {
+    this.appService
+    .getSchemas()
+    .subscribe((schemas: any) => (this.schemas = schemas));
+  }
 
   ngOnInit(): void {
     this.route.queryParams.subscribe((params: any) => {

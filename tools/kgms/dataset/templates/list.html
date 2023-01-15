@@ -6,8 +6,9 @@
     </head>
 
     <body>
+        {{graph}}
          <!-- Upload form. Note enctype attribute! -->
-         <form action="{% url "datasets" %}" method="post" enctype="multipart/form-data">
+         <form action="{% url "datasets" graph %}" method="post" enctype="multipart/form-data">
             {% csrf_token %}
             
             {{ message }}

@@ -6,3 +6,4 @@ class Dataset(models.Model):
     content = models.CharField(max_length=500)
     docfile = models.FileField(upload_to='docfiles/%Y/%m/%d')
     size = models.IntegerField()
+    graph = models.CharField(max_length=200)

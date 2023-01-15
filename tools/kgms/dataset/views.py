@@ -57,7 +57,7 @@ def dataset(request, dataset_id):
 
 
 @xframe_options_exempt
-def datasets(request):
+def datasets(request, graph):
     print(f"Great! You're using Python 3.6+. If you fail here, use the right version.")
     message = 'Upload as many files as you want!'
     # Handle file upload
@@ -83,6 +83,7 @@ def datasets(request):
             g.serialize(str(newdoc.docfile).split(
                 '.')[0]+'.ttl', format='turtle')
             newdoc.size = len(df.values)
+            newdoc.graph = str(graph)
             newdoc.save()
 
             # # Create a Graph
@@ -101,8 +102,9 @@ def datasets(request):
         form = DatasetForm()  # An empty, unbound form
 
     # Load datasets for the list page
-    datasets = Dataset.objects.all()
+    datasets = Dataset.objects.filter(graph=graph)
+    print(graph)
 
     # Render list page with the datasets and the form
-    context = {'datasets': datasets, 'form': form, 'message': message}
+    context = {'datasets': datasets, 'graph': graph, 'form': form, 'message': message}
     return render(request, 'list.html', context)

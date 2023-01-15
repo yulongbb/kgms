@@ -37,10 +37,12 @@ export class AppComponent implements OnInit {
 
   ngOnInit(): void {
     this.route.queryParams.subscribe((params:any)=>{
-      this.id = params['id'];
-      this.appService.getSchema(params['id']).subscribe((graph:any)=>{
-        this.graph = graph;
-      })
+      if(params['id']){
+        this.id = params['id'];
+        this.appService.getSchema(params['id']).subscribe((graph:any)=>{
+          this.graph = graph;
+        })
+      }
     })
   }
 

@@ -1,8 +1,33 @@
-<img *ngIf="!id" src="assets/images/schema.jpg" class="img-fluid" alt="..." />
+<!-- <img *ngIf="!id" src="assets/images/schema.jpg" class="img-fluid" alt="..." /> -->
 
-<button  *ngIf="id" mat-flat-button color="primary" (click)="openDialog(id)">创建</button>
+<div *ngIf="!id">
+  <mat-card *ngFor="let schema of schemas" class="example-card my-2">
+    <mat-card-header>
+      <mat-card-title-group>
+        <mat-card-title
+          ><a [routerLink]="['/dataset']" [queryParams]="{ id: schema.id }">{{
+            schema.name
+          }}</a>
+          </mat-card-title>
+        <mat-card-subtitle>G{{ schema.id }}</mat-card-subtitle>
+        <!-- <img
+          mat-card-sm-image
+          src="https://material.angular.io/assets/img/examples/shiba2.jpg"
+        /> -->
+      </mat-card-title-group>
+    </mat-card-header>
+    <mat-card-content> {{ schema.description }} </mat-card-content>
+  </mat-card>
+</div>
 
-<kgms-angular-tree-component  *ngIf="id" [graph]="id" [nodes]="graph?.children" (selected)="select($event)">
-  
+<button *ngIf="id" mat-flat-button color="primary" (click)="openDialog(id)">
+  创建
+</button>
+
+<kgms-angular-tree-component
+  *ngIf="id"
+  [graph]="id"
+  [nodes]="graph?.children"
+  (selected)="select($event)"
+>
 </kgms-angular-tree-component>
-

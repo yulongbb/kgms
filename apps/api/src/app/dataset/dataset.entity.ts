@@ -30,5 +30,11 @@ export class Dataset {
     nullable: true,
   })
   size: number
+
+  @Field()
+  @Column({
+    nullable: true,
+  })
+  graph: string
 }
 
