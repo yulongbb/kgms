@@ -6,6 +6,7 @@
 @import 'leaflet/dist/leaflet.css';
 
 
+
 ::-webkit-scrollbar {
     display: none;
 }
@@ -5465,7 +5466,7 @@ table.diff table.wb-details td {
 
 .wikibase-entityview .wikibase-entityview-main {
     margin: 0 2em 2em 0;
-    max-width: 65em;
+    max-width: 100%;
     width: 100%
 }
 
@@ -9776,7 +9777,7 @@ table.diff table.wb-details td {
 
 .wikibase-entityview .wikibase-entityview-main {
     margin: 0 2em 2em 0;
-    max-width: 65em;
+    max-width: 100%;
     width: 100%
 }
 

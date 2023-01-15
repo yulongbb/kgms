@@ -1,0 +1,5 @@
+<div class="owl-carousel owl-theme">
+  <div class="item" *ngFor="let entity of entities">
+    <h4 class="box-entity">{{ entity.mainsnak.datavalue.value.id | value }}</h4>
+  </div>
+</div>

@@ -10,6 +10,7 @@ import { ActivatedRoute, Router } from '@angular/router';
 
 export interface Schema {
   name: string;
+  description: string;
 }
 
 @Component({
@@ -56,16 +57,24 @@ export class AppComponent implements OnInit {
 
   openDialog() {
     const dialogRef = this.dialog.open(DialogComponent, {
-      data: { name: '' },
+      data: { name: '', description: '' },
     });
     dialogRef.afterClosed().subscribe((result) => {
       console.log(result);
+      result.name = result.name.trim();
+      if (!result.name) {
+        return;
+      }
+      result.description = result.description.trim();
+      if (!result.description) {
+        return;
+      }
       if (!result) {
         return;
       }
-      result = result.trim();
       this.appService
-        .addSchema({ name: result } as Schema)
+        .addSchema({ name: result.name,
+          description: result.description,} as Schema)
         .subscribe((schema) => {
           console.log(schema);
           this.schemas.push(schema);

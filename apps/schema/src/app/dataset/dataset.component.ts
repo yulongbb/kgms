@@ -14,7 +14,7 @@ export class DatasetComponent implements OnInit{
 
   constructor(public sanitizer: DomSanitizer,private route: ActivatedRoute,) { 
     this.route.queryParams.subscribe((params: any) => {
-      this.url = `http://localhost:8000/datasets/graph/${params['id']}/`;
+      this.url = `http://localhost:8000/datasets/graph/${params['id']}`;
     });
   }
 

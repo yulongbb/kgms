@@ -1,0 +1,9 @@
+.box-entity{
+    height: 300px;
+    width: 100%;
+    background-color:dimgrey;
+    padding: 20px;
+    display: block;
+    cursor: pointer;
+    color: aliceblue;
+}

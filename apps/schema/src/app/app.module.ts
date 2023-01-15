@@ -4,6 +4,8 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { LibTableModule } from '@lib/table';
 import { LibTreeModule } from '@lib/tree';
 import { LibMapModule } from '@lib/map';
+import { LibEntityModule } from '@lib/entity';
+
 
 import { AppComponent, DialogComponent } from './app.component';
 import { MaterialModule } from './material.module';
@@ -18,6 +20,7 @@ import { GraphComponent } from './graph/graph.component';
 import { MapComponent } from './map/map.component';
 import { EarthComponent } from './earth/earth.component';
 import { LearnComponent } from './learn/learn.component';
+import { EntityPipe } from './learn/entity.pipe';
 
 @NgModule({
   declarations: [
@@ -29,7 +32,8 @@ import { LearnComponent } from './learn/learn.component';
     GraphComponent,
     MapComponent,
     EarthComponent,
-    LearnComponent
+    LearnComponent,
+    EntityPipe
   ],
   imports: [
     BrowserModule,
@@ -42,6 +46,7 @@ import { LearnComponent } from './learn/learn.component';
     LibTableModule,
     LibTreeModule,
     LibMapModule,
+    LibEntityModule
   ],
   providers: [AppService],
   bootstrap: [AppComponent],

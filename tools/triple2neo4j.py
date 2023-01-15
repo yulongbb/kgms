@@ -1,7 +1,7 @@
 import requests
 
-dataset = 11
-schema = 15
+dataset = 12
+schema = 125
 
 # Extract
 url = "http://127.0.0.1:8000/datasets/turtles/"+str(dataset)

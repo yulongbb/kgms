@@ -185,3 +185,5 @@ npm install @asymmetrik/ngx-leaflet --force
 
 
 scrapy crawl baike
+
+python3 -m scrapy crawl baike

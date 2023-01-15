@@ -7,13 +7,13 @@ import csv
 class BaikeSpider(scrapy.Spider):
     name = 'baike'
     allowed_domains = ['baike.baidu.com']
-    start_urls = ['https://baike.baidu.com/item/陈奕迅']
+    start_urls = ['https://baike.baidu.com/item/蔡依林']
     # olds = set([item['_id'] for item in db_baike.find({}, {'_id': 1})])
     # if len(olds) > 0:
     #     start_urls = ['https://baike.baidu.com/item/'+olds.pop()]
 
     def parse(self, response):
-        # print(response.url)
+        print(response.url)
         # item_name = re.sub('/', '', re.sub('https://baike.baidu.com/item/',
         #                                    '', urllib.parse.unquote(response.url)))
         # # 爬取过的直接忽视
@@ -34,6 +34,8 @@ class BaikeSpider(scrapy.Spider):
         # 处理三元组
         entity = ''.join(response.xpath(
             '//h1/text()').getall()).replace('/', '')
+        print(entity)
+
         attrs = response.xpath(
             '//dt[contains(@class,"basicInfo-item name")]').getall()
 

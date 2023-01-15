@@ -5,6 +5,7 @@ import { StatementComponent } from './entity/statement/statement.component';
 import { PropertyPipe } from './pipes/property.pipe';
 import { ValuePipe } from './pipes/value.pipe';
 import { MediaComponent } from './media/media.component';
+import { CarouselComponent } from './carousel/carousel.component';
 
 @NgModule({
   imports: [CommonModule],
@@ -14,8 +15,14 @@ import { MediaComponent } from './media/media.component';
     PropertyPipe,
     ValuePipe,
     MediaComponent,
+    CarouselComponent,
   ],
   entryComponents: [PropertyPipe, ValuePipe],
-  exports: [EntityComponent, StatementComponent,MediaComponent],
+  exports: [
+    EntityComponent,
+    StatementComponent,
+    MediaComponent,
+    CarouselComponent,
+  ],
 })
 export class LibEntityModule {}

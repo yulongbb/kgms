@@ -95,7 +95,7 @@ def datasets(request, graph):
             #     print(s, p, o)
 
             # Redirect to the dataset list after POST
-            return redirect('datasets')
+            return redirect('datasets/schema/'+str(graph))
         else:
             message = 'The form is not valid. Fix the following error:'
     else:

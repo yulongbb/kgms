@@ -18,9 +18,15 @@
         "styles": [
           "./node_modules/bootstrap/dist/css/bootstrap.min.css",
           "./node_modules/@angular/material/prebuilt-themes/indigo-pink.css",
+          "./node_modules/owl.carousel/dist/assets/owl.carousel.min.css",
+          "./node_modules/owl.carousel/dist/assets/owl.theme.default.min.css",
           "apps/schema/src/styles.css"
         ],
-        "scripts": ["apps/schema/src/assets/js/globe.gl.min.js"]
+        "scripts": [
+          "./node_modules/jquery/dist/jquery.min.js",
+          "./node_modules/owl.carousel/dist/owl.carousel.min.js",
+          "apps/schema/src/assets/js/globe.gl.min.js"
+        ]
       },
       "configurations": {
         "production": {
