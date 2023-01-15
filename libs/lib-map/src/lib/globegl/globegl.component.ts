@@ -22,7 +22,7 @@ export class GlobeglComponent implements OnInit {
       color: ['red', 'white', 'blue', 'green'][Math.round(Math.random() * 3)],
     }));
     Globe()
-      .width(1450)
+      .width(1470)
       .globeImageUrl('//unpkg.com/three-globe/example/img/earth-night.jpg')
       .backgroundImageUrl('//unpkg.com/three-globe/example/img/night-sky.png')
       .htmlElementsData(gData)
