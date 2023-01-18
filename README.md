@@ -187,3 +187,6 @@ npm install @asymmetrik/ngx-leaflet --force
 scrapy crawl baike
 
 python3 -m scrapy crawl baike
+
+
+MATCH (m)-[r:P1082]->(n) SET m.image = n.label RETURN m

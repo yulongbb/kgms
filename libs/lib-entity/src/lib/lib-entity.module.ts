@@ -6,6 +6,7 @@ import { PropertyPipe } from './pipes/property.pipe';
 import { ValuePipe } from './pipes/value.pipe';
 import { MediaComponent } from './media/media.component';
 import { CarouselComponent } from './carousel/carousel.component';
+import { ImagePipe } from './pipes/image.pip';
 
 @NgModule({
   imports: [CommonModule],
@@ -14,6 +15,7 @@ import { CarouselComponent } from './carousel/carousel.component';
     StatementComponent,
     PropertyPipe,
     ValuePipe,
+    ImagePipe,
     MediaComponent,
     CarouselComponent,
   ],

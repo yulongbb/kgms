@@ -9,7 +9,7 @@ declare let $: any;
 export class CarouselComponent implements OnInit {
   @Input() entities: any;
   ngOnInit(): void {
-    setTimeout(function(){ 
+    setTimeout(function () {
       $('.owl-carousel').owlCarousel({
         loop: false,
         margin: 10,
@@ -26,7 +26,6 @@ export class CarouselComponent implements OnInit {
           },
         },
       });
-    },500);
-  
+    }, 500);
   }
 }
