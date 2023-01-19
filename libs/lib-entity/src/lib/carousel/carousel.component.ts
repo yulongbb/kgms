@@ -1,4 +1,4 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 declare let $: any;
 
 @Component({
@@ -8,6 +8,8 @@ declare let $: any;
 })
 export class CarouselComponent implements OnInit {
   @Input() entities: any;
+  @Output() selected = new EventEmitter<string>();
+
   ngOnInit(): void {
     setTimeout(function () {
       $('.owl-carousel').owlCarousel({
@@ -27,5 +29,10 @@ export class CarouselComponent implements OnInit {
         },
       });
     }, 500);
+  }
+
+  cilckEntity(entity:any){
+    console.log(entity)
+    this.selected.emit(entity);
   }
 }

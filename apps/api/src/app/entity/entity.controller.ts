@@ -13,6 +13,19 @@ import { Neo4jService } from 'nest-neo4j';
 export class EntityController {
   constructor(private readonly neo4jService: Neo4jService) {}
 
+  /**
+   * 查询单个节点信息
+   * @param id
+   * @returns
+   */
+  @Post('node')
+  async CreateNode(@Body() node: any): Promise<any> {
+    const data: any = await this.neo4jService.write(
+      `MATCH (n)  WHERE ID(n)=${node.id.replace('Q', '')} SET n.image=${JSON.stringify(node.image)} RETURN n`
+    );
+    return data['records'][0]['_fields'][0]['properties'];
+  }
+
   @Post(':id')
   async create(@Param('id') id: string, @Body() triple: any): Promise<any> {
     return await this.neo4jService.write(
@@ -83,10 +96,13 @@ export class EntityController {
         ''
       )} RETURN subject`
     );
-    console.log(node['records'][0]['_fields'][0]['properties']['type']);
+    console.log(node['records'][0]['_fields'][0]['properties']);
 
     entity['id'] = `Q${node['records'][0]['_fields'][0]['identity']['low']}`;
     entity['type'] = node['records'][0]['_fields'][0]['properties']['type'];
+    if (node['records'][0]['_fields'][0]['properties']['image']) {
+      entity['image'] = node['records'][0]['_fields'][0]['properties']['image'];
+    }
 
     entity['labels'] = {};
     entity['labels']['zh-cn'] = {

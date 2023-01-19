@@ -1,6 +1,7 @@
 <div class="warpper">
+
   <div *ngFor="let schema of schemas">
     <h3 class="text-light">{{ schema.name }}</h3>
-    <kgms-carousel [entities]="schema.wikidataUrl | entity"></kgms-carousel>
+    <kgms-carousel [entities]="schema.wikidataUrl | entity" (selected)="openDialog($event)"></kgms-carousel>
   </div>
 </div>

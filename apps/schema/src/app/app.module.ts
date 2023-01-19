@@ -19,7 +19,7 @@ import { BuilderComponent } from './builder/builder.component';
 import { GraphComponent } from './graph/graph.component';
 import { MapComponent } from './map/map.component';
 import { EarthComponent } from './earth/earth.component';
-import { LearnComponent } from './learn/learn.component';
+import { EntityDialogComponent, LearnComponent } from './learn/learn.component';
 import { EntityPipe } from './learn/entity.pipe';
 
 @NgModule({
@@ -33,7 +33,8 @@ import { EntityPipe } from './learn/entity.pipe';
     MapComponent,
     EarthComponent,
     LearnComponent,
-    EntityPipe
+    EntityPipe,
+    EntityDialogComponent
   ],
   imports: [
     BrowserModule,

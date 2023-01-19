@@ -52,6 +52,7 @@ def dataset(request, dataset_id):
     for s, p, o in g:
         triples.append({'subject': s, 'predicate': p, 'object': o})
     context = {'dataset': dataset, 'triples': triples[0:100]}
+    print(context)
 
     return render(request, 'detail.html', context)
 

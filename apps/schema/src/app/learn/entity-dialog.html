@@ -1,0 +1,55 @@
+<!-- <h1 mat-dialog-title>
+  <img [src]="instance.image">
+</h1>
+<div mat-dialog-content>
+
+</div> -->
+
+<mat-card class="example-card" style="width: 850px; height: 600px; overflow: scroll;" *ngIf="instance">
+  <mat-card-actions>
+    <button mat-button [mat-dialog-close]="instance" cdkFocusInitial>保存</button>
+    <button mat-button (click)="onNoClick()">关闭</button>
+  </mat-card-actions>
+  <mat-card-header>
+    <div mat-card-avatar class="example-header-image"></div>
+    <mat-card-title>{{instance?.labels['zh-cn']?.value}}</mat-card-title>
+    <mat-card-subtitle
+      >{{instance?.descriptions['zh-cn']?.value}}</mat-card-subtitle
+    >
+  </mat-card-header>
+  <p>
+    <mat-form-field *ngIf="!instance?.image||instance?.image==='nan'" appearance="fill">
+      <mat-label>图片地址</mat-label>
+      <input matInput [(ngModel)]="instance.image" />
+    </mat-form-field>
+  </p>
+  <svg
+    *ngIf="!instance?.image||instance?.image==='nan'"
+    class="bd-placeholder-img bd-placeholder-img-lg img-fluid"
+    width="850"
+    height="330"
+    xmlns="http://www.w3.org/2000/svg"
+    role="img"
+    aria-label="Placeholder: Responsive image"
+    preserveAspectRatio="xMidYMid slice"
+    focusable="false"
+  >
+    <title>Placeholder</title>
+    <rect width="100%" height="100%" fill="#868e96"></rect>
+    <text x="50%" y="50%" fill="#dee2e6" dy=".3em">暂无图片</text>
+  </svg>
+  <img class="img-fluid"
+    *ngIf="instance?.image&&instance?.image!=='nan'"
+    style="max-width: 850px;"
+    mat-card-image
+    [src]="instance.image"
+    alt="Photo of a Shiba Inu"
+  />
+
+  <!-- <div style="width: 100%; height:100%; overflow-y: scroll;"  *ngIf="instance?.image&&instance?.image!=='nan'" [ngStyle]="{'background-image': 'url(' + (instance?.image) + ')','background-color':'#3c3c3c','background-position':'center top','background-size': 'cover'}">
+  </div> -->
+  <mat-card-content>
+    <!-- <p>{{instance?.image|json}}</p> -->
+  </mat-card-content>
+
+</mat-card>

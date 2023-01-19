@@ -17,13 +17,11 @@ export class EntityPipe implements PipeTransform {
       this.cachedId = id;
       this.http
         .get(`http://localhost:3333/api/entity/${id.replace('Q', '')}`)
-        .subscribe((result: any) =>
-          Object.keys(result.claims).map((key: any) => {
-            if(result.claims[key].length>10){
-              this.entity = result.claims[key].slice(0, 20);
-            }
-          })
-        );
+        .subscribe((result: any) => {
+          const [firstKey] = Object.keys(result.claims);
+console.log(firstKey);
+          this.entity = result.claims[firstKey].slice(0, 20);
+        });
     }
 
     return this.entity;

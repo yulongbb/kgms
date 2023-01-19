@@ -5,6 +5,12 @@ export const nodes = [
   {
     id: '1',
     type: 'source',
+    data: {
+      selects: {
+        'handle-0': 'smoothstep',
+        'handle-1': 'smoothstep',
+      },
+    },
     position: { x: 100, y: 200 },
   },
 
