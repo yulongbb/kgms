@@ -19,7 +19,7 @@ export class EntityPipe implements PipeTransform {
         .get(`http://localhost:3333/api/entity/${id.replace('Q', '')}`)
         .subscribe((result: any) => {
           const [firstKey] = Object.keys(result.claims);
-console.log(firstKey);
+          console.log(firstKey);
           this.entity = result.claims[firstKey].slice(0, 20);
         });
     }

@@ -21,6 +21,8 @@ import { MapComponent } from './map/map.component';
 import { EarthComponent } from './earth/earth.component';
 import { EntityDialogComponent, LearnComponent } from './learn/learn.component';
 import { EntityPipe } from './learn/entity.pipe';
+import { ValuePipe } from './learn/value.pipe';
+import { PropertyPipe } from './learn/property.pipe';
 
 @NgModule({
   declarations: [
@@ -34,6 +36,8 @@ import { EntityPipe } from './learn/entity.pipe';
     EarthComponent,
     LearnComponent,
     EntityPipe,
+    ValuePipe,
+    PropertyPipe,
     EntityDialogComponent
   ],
   imports: [

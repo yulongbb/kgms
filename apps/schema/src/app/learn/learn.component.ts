@@ -53,7 +53,7 @@ export class LearnComponent implements OnInit {
             predicate: `P${predicate.id}`,
             object: result.image,
           };
-          console.log(turtle)
+          console.log(turtle);
 
           // 更新节点
           const node = {
@@ -82,19 +82,28 @@ export class LearnComponent implements OnInit {
 })
 export class EntityDialogComponent {
   instance: any;
-  statements: any;
+  statements: Map<string, Array<string>>;
+
   constructor(
     public dialogRef: MatDialogRef<EntityDialogComponent>,
     @Inject(MAT_DIALOG_DATA) public data: any,
     private http: HttpClient
   ) {
-    console.log(data);
+    this.statements = new Map<string, Array<string>>();
     this.http
       .get(
         `http://localhost:3333/api/entity/${data.mainsnak.datavalue.value.id}`
       )
       .subscribe((instance: any) => {
         this.instance = instance;
+        Object.keys(instance.claims).map((key: string) => {
+          const values = new Array<string>();
+          instance.claims[key].forEach((value: any) => {
+            values.push(value.mainsnak.datavalue.value.id);
+          });
+          this.statements.set(key, values);
+        });
+        console.log(this.statements);
       });
   }
 
