@@ -59,7 +59,7 @@ export function App() {
   });
 
   const run = async (e) => {
-    axios.get('http://127.0.0.1:8000/datasets/turtles/17').then((response) => {
+    axios.get('http://127.0.0.1:8000/datasets/turtles/20').then((response) => {
       // handle success
       let fnPromiseList = [];
       response.data.forEach((turtle) => {
@@ -67,7 +67,7 @@ export function App() {
         fnPromiseList.push(
           new Promise((resolve, reject) => {
             axios
-              .post('http://localhost:3333/api/property/125', {
+              .post('http://localhost:3333/api/property/136', {
                 name: turtle['predicate'],
               })
               .then((res) => {
@@ -93,7 +93,7 @@ export function App() {
       Promise.all(fnPromiseList).then(async (res) => {
         for(let i of res){
           console.log(i);
-          await axios.post('http://localhost:3333/api/entity/125', i);
+          await axios.post('http://localhost:3333/api/entity/136', i);
         }
       });
     });
