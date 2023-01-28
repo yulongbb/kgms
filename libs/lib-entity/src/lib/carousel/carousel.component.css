@@ -1,8 +1,15 @@
 .box-entity{
     height: 300px;
     width: 100%;
-    padding: 20px;
+    padding: 10px 20px 0 0 ;
     display: block;
     cursor: pointer;
-    color: aliceblue;
+
+}
+
+
+h4{
+    color: #fff;
+    background-color: rgba(0, 0, 0, 0.6);
+    
 }

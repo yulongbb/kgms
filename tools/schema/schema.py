@@ -1,7 +1,7 @@
 import requests
 
 def schema2entity(name):
-    data = requests.get("http://localhost:3333/api/entity/schema/136?name="+str(name))
+    data = requests.get("http://localhost:3333/api/entity/schema/143?name="+str(name))
     if(len(data.json())>0):
         return "Q"+str(data.json()[0]['_fields'][0]['identity']['low'])
     return None
@@ -16,7 +16,7 @@ def children(schema):
                 requests.put('http://localhost:3333/api/schemas/'+str(child['id'])+'/'+str(entity))
             children(child)
 
-data = requests.get('http://localhost:3333/api/schemas/136')
+data = requests.get('http://localhost:3333/api/schemas/143')
 print(data.json()['children'])   
 for schema in data.json()['children']:
     print(str(schema['id'])+':'+str(schema['name']))

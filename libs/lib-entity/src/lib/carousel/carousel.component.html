@@ -1,5 +1,7 @@
 <div class="owl-carousel owl-theme">
   <div class="item" (click)="cilckEntity(entity)"  *ngFor="let entity of entities" [ngStyle]="{'background-image': 'url(' + (entity.mainsnak.datavalue.value.id | image) + ')','background-color':'#3c3c3c','background-position':'center','background-size': 'cover'}">
-    <h4 class="box-entity">{{ entity.mainsnak.datavalue.value.id | value }}</h4>
+    <div class="box-entity">
+      <h4>{{ entity.mainsnak.datavalue.value.id | value }}</h4>
+    </div>
   </div>
 </div>
