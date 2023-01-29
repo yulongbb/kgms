@@ -7,7 +7,7 @@ import csv
 class BaikeSpider(scrapy.Spider):
     name = 'baike'
     allowed_domains = ['baike.baidu.com']
-    start_urls = ['https://baike.baidu.com/item/杨丞琳']
+    start_urls = ['https://baike.baidu.com/item/范冰冰']
     # olds = set([item['_id'] for item in db_baike.find({}, {'_id': 1})])
     # if len(olds) > 0:
     #     start_urls = ['https://baike.baidu.com/item/'+olds.pop()]

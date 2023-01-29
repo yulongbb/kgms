@@ -40,10 +40,6 @@ def dataset(request, dataset_id):
     dataset = get_object_or_404(Dataset, pk=dataset_id)
     url = "http://localhost:8000/"+str(str(dataset.docfile).split(
         '.')[0]+'.ttl')
-    
-    print(url)
-
-    # Create a Graph
     g = Graph()
     s = requests.get(url).content
     g.parse(io.StringIO(s.decode('utf-8')), format="turtle")
@@ -52,14 +48,11 @@ def dataset(request, dataset_id):
     for s, p, o in g:
         triples.append({'subject': s, 'predicate': p, 'object': o})
     context = {'dataset': dataset, 'triples': triples[0:100]}
-    print(context)
-
     return render(request, 'detail.html', context)
 
 
 @xframe_options_exempt
 def datasets(request, graph):
-    print(f"Great! You're using Python 3.6+. If you fail here, use the right version.")
     message = 'Upload as many files as you want!'
     # Handle file upload
     if request.method == 'POST':
@@ -75,7 +68,6 @@ def datasets(request, graph):
             s = requests.get(url).content
             df = pd.read_csv(io.StringIO(s.decode('utf-8')))
             g = Graph()
-            print(len(df.values))
             for row in df.values:
                 if row is not None:
                     g.add((Literal(row[0]), Literal(row[2]), Literal(row[1])))
@@ -96,16 +88,13 @@ def datasets(request, graph):
             #     print(s, p, o)
 
             # Redirect to the dataset list after POST
-            return redirect('datasets/schema/'+str(graph))
+            return redirect('/datasets/graph/'+str(graph))
         else:
             message = 'The form is not valid. Fix the following error:'
     else:
         form = DatasetForm()  # An empty, unbound form
-
     # Load datasets for the list page
     datasets = Dataset.objects.filter(graph=graph)
-    print(graph)
-
     # Render list page with the datasets and the form
     context = {'datasets': datasets, 'graph': graph, 'form': form, 'message': message}
     return render(request, 'list.html', context)
