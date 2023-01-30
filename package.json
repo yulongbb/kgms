@@ -79,6 +79,7 @@
     "treant-js": "^1.0.1",
     "tslib": "^2.3.0",
     "typescript": "^4.5.4",
+    "vis-network": "^9.1.2",
     "zone.js": "~0.11.4"
   },
   "devDependencies": {

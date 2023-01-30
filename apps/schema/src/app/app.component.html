@@ -102,6 +102,14 @@
       <button
         *ngIf="graph"
         mat-button
+        [routerLink]="['/picture']"
+        [queryParams]="{ id: id }"
+      >
+        图片
+      </button>
+      <button
+        *ngIf="graph"
+        mat-button
         [routerLink]="['/map']"
         [queryParams]="{ id: id }"
       >

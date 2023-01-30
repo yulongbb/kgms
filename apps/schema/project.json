@@ -29,6 +29,7 @@
           "./node_modules/owl.carousel/dist/assets/owl.theme.default.min.css",
           "node_modules/treant-js/Treant.css",
           "node_modules/treant-js/vendor/perfect-scrollbar/perfect-scrollbar.css",
+          "node_modules/vis-network/dist/dist/vis-network.min.css",
           "apps/schema/src/styles.css"
         ],
         "scripts": [
@@ -40,6 +41,7 @@
           "node_modules/treant-js/vendor/jquery.mousewheel.js",
           "node_modules/treant-js/vendor/perfect-scrollbar/perfect-scrollbar.js",
           "node_modules/treant-js/vendor/raphael.js",
+          "node_modules/vis-network/dist/vis-network.min.js",
           "node_modules/treant-js/Treant.js"
         ]
       },

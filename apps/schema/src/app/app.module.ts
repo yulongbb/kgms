@@ -19,6 +19,7 @@ import { EntitreeComponent } from './entitree/entitree.component';
 import { GraphComponent } from './graph/graph.component';
 import { MapComponent } from './map/map.component';
 import { EarthComponent } from './earth/earth.component';
+import { PictureComponent } from './picture/picture.component';
 import { EntityDialogComponent, LearnComponent } from './learn/learn.component';
 import { EntityPipe } from './learn/entity.pipe';
 import { ValuePipe } from './learn/value.pipe';
@@ -36,6 +37,7 @@ import { PropertyPipe } from './learn/property.pipe';
     MapComponent,
     EarthComponent,
     LearnComponent,
+    PictureComponent,
     EntityPipe,
     ValuePipe,
     PropertyPipe,

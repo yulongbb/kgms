@@ -10,6 +10,7 @@ import { MapComponent } from './map/map.component';
 import { EarthComponent } from './earth/earth.component';
 import { LearnComponent } from './learn/learn.component';
 import { QaComponent } from './qa/qa.component';
+import { PictureComponent } from './picture/picture.component';
 
 const routes: Routes = [
   { path: '', redirectTo: '/schema', pathMatch: 'full' },
@@ -28,6 +29,7 @@ const routes: Routes = [
   },
   { path: 'entitree', component: EntitreeComponent },
   { path: 'graph', component: GraphComponent },
+  { path: 'picture', component: PictureComponent },
   { path: 'map', component: MapComponent },
   { path: 'earth', component: EarthComponent },
   { path: 'learn', component: LearnComponent },
