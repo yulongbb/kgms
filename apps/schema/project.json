@@ -7,25 +7,40 @@
   "targets": {
     "build": {
       "executor": "@angular-devkit/build-angular:browser",
-      "outputs": ["{options.outputPath}"],
+      "outputs": [
+        "{options.outputPath}"
+      ],
       "options": {
         "outputPath": "dist/apps/schema",
         "index": "apps/schema/src/index.html",
         "main": "apps/schema/src/main.ts",
-        "polyfills": ["zone.js"],
+        "polyfills": [
+          "zone.js"
+        ],
         "tsConfig": "apps/schema/tsconfig.app.json",
-        "assets": ["apps/schema/src/favicon.ico", "apps/schema/src/assets"],
+        "assets": [
+          "apps/schema/src/favicon.ico",
+          "apps/schema/src/assets"
+        ],
         "styles": [
           "./node_modules/bootstrap/dist/css/bootstrap.min.css",
           "./node_modules/@angular/material/prebuilt-themes/indigo-pink.css",
           "./node_modules/owl.carousel/dist/assets/owl.carousel.min.css",
           "./node_modules/owl.carousel/dist/assets/owl.theme.default.min.css",
+          "node_modules/treant-js/Treant.css",
+          "node_modules/treant-js/vendor/perfect-scrollbar/perfect-scrollbar.css",
           "apps/schema/src/styles.css"
         ],
         "scripts": [
           "./node_modules/jquery/dist/jquery.min.js",
           "./node_modules/owl.carousel/dist/owl.carousel.min.js",
-          "apps/schema/src/assets/js/globe.gl.min.js"
+          "apps/schema/src/assets/js/globe.gl.min.js",
+          "node_modules/popper.js/dist/umd/popper.js",
+          "node_modules/treant-js/vendor/jquery.easing.js",
+          "node_modules/treant-js/vendor/jquery.mousewheel.js",
+          "node_modules/treant-js/vendor/perfect-scrollbar/perfect-scrollbar.js",
+          "node_modules/treant-js/vendor/raphael.js",
+          "node_modules/treant-js/Treant.js"
         ]
       },
       "configurations": {
@@ -75,14 +90,21 @@
     },
     "lint": {
       "executor": "@nrwl/linter:eslint",
-      "outputs": ["{options.outputFile}"],
+      "outputs": [
+        "{options.outputFile}"
+      ],
       "options": {
-        "lintFilePatterns": ["apps/schema/**/*.ts", "apps/schema/**/*.html"]
+        "lintFilePatterns": [
+          "apps/schema/**/*.ts",
+          "apps/schema/**/*.html"
+        ]
       }
     },
     "test": {
       "executor": "@nrwl/jest:jest",
-      "outputs": ["{workspaceRoot}/coverage/{projectRoot}"],
+      "outputs": [
+        "{workspaceRoot}/coverage/{projectRoot}"
+      ],
       "options": {
         "jestConfig": "apps/schema/jest.config.ts",
         "passWithNoTests": true

@@ -204,3 +204,7 @@ npm install --save @antv/g6 --force
 
 拖拽有阴影
 graph.get('canvas').set('localRefresh', false);
+
+
+运行wikitree
+npm run dev

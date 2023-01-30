@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { DomSanitizer, SafeResourceUrl } from '@angular/platform-browser';
+declare var Treant: any;
 
 @Component({
   selector: 'kgms-entitree',
@@ -7,13 +8,27 @@ import { DomSanitizer, SafeResourceUrl } from '@angular/platform-browser';
   styleUrls: ['./entitree.component.css'],
 })
 export class EntitreeComponent {
-  name = 'Set iframe source';
-  url = 'http://localhost:3000';
-  urlSafe!: SafeResourceUrl;
-
-  constructor(public sanitizer: DomSanitizer) {}
+  constructor() {}
 
   ngOnInit() {
-    this.urlSafe = this.sanitizer.bypassSecurityTrustResourceUrl(this.url);
+    const simple_chart_config = {
+      chart: {
+        container: '#tree-simple',
+      },
+
+      nodeStructure: {
+        text: { name: 'Parent node' },
+        children: [
+          {
+            text: { name: 'First child' },
+          },
+          {
+            text: { name: 'Second child' },
+          },
+        ],
+      },
+    };
+
+    const my_chart = new Treant(simple_chart_config);
   }
 }
