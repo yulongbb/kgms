@@ -1,53 +1,163 @@
-import { Component } from '@angular/core';
-declare var vis: any;
+import { Component, OnInit } from '@angular/core';
 
 @Component({
   selector: 'kgms-picture',
   templateUrl: './picture.component.html',
   styleUrls: ['./picture.component.css'],
 })
-export class PictureComponent {
-  constructor() {}
+export class PictureComponent implements OnInit {
+  ngOnInit(): void {
+    const cytoscape = require('cytoscape');
+    const cyqtip = require('cytoscape-qtip');
 
-  ngOnInit() {
-    // create an array with nodes
-    const nodes = new vis.DataSet([
-      {
-        id: 1,
-        label: 'Node 1',
-        x: -200,
-        y: 40,
-      },
-      { id: 2, label: 'Node 2', x: -100, y: 0 },
-      { id: 3, label: 'Node 3', x: 0, y: 0 },
-      { id: 4, label: 'Node 4', x: 100, y: 0 },
-      { id: 5, label: 'Node 5', x: 200, y: 50 },
-    ]);
+    cyqtip( cytoscape ); 
 
-    // create a network
-    const container = document.getElementById('mynetwork');
-    const data = {
-      nodes: nodes,
-    };
+    const cy = cytoscape({
+      container: document.getElementById('cy'), // container to render in
+      zoomingEnabled: false,
+      panningEnabled: false,
+      elements: [
+        // list of graph elements to start with
+        {
+          // node a
+          data: { id: 'Ashley Biden' },
+          position: {
+            // the model position of the node (optional on init, mandatory after)
+            x: 204,
+            y: 186,
+          },
+          locked: true,
+          style: {
+            width: 150,
+            height: 150,
+          },
+        },
+        {
+          // node b
+          data: { id: 'Natali Germanotta' },
+          position: {
+            // the model position of the node (optional on init, mandatory after)
+            x: 371,
+            y: 157,
+          },
+          locked: true,
+          style: {
+            width: 150,
+            height: 150,
+          },
+        },
+        {
+          // node b
+          data: { id: 'Joe Biden' },
+          position: {
+            // the model position of the node (optional on init, mandatory after)
+            x: 578,
+            y: 136,
+          },
+          locked: true,
+          style: {
+            width: 150,
+            height: 150,
+          },
+        },
+        {
+          // node b
+          data: { id: 'Lady Gaga' },
+          position: {
+            // the model position of the node (optional on init, mandatory after)
+            x: 766,
+            y: 114,
+          },
+          locked: true,
+          style: {
+            width: 150,
+            height: 150,
+          },
+        },
+        {
+          // node b
+          data: { id: 'Jill Biden' },
+          position: {
+            // the model position of the node (optional on init, mandatory after)
+            x: 981,
+            y: 215,
+          },
+          locked: true,
+          style: {
+            width: 150,
+            height: 150,
+          },
+        },
+      ],
 
-    const options = {
-      nodes: {
-        shape: 'circle',
+      style: [
+        // the stylesheet for the graph
+        {
+          selector: 'node',
+          style: {
+            'background-color': '#ff0',
+            'background-opacity': 0.2,
+            label: 'data(id)',
+            'font-size': '0',
+            color: '#fff',
+          },
+        },
+        {
+          selector: ':selected',
+          css: {
+            'border-width': 2,
+            'border-color': 'SteelBlue',
+            'background-opacity': 0,
+            'line-color': 'black',
+            'target-arrow-color': 'black',
+            'source-arrow-color': 'black',
+          },
+        },
+      ],
+
+      layout: {
+        name: 'null',
+        fit: false,
       },
-      interaction: {
-        dragNodes: true,
-        dragView: true,
-        hover: true,
-        zoomView: false,
-      },
-      physics: {
-        enabled: false,
-      },
-    };
-    const network = new vis.Network(container, data, options);
-    network.moveTo({
-      position: { x: 0, y: 100 },
-      scale: 2,
     });
+    cy.on('tap', (evt: any) => {
+      console.log(evt.position);
+    });
+
+    cy.elements().qtip({
+      content: function(){ return this.id() },
+      position: {
+        my: 'top center',
+        at: 'bottom center'
+      },
+      style: {
+        classes: 'qtip-bootstrap',
+        tip: {
+          width: 16,
+          height: 8
+        }
+      }
+    });
+
+    // call on core
+    cy.qtip({
+      content: 'Example qTip on core bg',
+      position: {
+        my: 'top center',
+        at: 'bottom center'
+      },
+      show: {
+        cyBgOnly: true
+      },
+      style: {
+        classes: 'qtip-bootstrap',
+        tip: {
+          width: 16,
+          height: 8
+        }
+      }
+    });
+
+
   }
 }

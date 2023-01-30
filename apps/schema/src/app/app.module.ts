@@ -5,6 +5,7 @@ import { LibTableModule } from '@lib/table';
 import { LibTreeModule } from '@lib/tree';
 import { LibMapModule } from '@lib/map';
 import { LibEntityModule } from '@lib/entity';
+import { LibNetworkModule } from '@lib/network';
 
 import { AppComponent, DialogComponent } from './app.component';
 import { MaterialModule } from './material.module';
@@ -55,6 +56,7 @@ import { PropertyPipe } from './learn/property.pipe';
     LibTreeModule,
     LibMapModule,
     LibEntityModule,
+    LibNetworkModule
   ],
   providers: [AppService],
   bootstrap: [AppComponent],

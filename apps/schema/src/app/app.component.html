@@ -99,14 +99,7 @@
       >
         图
       </button>
-      <button
-        *ngIf="graph"
-        mat-button
-        [routerLink]="['/picture']"
-        [queryParams]="{ id: id }"
-      >
-        图片
-      </button>
+
       <button
         *ngIf="graph"
         mat-button
@@ -130,6 +123,14 @@
         [queryParams]="{ id: id }"
       >
         知识学习
+      </button>
+      <button
+        *ngIf="graph"
+        mat-button
+        [routerLink]="['/picture']"
+        [queryParams]="{ id: id }"
+      >
+        知识链接
       </button>
       <button
         *ngIf="graph"

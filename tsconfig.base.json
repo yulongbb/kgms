@@ -18,6 +18,7 @@
       "@lib/angular": ["libs/lib-angular/src/index.ts"],
       "@lib/entity": ["libs/lib-entity/src/index.ts"],
       "@lib/map": ["libs/lib-map/src/index.ts"],
+      "@lib/network": ["libs/lib-network/src/index.ts"],
       "@lib/react": ["libs/lib-react/src/index.ts"],
       "@lib/shared": ["libs/lib-shared/src/index.ts"],
       "@lib/table": ["libs/lib-table/src/index.ts"],
