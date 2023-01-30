@@ -2,21 +2,26 @@
   <mat-drawer #drawer class="example-sidenav" mode="side">
     <mat-selection-list #shoes [multiple]="false">
       <mat-list-option>
-        <a class="text-dark text-decoration-none"  href="/">首页</a>
+        <a class="text-dark text-decoration-none" href="/">首页</a>
       </mat-list-option>
       <mat-list-option
         *ngFor="let shoe of schemas"
         [value]="shoe"
         [selected]="shoe.id === id"
       >
-        <a class="text-dark text-decoration-none"  [href]="'/dataset?id=' + shoe.id"> {{ shoe.name }}</a>
+        <a
+          class="text-dark text-decoration-none"
+          [href]="'/dataset?id=' + shoe.id"
+        >
+          {{ shoe.name }}</a
+        >
       </mat-list-option>
     </mat-selection-list>
   </mat-drawer>
   <mat-drawer-content>
     <mat-toolbar class="app-toolbar" color="primary">
       <!-- <div> -->
-        <!-- <button mat-button color="primary" (click)="openDialog()">
+      <!-- <button mat-button color="primary" (click)="openDialog()">
           创建图谱
         </button>
         <button mat-button color="warn" (click)="deleteSchema(id)">
@@ -24,8 +29,18 @@
         </button>
       </div> -->
 
-      <a *ngIf="graph" class="text-light text-decoration-none mx-4" (click)="drawer.toggle()">{{ graph.name }}</a>
-      <a *ngIf="!graph" class="text-light text-decoration-none  mx-4" (click)="drawer.toggle()">知识图谱构建工具</a>
+      <a
+        *ngIf="graph"
+        class="text-light text-decoration-none mx-4"
+        (click)="drawer.toggle()"
+        >{{ graph.name }}</a
+      >
+      <a
+        *ngIf="!graph"
+        class="text-light text-decoration-none mx-4"
+        (click)="drawer.toggle()"
+        >知识图谱构建工具</a
+      >
       <button
         *ngIf="graph"
         mat-button
@@ -71,6 +86,14 @@
       <button
         *ngIf="graph"
         mat-button
+        [routerLink]="['/entitree']"
+        [queryParams]="{ id: id }"
+      >
+        树
+      </button>
+      <button
+        *ngIf="graph"
+        mat-button
         [routerLink]="['/graph']"
         [queryParams]="{ id: id }"
       >
@@ -110,10 +133,15 @@
       </button>
       <span class="example-spacer"></span>
 
-      <button  mat-icon-button class="example-icon favorite-icon" aria-label="Example icon-button with heart icon" (click)="openDialog()">
+      <button
+        mat-icon-button
+        class="example-icon favorite-icon"
+        aria-label="Example icon-button with heart icon"
+        (click)="openDialog()"
+      >
         <mat-icon>add</mat-icon>
       </button>
     </mat-toolbar>
-      <router-outlet></router-outlet>
+    <router-outlet></router-outlet>
   </mat-drawer-content>
 </mat-drawer-container>

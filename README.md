@@ -198,3 +198,9 @@ pip3 install django-cors-headers  -i https://pypi.tuna.tsinghua.edu.cn/simple
 npm install @mui/material @emotion/react @emotion/styled  --force
 
 MATCH (m)-[r:P168]->(n) SET m.image=n.label RETURN n.label
+
+
+npm install --save @antv/g6 --force
+
+拖拽有阴影
+graph.get('canvas').set('localRefresh', false);

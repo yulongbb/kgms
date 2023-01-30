@@ -6,7 +6,6 @@ import { LibTreeModule } from '@lib/tree';
 import { LibMapModule } from '@lib/map';
 import { LibEntityModule } from '@lib/entity';
 
-
 import { AppComponent, DialogComponent } from './app.component';
 import { MaterialModule } from './material.module';
 import { AppService } from './app.service';
@@ -16,6 +15,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { SchemaComponent } from './schema/schema.component';
 import { DatasetComponent } from './dataset/dataset.component';
 import { BuilderComponent } from './builder/builder.component';
+import { EntitreeComponent } from './entitree/entitree.component';
 import { GraphComponent } from './graph/graph.component';
 import { MapComponent } from './map/map.component';
 import { EarthComponent } from './earth/earth.component';
@@ -31,6 +31,7 @@ import { PropertyPipe } from './learn/property.pipe';
     SchemaComponent,
     DatasetComponent,
     BuilderComponent,
+    EntitreeComponent,
     GraphComponent,
     MapComponent,
     EarthComponent,
@@ -38,7 +39,7 @@ import { PropertyPipe } from './learn/property.pipe';
     EntityPipe,
     ValuePipe,
     PropertyPipe,
-    EntityDialogComponent
+    EntityDialogComponent,
   ],
   imports: [
     BrowserModule,
@@ -51,7 +52,7 @@ import { PropertyPipe } from './learn/property.pipe';
     LibTableModule,
     LibTreeModule,
     LibMapModule,
-    LibEntityModule
+    LibEntityModule,
   ],
   providers: [AppService],
   bootstrap: [AppComponent],

@@ -4,6 +4,7 @@ import { PropertyComponent } from './property/property.component';
 import { SchemaComponent } from './schema/schema.component';
 import { DatasetComponent } from './dataset/dataset.component';
 import { BuilderComponent } from './builder/builder.component';
+import { EntitreeComponent } from './entitree/entitree.component';
 import { GraphComponent } from './graph/graph.component';
 import { MapComponent } from './map/map.component';
 import { EarthComponent } from './earth/earth.component';
@@ -25,6 +26,7 @@ const routes: Routes = [
     loadChildren: () =>
       import('./instance/instance.module').then((m) => m.InstanceModule),
   },
+  { path: 'entitree', component: EntitreeComponent },
   { path: 'graph', component: GraphComponent },
   { path: 'map', component: MapComponent },
   { path: 'earth', component: EarthComponent },
