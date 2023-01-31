@@ -21,8 +21,10 @@ export class GlobeglComponent implements OnInit {
       size: 7 + Math.random() * 30,
       color: ['red', 'white', 'blue', 'green'][Math.round(Math.random() * 3)],
     }));
+    const container:any = document.getElementById('globeViz');
+    const width = container.scrollWidth;
     Globe()
-      .width(1470)
+      .width(width)
       .globeImageUrl('//unpkg.com/three-globe/example/img/earth-night.jpg')
       .backgroundImageUrl('//unpkg.com/three-globe/example/img/night-sky.png')
       .htmlElementsData(gData)
