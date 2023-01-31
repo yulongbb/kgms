@@ -1,0 +1,116 @@
+{
+    "name": "省",
+    "concepts": [
+        {
+            "name": "市",
+            "relationship": "包含"
+        },
+        {
+            "name": "省会",
+            "relationship": "设立"
+        },
+        {
+            "name": "直辖市",
+            "relationship": "同级名称"
+        },
+        {
+            "name": "自治区",
+            "relationship": "同级名称"
+        },
+        {
+            "name": "特别行政区",
+            "relationship": "同级名称"
+        }
+    ]
+}
+{
+    "name": "市",
+    "concepts": [
+        {
+            "name": "县",
+            "relationship": "包含"
+        },
+        {
+            "name": "地区",
+            "relationship": "同级名称"
+        },
+        {
+            "name": "自治州",
+            "relationship": "同级名称"
+        },
+        {
+            "name": "盟",
+            "relationship": "同级名称"
+        }
+    ]
+}
+{
+    "name": "县",
+    "concepts": [
+        {
+            "name": "乡",
+            "relationship": "包含"
+        },
+        {
+            "name": "市辖区",
+            "relationship": "同级名称"
+        },
+        {
+            "name": "县级市",
+            "relationship": "同级名称"
+        },
+        {
+            "name": "自治县",
+            "relationship": "同级名称"
+        },
+        {
+            "name": "旗",
+            "relationship": "同级名称"
+        },
+        {
+            "name": "自治旗",
+            "relationship": "同级名称"
+        },
+        {
+            "name": "林区",
+            "relationship": "同级名称"
+        },
+        {
+            "name": "特区",
+            "relationship": "同级名称"
+        }
+    ]
+}
+{
+    "name": "乡",
+    "concepts": [
+        {
+            "name": "村",
+            "relationship": "包含"
+        },
+        {
+            "name": "街道",
+            "relationship": "同级名称"
+        },
+        {
+            "name": "镇",
+            "relationship": "同级名称"
+        },
+        {
+            "name": "民族乡",
+            "relationship": "同级名称"
+        },
+        {
+            "name": "苏木",
+            "relationship": "同级名称"
+        },
+        {
+            "name": "民族苏木",
+            "relationship": "同级名称"
+        },
+        {
+            "name": "县辖区",
+            "relationship": "同级名称"
+        }
+    ]
+}
