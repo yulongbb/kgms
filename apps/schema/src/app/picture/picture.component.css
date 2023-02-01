@@ -1,11 +1,11 @@
 #cy {
-    width: 1200px;
-    height: 800px;
-    margin: 0 auto;
-    display: block;
-    z-index: 100;
-    background-color: rgba(0, 0, 0, .5);
-    background-image: url("/assets/images/Ashley_Biden,_Joe_Biden,_Lady_Gaga_and_Jill_Biden.jpg");
-    background-repeat: no-repeat;
-    background-size: cover;
-  }
+  width: 1200px;
+  height: 800px;
+  margin: 0 auto;
+  display: block;
+  z-index: 100;
+  background-color: rgba(0, 0, 0, .5);
+  background-image: url("/assets/images/Ashley_Biden,_Joe_Biden,_Lady_Gaga_and_Jill_Biden.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}

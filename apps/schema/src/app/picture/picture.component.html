@@ -1,8 +1,7 @@
-<div class="container-fluid" style="width: 1329.19px;" style="position: relative;">
-    <div id="cy"></div>
-
-    <!-- <div class="row text-center" style="position: relative;">
-      
-    </div> -->
+<div class="container" style="position: relative">
+  <h3 class="text-center" [innerHTML]="title | linked: linkeds">
+  </h3>
+  <p [innerHTML]="content | linked: linkeds">
+  </p>
+  <div id="cy"></div>
 </div>
-

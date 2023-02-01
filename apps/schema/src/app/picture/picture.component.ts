@@ -1,5 +1,5 @@
 import { HttpClient } from '@angular/common/http';
-import { Component, Inject, OnInit } from '@angular/core';
+import { Component, Inject, OnInit, ElementRef } from '@angular/core';
 import {
   MatDialog,
   MatDialogRef,
@@ -15,7 +15,30 @@ declare let $: any;
   styleUrls: ['./picture.component.css'],
 })
 export class PictureComponent implements OnInit {
-  constructor(public dialog: MatDialog) {}
+  title =
+    '乔·拜登问答：他的反性侵犯运动、Lady Gaga 的惊喜和“悲伤的”唐纳德·特朗普';
+
+  content = ` 副总统乔·拜登 (Joe Biden) 在奥斯卡颁奖典礼上对 Lady Gaga 的介绍可能让 3400
+  万观众头疼，但成千上万的大学生确切地理解政治家和全球巨星之间的联系。Gaga
+  的奥斯卡提名歌曲“ Til It Happens to You”是为2015
+  年一部关于校园性侵犯的纪录片《猎场》而创作的——2014
+  年，拜登与奥巴马总统一起发起了“它在我们身上”倡议( itsonus.org
+  )提高对同一问题的认识和集体责任（根据 ?NotAlone.gov的数据，五分之一的女性和
+  1 名男性以及 16
+  名男性在大学期间遭到性侵犯，两年前作为白宫保护学生免遭性侵犯特别工作组的一部分推出的资源网站）。现在，4
+  月 7 日，Gaga 将与内华达大学拉斯维加斯分校的副校长一起，支持他代表 It's On
+  Us 前往大学，到目前为止，已有来自 530 多所大学的 250,000
+  名学生签署了一份团结和行动主义的承诺。在展望 2016 年大选后的生活时，73
+  岁的拜登反思了为什么他最引以为豪的事业不会是他唯一的遗产`;
+
+  linkeds = [
+    { id: 'Q33824', names: ['乔·拜登', '拜登'] },
+    { id: 'Q115089', names: ['唐纳德·特朗普'] },
+    { id: 'Q33837', names: ['Lady Gaga', 'Gaga'] },
+    { id: 'Q115105', names: ['奥巴马'] },
+  ];
+
+  constructor(public dialog: MatDialog, private elementRef: ElementRef) {}
 
   ngOnInit(): void {
     const cytoscape = require('cytoscape');
@@ -199,6 +222,18 @@ export class PictureComponent implements OnInit {
       },
     });
   }
+
+  openAlert() {
+    alert('hello');
+  }
+
+  ngAfterViewChecked() {
+    if (this.elementRef.nativeElement.querySelectorAll('a')) {
+      this.elementRef.nativeElement
+        .querySelector('a')
+        .addEventListener('click', this.openAlert.bind(this));
+    }
+  }
 }
 
 @Component({
@@ -216,9 +251,7 @@ export class PictureDialogComponent {
   ) {
     this.statements = new Map<string, Array<string>>();
     this.http
-      .get(
-        `http://localhost:3333/api/entity/${data.id}`
-      )
+      .get(`http://localhost:3333/api/entity/${data.id}`)
       .subscribe((instance: any) => {
         this.instance = instance;
         Object.keys(instance.claims).map((key: string) => {
