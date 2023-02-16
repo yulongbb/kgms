@@ -1,4 +1,4 @@
-<mat-drawer-container class="example-container">
+<mat-drawer-container class="chat">
   <mat-drawer mode="side" opened>
     <mat-list role="list" style="width: 300px;">
       <mat-list-item role="listitem">Item 1</mat-list-item>
@@ -7,12 +7,9 @@
     </mat-list>
   </mat-drawer>
   <mat-drawer-content>
-    <!-- Chat container-->
     <div fxLayout="column" fxLayoutAlign="space-between stretch" style="width: 100%; height: 100%;">
-      <!-- Header -->
       <app-chat-header style="width: 100%;" fxFlex="64px"></app-chat-header>
 
-      <!-- Messages-->
       <div fxLayout="column"
         style="width: 100%; height: 100%; overflow-y: scroll; background-color: lightgray; box-shadow: inset 0px 0px 10px rgba(0,0,0,0.5);">
         <ng-container *ngFor="let msg of messages; trackBy: trackByCreated; let i = index">
@@ -21,7 +18,6 @@
         </ng-container>
       </div>
 
-      <!-- Send form and other controls -->
       <app-chat-controls style="width: 100%;" [chatId]="chat.id"></app-chat-controls>
     </div>
   </mat-drawer-content>
