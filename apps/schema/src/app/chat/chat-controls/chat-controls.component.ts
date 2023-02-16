@@ -21,7 +21,6 @@ export class ChatControlsComponent implements OnInit {
   }
 
   ngOnInit() {
-    this.scrollBottom();
 
     this.messageControl.valueChanges
       .pipe(

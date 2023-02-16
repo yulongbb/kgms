@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { FlexLayoutModule } from '@angular/flex-layout';
 
 
 import { LibTableModule } from '@lib/table';
@@ -27,7 +28,6 @@ import { ChatComponent } from './chat/chat.component';
 import { ChatHeaderComponent } from './chat/chat-header/chat-header.component';
 import { ChatMessageComponent } from './chat/chat-message/chat-message.component';
 import { ChatControlsComponent } from './chat/chat-controls/chat-controls.component';
-import { TypingIndicatorComponent } from './chat/typing-indicator/typing-indicator.component';
 import {
   PictureComponent,
   PictureDialogComponent,
@@ -59,7 +59,6 @@ import { PropertyPipe } from './learn/property.pipe';
     ChatHeaderComponent,
     ChatMessageComponent,
     ChatControlsComponent,
-    TypingIndicatorComponent,
     EntityDialogComponent,
     PictureDialogComponent,
   ],
@@ -70,6 +69,7 @@ import { PropertyPipe } from './learn/property.pipe';
     ReactiveFormsModule,
     HttpClientModule,
     NgbModule,
+    FlexLayoutModule,
     AppRoutingModule,
     MaterialModule,
     LibTableModule,
