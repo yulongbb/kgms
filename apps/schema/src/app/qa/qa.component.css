@@ -1,0 +1,6 @@
+.example-container {
+    width: 1200px;
+    height: 800px;
+    margin: 10px auto;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}

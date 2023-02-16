@@ -20,6 +20,7 @@ import { EntitreeComponent } from './entitree/entitree.component';
 import { GraphComponent } from './graph/graph.component';
 import { MapComponent } from './map/map.component';
 import { EarthComponent } from './earth/earth.component';
+import { QaComponent } from './qa/qa.component';
 import {
   PictureComponent,
   PictureDialogComponent,
@@ -47,6 +48,7 @@ import { PropertyPipe } from './learn/property.pipe';
     ValuePipe,
     PropertyPipe,
     LinkedPipe,
+    QaComponent,
     EntityDialogComponent,
     PictureDialogComponent,
   ],
