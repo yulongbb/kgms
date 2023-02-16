@@ -9,7 +9,7 @@ import { GraphComponent } from './graph/graph.component';
 import { MapComponent } from './map/map.component';
 import { EarthComponent } from './earth/earth.component';
 import { LearnComponent } from './learn/learn.component';
-import { QaComponent } from './qa/qa.component';
+import { ChatComponent } from './chat/chat.component';
 import { PictureComponent } from './picture/picture.component';
 
 const routes: Routes = [
@@ -33,7 +33,7 @@ const routes: Routes = [
   { path: 'map', component: MapComponent },
   { path: 'earth', component: EarthComponent },
   { path: 'learn', component: LearnComponent },
-  { path: 'qa', component: QaComponent },
+  { path: 'chat', component: ChatComponent },
 ];
 
 @NgModule({

@@ -1,6 +1,9 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+
+
 import { LibTableModule } from '@lib/table';
 import { LibTreeModule } from '@lib/tree';
 import { LibMapModule } from '@lib/map';
@@ -20,7 +23,11 @@ import { EntitreeComponent } from './entitree/entitree.component';
 import { GraphComponent } from './graph/graph.component';
 import { MapComponent } from './map/map.component';
 import { EarthComponent } from './earth/earth.component';
-import { QaComponent } from './qa/qa.component';
+import { ChatComponent } from './chat/chat.component';
+import { ChatHeaderComponent } from './chat/chat-header/chat-header.component';
+import { ChatMessageComponent } from './chat/chat-message/chat-message.component';
+import { ChatControlsComponent } from './chat/chat-controls/chat-controls.component';
+import { TypingIndicatorComponent } from './chat/typing-indicator/typing-indicator.component';
 import {
   PictureComponent,
   PictureDialogComponent,
@@ -48,7 +55,11 @@ import { PropertyPipe } from './learn/property.pipe';
     ValuePipe,
     PropertyPipe,
     LinkedPipe,
-    QaComponent,
+    ChatComponent,
+    ChatHeaderComponent,
+    ChatMessageComponent,
+    ChatControlsComponent,
+    TypingIndicatorComponent,
     EntityDialogComponent,
     PictureDialogComponent,
   ],
@@ -58,6 +69,7 @@ import { PropertyPipe } from './learn/property.pipe';
     FormsModule,
     ReactiveFormsModule,
     HttpClientModule,
+    NgbModule,
     AppRoutingModule,
     MaterialModule,
     LibTableModule,
