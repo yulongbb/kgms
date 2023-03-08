@@ -25,7 +25,6 @@ import { GraphComponent } from './graph/graph.component';
 import { MapComponent } from './map/map.component';
 import { EarthComponent } from './earth/earth.component';
 import { ChatComponent } from './chat/chat.component';
-import { ChatHeaderComponent } from './chat/chat-header/chat-header.component';
 import { ChatMessageComponent } from './chat/chat-message/chat-message.component';
 import { ChatControlsComponent } from './chat/chat-controls/chat-controls.component';
 import {
@@ -56,7 +55,6 @@ import { PropertyPipe } from './learn/property.pipe';
     PropertyPipe,
     LinkedPipe,
     ChatComponent,
-    ChatHeaderComponent,
     ChatMessageComponent,
     ChatControlsComponent,
     EntityDialogComponent,

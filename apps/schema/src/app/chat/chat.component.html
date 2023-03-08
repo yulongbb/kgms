@@ -8,8 +8,6 @@
   </mat-drawer>
   <mat-drawer-content>
     <div fxLayout="column" fxLayoutAlign="space-between stretch" style="width: 100%; height: 100%;">
-      <app-chat-header style="width: 100%;" fxFlex="64px"></app-chat-header>
-
       <div fxLayout="column"
         style="width: 100%; height: 100%; overflow-y: scroll; background-color: lightgray; box-shadow: inset 0px 0px 10px rgba(0,0,0,0.5);">
         <ng-container *ngFor="let msg of messages; trackBy: trackByCreated; let i = index">
