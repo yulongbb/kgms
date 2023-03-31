@@ -4,33 +4,6 @@
 
 组成构件： 数据源（dataset）、概念（schema）、属性（property）、处理过程（builder）、实例（instance）、图（graph）
 
-## screenshots
-
-### dataset
-
-![dataset](/screenshots/dataset.png)
-
-### schema
-
-![schema](/screenshots/schema.png)
-
-### property
-
-![property](/screenshots/property.png)
-
-### builder
-
-![builder](/screenshots/builder.png)
-
-### instance
-
-![instance](/screenshots/instance.png)
-
-### graph
-
-![graph](/screenshots/graph.png)
-
-
 ## links
 
 [openkg](http://www.openkg.cn/)
